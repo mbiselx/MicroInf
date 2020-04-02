@@ -28,7 +28,7 @@ int main(void)
 
     	//waits 1 second
         chThdSleepMilliseconds(1000);
-        //test
+        //test2_samuel
     }}
 
 
