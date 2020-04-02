@@ -16,9 +16,15 @@ int main(void)
     chSysInit();
     mpu_init();
 
+    proximity_start();
+    calibrate_ir();
+
+    movement_main();
+
     /* Infinite loop. */
     while (1)
     {
+
     	//waits 1 second
         chThdSleepMilliseconds(1000);
     }
