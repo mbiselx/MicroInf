@@ -27,8 +27,8 @@ int main(void)
 
     	//waits 1 second
         chThdSleepMilliseconds(1000);
-    }
-}
+        //test
+    }}
 
 
 #define STACK_CHK_GUARD 0xe2dee396
