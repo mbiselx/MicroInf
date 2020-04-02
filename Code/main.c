@@ -18,6 +18,7 @@ int main(void)
 
     proximity_start();
     calibrate_ir();
+    //en witere test
 
     movement_main();
 
