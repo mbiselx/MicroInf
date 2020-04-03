@@ -9,8 +9,10 @@
 #include <chprintf.h>
 #include <sensors\proximity.h>
 
-#include <motors.h>
-#include <pi_regulator.h>
+#include "motors.h"
+#include "pi_regulator.h"
+
+#include "map.h"
 
 #define PI							3.1415f
 
@@ -109,7 +111,23 @@ Wall	 Front
 //main for testing PI regulator and move
 void move_main(void){
 
+	int i = 0;
+
+	left_motor_set_pos(0);
+	right_motor_set_pos(0);
+
+	map_log_new_point(0,0);
+
 	while(1){
 		move_robot_along_wall(WALL_ON_RIGHT);
+		i++;
+		if (i > 50)
+		{
+			map_log_new_point(left_motor_get_pos(), right_motor_get_pos());
+			left_motor_set_pos(0);
+			right_motor_set_pos(0);
+			i=0;
+			map_send_all_data_to_computer();
+		}
 	}
 }

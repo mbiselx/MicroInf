@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
   55              	.LBB70:
   56              		.file 2 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chschd.h"
   57              		.loc 2 604 0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 2
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 2
 
 
   58 000e 0060     		str	r0, [r0]
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  112              		.align	1
  113              		.p2align 4,,15
  114              		.global	chIQResetI
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 3
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 3
 
 
  115              		.syntax unified
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  169              		.cfi_def_cfa_offset 0
  170              	.LVL9:
  171              		.loc 1 118 0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 4
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 4
 
 
  172 002e FFF7FEBF 		b	chThdDequeueAllI
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  226 001a 9A42     		cmp	r2, r3
  227 001c A368     		ldr	r3, [r4, #8]
  228 001e 16D0     		beq	.L24
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 5
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 5
 
 
  229              	.L18:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  283 0056 F1E7     		b	.L15
  284              	.LVL19:
  285              	.L25:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 6
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 6
 
 
  286              		.loc 1 151 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  340              	.LVL23:
  341              		.thumb
  342              		.syntax unified
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 7
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 7
 
 
  343              	.LBE100:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  397              		.loc 1 191 0
  398 0044 8242     		cmp	r2, r0
  399              		.loc 1 189 0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 8
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 8
 
 
  400 0046 A360     		str	r3, [r4, #8]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  454 0078 9A42     		cmp	r2, r3
  455 007a 2846     		mov	r0, r5
  456 007c 05D1     		bne	.L47
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 9
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 9
 
 
  457 007e 03B0     		add	sp, sp, #12
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  511              		.cfi_offset 10, -12
  512              		.cfi_offset 11, -8
  513              		.cfi_offset 14, -4
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 10
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 10
 
 
  514 0004 DFF8F490 		ldr	r9, .L73+12
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  568 003a 2046     		mov	r0, r4
  569 003c C047     		blx	r8
  570              	.LVL48:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 11
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 11
 
 
  571 003e 04E0     		b	.L53
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  625 007a B342     		cmp	r3, r6
  626 007c 04D0     		beq	.L58
  627 007e B269     		ldr	r2, [r6, #24]
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 12
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 12
 
 
  628 0080 9B68     		ldr	r3, [r3, #8]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  682              	.LVL63:
  683              	.L70:
  684              	.LBE147:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 13
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 13
 
 
  685              	.LBE146:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  739              		.cfi_restore_state
  740              	.LBB156:
  741              	.LBB145:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 14
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 14
 
 
  742              		.loc 5 367 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  796              		.loc 1 276 0
  797 0006 2E68     		ldr	r6, [r5]
  798              		.loc 1 280 0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 15
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 15
 
 
  799 0008 C160     		str	r1, [r0, #12]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  853              		.global	chOQResetI
  854              		.syntax unified
  855              		.thumb
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 16
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 16
 
 
  856              		.thumb_func
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  910              	.LVL82:
  911              		.loc 1 306 0
  912 0030 FFF7FEBF 		b	chThdDequeueAllI
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 17
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 17
 
 
  913              	.LVL83:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  967              	@ 546 "../../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cmFunc.h" 1
  968 0014 83F31188 		MSR basepri, r3
  969              	@ 0 "" 2
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 18
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 18
 
 
  970              	.LVL87:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1024 004a 9A42     		cmp	r2, r3
  1025              		.loc 1 345 0
  1026 004c 24BF     		itt	cs
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 19
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 19
 
 
  1027 004e E368     		ldrcs	r3, [r4, #12]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1081 0084 02B0     		add	sp, sp, #8
  1082              		.cfi_remember_state
  1083              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 20
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 20
 
 
  1084              		@ sp needed
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1138              	.LVL105:
  1139 00b8 DCE7     		b	.L95
  1140              	.L104:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 21
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 21
 
 
  1141              	.LBE196:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1195 001a A368     		ldr	r3, [r4, #8]
  1196 001c 15D0     		beq	.L116
  1197              	.L110:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 22
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 22
 
 
  1198              	.LVL110:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1252              	.LBE202:
  1253              		.loc 1 372 0
  1254 004e 6FF00200 		mvn	r0, #2
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 23
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 23
 
 
  1255 0052 F1E7     		b	.L107
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1309              		.loc 1 415 0
  1310 0016 1646     		mov	r6, r2
  1311 0018 002A     		cmp	r2, #0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 24
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 24
 
 
  1312 001a 61D0     		beq	.L142
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1366              		.loc 1 419 0
  1367 003a 002B     		cmp	r3, #0
  1368 003c 32D0     		beq	.L126
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 25
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 25
 
 
  1369              	.L143:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1423              	.LBB235:
  1424              		.loc 4 546 0
  1425              		.syntax unified
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 26
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 26
 
 
  1426              	@ 546 "../../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cmFunc.h" 1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1480 00a0 002B     		cmp	r3, #0
  1481 00a2 CCD1     		bne	.L143
  1482              	.L126:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 27
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 27
 
 
  1483              		.loc 1 420 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1537              		.cfi_def_cfa_offset 36
  1538              		@ sp needed
  1539 00dc BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 28
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 28
 
 
  1540              	.LVL146:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1589              		.align	2
  1590              		.set	.LANCHOR2,. + 0
  1591              		.type	__func__.7913, %object
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 29
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 29
 
 
  1592              		.size	__func__.7913, 17
@@ -1690,9 +1690,9 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1594      00
  1595              		.text
  1596              	.Letext0:
- 1597              		.file 6 "c:\\users\\samue\\documents\\epfl\\6. semester\\microinformatique\\microinformatique_tp\\
- 1598              		.file 7 "c:\\users\\samue\\documents\\epfl\\6. semester\\microinformatique\\microinformatique_tp\\
- 1599              		.file 8 "c:\\users\\samue\\documents\\epfl\\6. semester\\microinformatique\\microinformatique_tp\\
+ 1597              		.file 6 "c:\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\lib\\gcc\\arm-none-e
+ 1598              		.file 7 "c:\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-none-eabi\\inclu
+ 1599              		.file 8 "c:\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-none-eabi\\inclu
  1600              		.file 9 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/compilers/GCC/chtypes.h"
  1601              		.file 10 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chsystypes.h"
  1602              		.file 11 "../../lib/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h"
@@ -1715,8 +1715,8 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1619 000b 01       		.uleb128 0x1
  1620 000c 11030000 		.4byte	.LASF208
  1621 0010 0C       		.byte	0xc
- 1622 0011 AF060000 		.4byte	.LASF209
- 1623 0015 61090000 		.4byte	.LASF210
+ 1622 0011 E9060000 		.4byte	.LASF209
+ 1623 0015 21060000 		.4byte	.LASF210
  1624 0019 08010000 		.4byte	.Ldebug_ranges0+0x108
  1625 001d 00000000 		.4byte	0
  1626 0021 00000000 		.4byte	.Ldebug_line0
@@ -1738,12 +1738,12 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1642 0040 05       		.byte	0x5
  1643 0041 A4010000 		.4byte	.LASF1
  1644 0045 04       		.uleb128 0x4
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 30
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 30
 
 
  1645 0046 08       		.byte	0x8
  1646 0047 04       		.byte	0x4
- 1647 0048 09060000 		.4byte	.LASF2
+ 1647 0048 15060000 		.4byte	.LASF2
  1648 004c 04       		.uleb128 0x4
  1649 004d 01       		.byte	0x1
  1650 004e 06       		.byte	0x6
@@ -1756,13 +1756,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1657 005e 04       		.uleb128 0x4
  1658 005f 01       		.byte	0x1
  1659 0060 08       		.byte	0x8
- 1660 0061 42070000 		.4byte	.LASF6
+ 1660 0061 7C070000 		.4byte	.LASF6
  1661 0065 04       		.uleb128 0x4
  1662 0066 02       		.byte	0x2
  1663 0067 05       		.byte	0x5
- 1664 0068 70070000 		.4byte	.LASF7
+ 1664 0068 AA070000 		.4byte	.LASF7
  1665 006c 03       		.uleb128 0x3
- 1666 006d 94080000 		.4byte	.LASF8
+ 1666 006d CE080000 		.4byte	.LASF8
  1667 0071 07       		.byte	0x7
  1668 0072 39       		.byte	0x39
  1669 0073 77000000 		.4byte	0x77
@@ -1771,7 +1771,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1672 0079 07       		.byte	0x7
  1673 007a 6B020000 		.4byte	.LASF9
  1674 007e 03       		.uleb128 0x3
- 1675 007f 34050000 		.4byte	.LASF10
+ 1675 007f 40050000 		.4byte	.LASF10
  1676 0083 07       		.byte	0x7
  1677 0084 4D       		.byte	0x4d
  1678 0085 89000000 		.4byte	0x89
@@ -1780,16 +1780,16 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1681 008b 05       		.byte	0x5
  1682 008c 27020000 		.4byte	.LASF11
  1683 0090 03       		.uleb128 0x3
- 1684 0091 D2080000 		.4byte	.LASF12
+ 1684 0091 0C090000 		.4byte	.LASF12
  1685 0095 07       		.byte	0x7
  1686 0096 4F       		.byte	0x4f
  1687 0097 9B000000 		.4byte	0x9b
  1688 009b 04       		.uleb128 0x4
  1689 009c 04       		.byte	0x4
  1690 009d 07       		.byte	0x7
- 1691 009e 76080000 		.4byte	.LASF13
+ 1691 009e B0080000 		.4byte	.LASF13
  1692 00a2 03       		.uleb128 0x3
- 1693 00a3 7C060000 		.4byte	.LASF14
+ 1693 00a3 B6060000 		.4byte	.LASF14
  1694 00a7 07       		.byte	0x7
  1695 00a8 69       		.byte	0x69
  1696 00a9 AD000000 		.4byte	0xad
@@ -1798,10 +1798,10 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1699 00af 07       		.byte	0x7
  1700 00b0 E6000000 		.4byte	.LASF15
  1701 00b4 03       		.uleb128 0x3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 31
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 31
 
 
- 1702 00b5 CF090000 		.4byte	.LASF16
+ 1702 00b5 AA090000 		.4byte	.LASF16
  1703 00b9 08       		.byte	0x8
  1704 00ba 18       		.byte	0x18
  1705 00bb 53000000 		.4byte	0x53
@@ -1813,14 +1813,14 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1711 00ca 24       		.byte	0x24
  1712 00cb 6C000000 		.4byte	0x6c
  1713 00cf 03       		.uleb128 0x3
- 1714 00d0 3A070000 		.4byte	.LASF18
+ 1714 00d0 74070000 		.4byte	.LASF18
  1715 00d4 08       		.byte	0x8
  1716 00d5 2C       		.byte	0x2c
  1717 00d6 7E000000 		.4byte	0x7e
  1718 00da 06       		.uleb128 0x6
  1719 00db CF000000 		.4byte	0xcf
  1720 00df 03       		.uleb128 0x3
- 1721 00e0 41080000 		.4byte	.LASF19
+ 1721 00e0 7B080000 		.4byte	.LASF19
  1722 00e4 08       		.byte	0x8
  1723 00e5 30       		.byte	0x30
  1724 00e6 90000000 		.4byte	0x90
@@ -1830,7 +1830,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1728 00f0 3C       		.byte	0x3c
  1729 00f1 A2000000 		.4byte	0xa2
  1730 00f5 03       		.uleb128 0x3
- 1731 00f6 D0050000 		.4byte	.LASF21
+ 1731 00f6 DC050000 		.4byte	.LASF21
  1732 00fa 09       		.byte	0x9
  1733 00fb 45       		.byte	0x45
  1734 00fc DF000000 		.4byte	0xdf
@@ -1840,7 +1840,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1738 0106 46       		.byte	0x46
  1739 0107 EA000000 		.4byte	0xea
  1740 010b 03       		.uleb128 0x3
- 1741 010c 270A0000 		.4byte	.LASF23
+ 1741 010c 020A0000 		.4byte	.LASF23
  1742 0110 09       		.byte	0x9
  1743 0111 48       		.byte	0x48
  1744 0112 B4000000 		.4byte	0xb4
@@ -1850,7 +1850,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1748 011c 49       		.byte	0x49
  1749 011d B4000000 		.4byte	0xb4
  1750 0121 03       		.uleb128 0x3
- 1751 0122 92060000 		.4byte	.LASF25
+ 1751 0122 CC060000 		.4byte	.LASF25
  1752 0126 09       		.byte	0x9
  1753 0127 4A       		.byte	0x4a
  1754 0128 B4000000 		.4byte	0xb4
@@ -1858,22 +1858,22 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1756 012d FE010000 		.4byte	.LASF26
  1757 0131 09       		.byte	0x9
  1758 0132 4B       		.byte	0x4b
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 32
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 32
 
 
  1759 0133 B4000000 		.4byte	0xb4
  1760 0137 03       		.uleb128 0x3
- 1761 0138 1B070000 		.4byte	.LASF27
+ 1761 0138 55070000 		.4byte	.LASF27
  1762 013c 09       		.byte	0x9
  1763 013d 4C       		.byte	0x4c
  1764 013e DF000000 		.4byte	0xdf
  1765 0142 03       		.uleb128 0x3
- 1766 0143 CE040000 		.4byte	.LASF28
+ 1766 0143 DA040000 		.4byte	.LASF28
  1767 0147 09       		.byte	0x9
  1768 0148 4D       		.byte	0x4d
  1769 0149 CF000000 		.4byte	0xcf
  1770 014d 03       		.uleb128 0x3
- 1771 014e 28050000 		.4byte	.LASF29
+ 1771 014e 34050000 		.4byte	.LASF29
  1772 0152 09       		.byte	0x9
  1773 0153 4F       		.byte	0x4f
  1774 0154 DF000000 		.4byte	0xdf
@@ -1883,42 +1883,42 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1778 015e 51       		.byte	0x51
  1779 015f CF000000 		.4byte	0xcf
  1780 0163 03       		.uleb128 0x3
- 1781 0164 D9040000 		.4byte	.LASF31
+ 1781 0164 E5040000 		.4byte	.LASF31
  1782 0168 09       		.byte	0x9
  1783 0169 52       		.byte	0x52
  1784 016a DF000000 		.4byte	0xdf
  1785 016e 03       		.uleb128 0x3
- 1786 016f B4080000 		.4byte	.LASF32
+ 1786 016f EE080000 		.4byte	.LASF32
  1787 0173 0A       		.byte	0xa
  1788 0174 33       		.byte	0x33
  1789 0175 DF000000 		.4byte	0xdf
  1790 0179 06       		.uleb128 0x6
  1791 017a 6E010000 		.4byte	0x16e
  1792 017e 03       		.uleb128 0x3
- 1793 017f 9F080000 		.4byte	.LASF33
+ 1793 017f D9080000 		.4byte	.LASF33
  1794 0183 0A       		.byte	0xa
  1795 0184 3F       		.byte	0x3f
  1796 0185 89010000 		.4byte	0x189
  1797 0189 07       		.uleb128 0x7
- 1798 018a C4040000 		.4byte	.LASF57
+ 1798 018a D0040000 		.4byte	.LASF57
  1799 018e 68       		.byte	0x68
  1800 018f 02       		.byte	0x2
  1801 0190 C2       		.byte	0xc2
  1802 0191 A7020000 		.4byte	0x2a7
  1803 0195 08       		.uleb128 0x8
- 1804 0196 A0070000 		.4byte	.LASF34
+ 1804 0196 DA070000 		.4byte	.LASF34
  1805 019a 02       		.byte	0x2
  1806 019b C3       		.byte	0xc3
  1807 019c B2020000 		.4byte	0x2b2
  1808 01a0 00       		.byte	0
  1809 01a1 08       		.uleb128 0x8
- 1810 01a2 08070000 		.4byte	.LASF35
+ 1810 01a2 42070000 		.4byte	.LASF35
  1811 01a6 02       		.byte	0x2
  1812 01a7 C5       		.byte	0xc5
  1813 01a8 B2020000 		.4byte	0x2b2
  1814 01ac 04       		.byte	0x4
  1815 01ad 08       		.uleb128 0x8
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 33
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 33
 
 
  1816 01ae 86010000 		.4byte	.LASF36
@@ -1927,7 +1927,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1819 01b4 37010000 		.4byte	0x137
  1820 01b8 08       		.byte	0x8
  1821 01b9 08       		.uleb128 0x8
- 1822 01ba 51060000 		.4byte	.LASF37
+ 1822 01ba 8B060000 		.4byte	.LASF37
  1823 01be 02       		.byte	0x2
  1824 01bf C8       		.byte	0xc8
  1825 01c0 2B050000 		.4byte	0x52b
@@ -1939,13 +1939,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1831 01cc B2020000 		.4byte	0x2b2
  1832 01d0 10       		.byte	0x10
  1833 01d1 08       		.uleb128 0x8
- 1834 01d2 43060000 		.4byte	.LASF39
+ 1834 01d2 7D060000 		.4byte	.LASF39
  1835 01d6 02       		.byte	0x2
  1836 01d7 CB       		.byte	0xcb
  1837 01d8 B2020000 		.4byte	0x2b2
  1838 01dc 14       		.byte	0x14
  1839 01dd 08       		.uleb128 0x8
- 1840 01de 030A0000 		.4byte	.LASF40
+ 1840 01de DE090000 		.4byte	.LASF40
  1841 01e2 02       		.byte	0x2
  1842 01e3 D2       		.byte	0xd2
  1843 01e4 A1080000 		.4byte	0x8a1
@@ -1957,28 +1957,28 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1849 01f0 B8080000 		.4byte	0x8b8
  1850 01f4 1C       		.byte	0x1c
  1851 01f5 08       		.uleb128 0x8
- 1852 01f6 5E070000 		.4byte	.LASF42
+ 1852 01f6 98070000 		.4byte	.LASF42
  1853 01fa 02       		.byte	0x2
  1854 01fb DD       		.byte	0xdd
  1855 01fc 16010000 		.4byte	0x116
  1856 0200 20       		.byte	0x20
  1857 0201 08       		.uleb128 0x8
- 1858 0202 BB070000 		.4byte	.LASF43
+ 1858 0202 F5070000 		.4byte	.LASF43
  1859 0206 02       		.byte	0x2
  1860 0207 E1       		.byte	0xe1
  1861 0208 0B010000 		.4byte	0x10b
  1862 020c 21       		.byte	0x21
  1863 020d 08       		.uleb128 0x8
- 1864 020e 52090000 		.4byte	.LASF44
+ 1864 020e 8C090000 		.4byte	.LASF44
  1865 0212 02       		.byte	0x2
  1866 0213 E6       		.byte	0xe6
  1867 0214 21010000 		.4byte	0x121
  1868 0218 22       		.byte	0x22
  1869 0219 08       		.uleb128 0x8
- 1870 021a 7A070000 		.4byte	.LASF45
+ 1870 021a B4070000 		.4byte	.LASF45
  1871 021e 02       		.byte	0x2
  1872 021f EC       		.byte	0xec
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 34
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 34
 
 
  1873 0220 2C010000 		.4byte	0x12c
@@ -1996,7 +1996,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1885 0239 D0070000 		.4byte	0x7d0
  1886 023d 28       		.byte	0x28
  1887 023e 0A       		.uleb128 0xa
- 1888 023f B90A0000 		.4byte	.LASF47
+ 1888 023f 940A0000 		.4byte	.LASF47
  1889 0243 02       		.byte	0x2
  1890 0244 3601     		.2byte	0x136
  1891 0246 B8020000 		.4byte	0x2b8
@@ -2008,25 +2008,25 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1897 0253 DC020000 		.4byte	0x2dc
  1898 0257 30       		.byte	0x30
  1899 0258 0A       		.uleb128 0xa
- 1900 0259 0F090000 		.4byte	.LASF49
+ 1900 0259 49090000 		.4byte	.LASF49
  1901 025d 02       		.byte	0x2
  1902 025e 4001     		.2byte	0x140
  1903 0260 42010000 		.4byte	0x142
  1904 0264 38       		.byte	0x38
  1905 0265 0A       		.uleb128 0xa
- 1906 0266 2A080000 		.4byte	.LASF50
+ 1906 0266 64080000 		.4byte	.LASF50
  1907 026a 02       		.byte	0x2
  1908 026b 4601     		.2byte	0x146
  1909 026d 4D010000 		.4byte	0x14d
  1910 0271 3C       		.byte	0x3c
  1911 0272 0A       		.uleb128 0xa
- 1912 0273 66070000 		.4byte	.LASF51
+ 1912 0273 A0070000 		.4byte	.LASF51
  1913 0277 02       		.byte	0x2
  1914 0278 4D01     		.2byte	0x14d
  1915 027a 9B080000 		.4byte	0x89b
  1916 027e 40       		.byte	0x40
  1917 027f 0A       		.uleb128 0xa
- 1918 0280 BE080000 		.4byte	.LASF52
+ 1918 0280 F8080000 		.4byte	.LASF52
  1919 0284 02       		.byte	0x2
  1920 0285 5101     		.2byte	0x151
  1921 0287 37010000 		.4byte	0x137
@@ -2038,17 +2038,17 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1927 0294 8F030000 		.4byte	0x38f
  1928 0298 48       		.byte	0x48
  1929 0299 0A       		.uleb128 0xa
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 35
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 35
 
 
- 1930 029a CC070000 		.4byte	.LASF54
+ 1930 029a 06080000 		.4byte	.LASF54
  1931 029e 02       		.byte	0x2
  1932 029f 5E01     		.2byte	0x15e
  1933 02a1 81070000 		.4byte	0x781
  1934 02a5 50       		.byte	0x50
  1935 02a6 00       		.byte	0
  1936 02a7 03       		.uleb128 0x3
- 1937 02a8 E9090000 		.4byte	.LASF55
+ 1937 02a8 C4090000 		.4byte	.LASF55
  1938 02ac 0A       		.byte	0xa
  1939 02ad 44       		.byte	0x44
  1940 02ae B2020000 		.4byte	0x2b2
@@ -2056,25 +2056,25 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1942 02b3 04       		.byte	0x4
  1943 02b4 7E010000 		.4byte	0x17e
  1944 02b8 03       		.uleb128 0x3
- 1945 02b9 5A050000 		.4byte	.LASF56
+ 1945 02b9 66050000 		.4byte	.LASF56
  1946 02bd 0A       		.byte	0xa
  1947 02be 49       		.byte	0x49
  1948 02bf C3020000 		.4byte	0x2c3
  1949 02c3 07       		.uleb128 0x7
- 1950 02c4 5E080000 		.4byte	.LASF58
+ 1950 02c4 98080000 		.4byte	.LASF58
  1951 02c8 04       		.byte	0x4
  1952 02c9 02       		.byte	0x2
  1953 02ca B0       		.byte	0xb0
  1954 02cb DC020000 		.4byte	0x2dc
  1955 02cf 08       		.uleb128 0x8
- 1956 02d0 A0070000 		.4byte	.LASF34
+ 1956 02d0 DA070000 		.4byte	.LASF34
  1957 02d4 02       		.byte	0x2
  1958 02d5 B1       		.byte	0xb1
  1959 02d6 B2020000 		.4byte	0x2b2
  1960 02da 00       		.byte	0
  1961 02db 00       		.byte	0
  1962 02dc 03       		.uleb128 0x3
- 1963 02dd DE070000 		.4byte	.LASF59
+ 1963 02dd 18080000 		.4byte	.LASF59
  1964 02e1 0A       		.byte	0xa
  1965 02e2 50       		.byte	0x50
  1966 02e3 E7020000 		.4byte	0x2e7
@@ -2085,20 +2085,20 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1971 02ee B7       		.byte	0xb7
  1972 02ef 0C030000 		.4byte	0x30c
  1973 02f3 08       		.uleb128 0x8
- 1974 02f4 A0070000 		.4byte	.LASF34
+ 1974 02f4 DA070000 		.4byte	.LASF34
  1975 02f8 02       		.byte	0x2
  1976 02f9 B8       		.byte	0xb8
  1977 02fa B2020000 		.4byte	0x2b2
  1978 02fe 00       		.byte	0
  1979 02ff 08       		.uleb128 0x8
- 1980 0300 08070000 		.4byte	.LASF35
+ 1980 0300 42070000 		.4byte	.LASF35
  1981 0304 02       		.byte	0x2
  1982 0305 B9       		.byte	0xb9
  1983 0306 B2020000 		.4byte	0x2b2
  1984 030a 04       		.byte	0x4
  1985 030b 00       		.byte	0
  1986 030c 03       		.uleb128 0x3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 36
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 36
 
 
  1987 030d 1C000000 		.4byte	.LASF61
@@ -2106,25 +2106,25 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  1989 0312 57       		.byte	0x57
  1990 0313 17030000 		.4byte	0x317
  1991 0317 0C       		.uleb128 0xc
- 1992 0318 1A050000 		.4byte	.LASF62
+ 1992 0318 26050000 		.4byte	.LASF62
  1993 031c 1C       		.byte	0x1c
  1994 031d 02       		.byte	0x2
  1995 031e 9001     		.2byte	0x190
  1996 0320 73030000 		.4byte	0x373
  1997 0324 0A       		.uleb128 0xa
- 1998 0325 56080000 		.4byte	.LASF63
+ 1998 0325 90080000 		.4byte	.LASF63
  1999 0329 02       		.byte	0x2
  2000 032a 9101     		.2byte	0x191
  2001 032c DC020000 		.4byte	0x2dc
  2002 0330 00       		.byte	0
  2003 0331 0A       		.uleb128 0xa
- 2004 0332 A3050000 		.4byte	.LASF64
+ 2004 0332 AF050000 		.4byte	.LASF64
  2005 0336 02       		.byte	0x2
  2006 0337 9201     		.2byte	0x192
  2007 0339 37010000 		.4byte	0x137
  2008 033d 08       		.byte	0x8
  2009 033e 0A       		.uleb128 0xa
- 2010 033f 4B060000 		.4byte	.LASF65
+ 2010 033f 85060000 		.4byte	.LASF65
  2011 0343 02       		.byte	0x2
  2012 0344 9401     		.2byte	0x194
  2013 0346 2B050000 		.4byte	0x52b
@@ -2136,20 +2136,20 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2019 0353 B2020000 		.4byte	0x2b2
  2020 0357 10       		.byte	0x10
  2021 0358 0A       		.uleb128 0xa
- 2022 0359 74060000 		.4byte	.LASF67
+ 2022 0359 AE060000 		.4byte	.LASF67
  2023 035d 02       		.byte	0x2
  2024 035e 9801     		.2byte	0x198
  2025 0360 B2020000 		.4byte	0x2b2
  2026 0364 14       		.byte	0x14
  2027 0365 0A       		.uleb128 0xa
- 2028 0366 6A060000 		.4byte	.LASF68
+ 2028 0366 A4060000 		.4byte	.LASF68
  2029 036a 02       		.byte	0x2
  2030 036b 9B01     		.2byte	0x19b
  2031 036d B2020000 		.4byte	0x2b2
  2032 0371 18       		.byte	0x18
  2033 0372 00       		.byte	0
  2034 0373 03       		.uleb128 0x3
- 2035 0374 C9080000 		.4byte	.LASF69
+ 2035 0374 03090000 		.4byte	.LASF69
  2036 0378 0A       		.byte	0xa
  2037 0379 5C       		.byte	0x5c
  2038 037a 7E030000 		.4byte	0x37e
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2041 0380 84030000 		.4byte	0x384
  2042 0384 0D       		.uleb128 0xd
  2043 0385 8F030000 		.4byte	0x38f
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 37
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 37
 
 
  2044 0389 0E       		.uleb128 0xe
@@ -2167,12 +2167,12 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2047 038f 0F       		.uleb128 0xf
  2048 0390 04       		.byte	0x4
  2049 0391 03       		.uleb128 0x3
- 2050 0392 F8060000 		.4byte	.LASF70
+ 2050 0392 32070000 		.4byte	.LASF70
  2051 0396 0A       		.byte	0xa
  2052 0397 61       		.byte	0x61
  2053 0398 9C030000 		.4byte	0x39c
  2054 039c 0C       		.uleb128 0xc
- 2055 039d EE070000 		.4byte	.LASF71
+ 2055 039d 28080000 		.4byte	.LASF71
  2056 03a1 14       		.byte	0x14
  2057 03a2 02       		.byte	0x2
  2058 03a3 6B01     		.2byte	0x16b
@@ -2196,13 +2196,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2076 03cb 6E010000 		.4byte	0x16e
  2077 03cf 08       		.byte	0x8
  2078 03d0 0A       		.uleb128 0xa
- 2079 03d1 8D0A0000 		.4byte	.LASF75
+ 2079 03d1 680A0000 		.4byte	.LASF75
  2080 03d5 02       		.byte	0x2
  2081 03d6 6F01     		.2byte	0x16f
  2082 03d8 73030000 		.4byte	0x373
  2083 03dc 0C       		.byte	0xc
  2084 03dd 0A       		.uleb128 0xa
- 2085 03de 20090000 		.4byte	.LASF76
+ 2085 03de 5A090000 		.4byte	.LASF76
  2086 03e2 02       		.byte	0x2
  2087 03e3 7101     		.2byte	0x171
  2088 03e5 8F030000 		.4byte	0x38f
@@ -2214,11 +2214,11 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2094 03f1 66       		.byte	0x66
  2095 03f2 F6030000 		.4byte	0x3f6
  2096 03f6 0C       		.uleb128 0xc
- 2097 03f7 E8050000 		.4byte	.LASF78
+ 2097 03f7 F4050000 		.4byte	.LASF78
  2098 03fb 10       		.byte	0x10
  2099 03fc 02       		.byte	0x2
  2100 03fd 7B01     		.2byte	0x17b
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 38
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 38
 
 
  2101 03ff 38040000 		.4byte	0x438
@@ -2241,7 +2241,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2118 0425 6E010000 		.4byte	0x16e
  2119 0429 08       		.byte	0x8
  2120 042a 0A       		.uleb128 0xa
- 2121 042b 1C0A0000 		.4byte	.LASF79
+ 2121 042b F7090000 		.4byte	.LASF79
  2122 042f 02       		.byte	0x2
  2123 0430 8201     		.2byte	0x182
  2124 0432 79010000 		.4byte	0x179
@@ -2259,13 +2259,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2136 044b A201     		.2byte	0x1a2
  2137 044d 86040000 		.4byte	0x486
  2138 0451 0A       		.uleb128 0xa
- 2139 0452 EB080000 		.4byte	.LASF82
+ 2139 0452 25090000 		.4byte	.LASF82
  2140 0456 02       		.byte	0x2
  2141 0457 AA01     		.2byte	0x1aa
  2142 0459 A7080000 		.4byte	0x8a7
  2143 045d 00       		.byte	0
  2144 045e 0A       		.uleb128 0xa
- 2145 045f 59090000 		.4byte	.LASF83
+ 2145 045f 93090000 		.4byte	.LASF83
  2146 0463 02       		.byte	0x2
  2147 0464 AF01     		.2byte	0x1af
  2148 0466 58010000 		.4byte	0x158
@@ -2277,8 +2277,8 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2154 0473 58010000 		.4byte	0x158
  2155 0477 08       		.byte	0x8
  2156 0478 0A       		.uleb128 0xa
- 2157 0479 2F0A0000 		.4byte	.LASF85
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 39
+ 2157 0479 0A0A0000 		.4byte	.LASF85
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 39
 
 
  2158 047d 02       		.byte	0x2
@@ -2287,7 +2287,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2161 0484 0C       		.byte	0xc
  2162 0485 00       		.byte	0
  2163 0486 03       		.uleb128 0x3
- 2164 0487 F1040000 		.4byte	.LASF86
+ 2164 0487 FD040000 		.4byte	.LASF86
  2165 048b 0A       		.byte	0xa
  2166 048c 70       		.byte	0x70
  2167 048d 91040000 		.4byte	0x491
@@ -2298,7 +2298,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2172 0499 C201     		.2byte	0x1c2
  2173 049b FE040000 		.4byte	0x4fe
  2174 049f 0A       		.uleb128 0xa
- 2175 04a0 C9090000 		.4byte	.LASF88
+ 2175 04a0 A4090000 		.4byte	.LASF88
  2176 04a4 02       		.byte	0x2
  2177 04a5 C601     		.2byte	0x1c6
  2178 04a7 0C030000 		.4byte	0x30c
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2212 04f4 02       		.byte	0x2
  2213 04f5 E301     		.2byte	0x1e3
  2214 04f7 C4080000 		.4byte	0x8c4
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 40
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 40
 
 
  2215 04fb E804     		.2byte	0x4e8
@@ -2359,12 +2359,12 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2230 051b 65       		.byte	0x65
  2231 051c 8F030000 		.4byte	0x38f
  2232 0520 03       		.uleb128 0x3
- 2233 0521 3E050000 		.4byte	.LASF96
+ 2233 0521 4A050000 		.4byte	.LASF96
  2234 0525 0D       		.byte	0xd
  2235 0526 6D       		.byte	0x6d
  2236 0527 EA000000 		.4byte	0xea
  2237 052b 07       		.uleb128 0x7
- 2238 052c 07090000 		.4byte	.LASF97
+ 2238 052c 41090000 		.4byte	.LASF97
  2239 0530 04       		.byte	0x4
  2240 0531 0D       		.byte	0xd
  2241 0532 89       		.byte	0x89
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2269 0569 73313800 		.ascii	"s18\000"
  2270 056d 0E       		.byte	0xe
  2271 056e F8       		.byte	0xf8
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 41
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 41
 
 
  2272 056f 15050000 		.4byte	0x515
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2326 05dd 15050000 		.4byte	0x515
  2327 05e1 2C       		.byte	0x2c
  2328 05e2 09       		.uleb128 0x9
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 42
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 42
 
 
  2329 05e3 73323800 		.ascii	"s28\000"
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2383 0653 723900   		.ascii	"r9\000"
  2384 0656 0E       		.byte	0xe
  2385 0657 0C01     		.2byte	0x10c
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 43
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 43
 
 
  2386 0659 15050000 		.4byte	0x515
@@ -2551,7 +2551,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2413 068e 51       		.byte	0x51
  2414 068f C4060000 		.4byte	0x6c4
  2415 0693 08       		.uleb128 0x8
- 2416 0694 36090000 		.4byte	.LASF99
+ 2416 0694 70090000 		.4byte	.LASF99
  2417 0698 0F       		.byte	0xf
  2418 0699 55       		.byte	0x55
  2419 069a 6E010000 		.4byte	0x16e
@@ -2563,22 +2563,22 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2425 06a6 B2020000 		.4byte	0x2b2
  2426 06aa 04       		.byte	0x4
  2427 06ab 08       		.uleb128 0x8
- 2428 06ac 750A0000 		.4byte	.LASF101
+ 2428 06ac 500A0000 		.4byte	.LASF101
  2429 06b0 0F       		.byte	0xf
  2430 06b1 5D       		.byte	0x5d
  2431 06b2 8F030000 		.4byte	0x38f
  2432 06b6 08       		.byte	0x8
  2433 06b7 08       		.uleb128 0x8
- 2434 06b8 90070000 		.4byte	.LASF102
+ 2434 06b8 CA070000 		.4byte	.LASF102
  2435 06bc 0F       		.byte	0xf
  2436 06bd 61       		.byte	0x61
  2437 06be B4000000 		.4byte	0xb4
  2438 06c2 0C       		.byte	0xc
  2439 06c3 00       		.byte	0
  2440 06c4 03       		.uleb128 0x3
- 2441 06c5 28060000 		.4byte	.LASF103
+ 2441 06c5 62060000 		.4byte	.LASF103
  2442 06c9 0F       		.byte	0xf
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 44
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 44
 
 
  2443 06ca 62       		.byte	0x62
@@ -2595,13 +2595,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2454 06df 37000000 		.4byte	0x37
  2455 06e3 00       		.byte	0
  2456 06e4 08       		.uleb128 0x8
- 2457 06e5 21060000 		.4byte	.LASF105
+ 2457 06e5 5B060000 		.4byte	.LASF105
  2458 06e9 0F       		.byte	0xf
  2459 06ea 6F       		.byte	0x6f
  2460 06eb FD060000 		.4byte	0x6fd
  2461 06ef 04       		.byte	0x4
  2462 06f0 08       		.uleb128 0x8
- 2463 06f1 9A060000 		.4byte	.LASF106
+ 2463 06f1 D4060000 		.4byte	.LASF106
  2464 06f5 0F       		.byte	0xf
  2465 06f6 73       		.byte	0x73
  2466 06f7 03070000 		.4byte	0x703
@@ -2628,17 +2628,17 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2487 0721 38       		.byte	0x38
  2488 0722 33070000 		.4byte	0x733
  2489 0726 08       		.uleb128 0x8
- 2490 0727 F5080000 		.4byte	.LASF108
+ 2490 0727 2F090000 		.4byte	.LASF108
  2491 072b 10       		.byte	0x10
  2492 072c 3C       		.byte	0x3c
  2493 072d F5000000 		.4byte	0xf5
  2494 0731 00       		.byte	0
  2495 0732 00       		.byte	0
  2496 0733 03       		.uleb128 0x3
- 2497 0734 7D050000 		.4byte	.LASF109
+ 2497 0734 89050000 		.4byte	.LASF109
  2498 0738 10       		.byte	0x10
  2499 0739 3D       		.byte	0x3d
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 45
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 45
 
 
  2500 073a 1E070000 		.4byte	0x71e
@@ -2648,19 +2648,19 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2504 0741 48       		.byte	0x48
  2505 0742 81070000 		.4byte	0x781
  2506 0746 08       		.uleb128 0x8
- 2507 0747 A8080000 		.4byte	.LASF110
+ 2507 0747 E2080000 		.4byte	.LASF110
  2508 074b 10       		.byte	0x10
  2509 074c 49       		.byte	0x49
  2510 074d F5000000 		.4byte	0xf5
  2511 0751 00       		.byte	0
  2512 0752 08       		.uleb128 0x8
- 2513 0753 64060000 		.4byte	.LASF111
+ 2513 0753 9E060000 		.4byte	.LASF111
  2514 0757 10       		.byte	0x10
  2515 0758 4A       		.byte	0x4a
  2516 0759 F5000000 		.4byte	0xf5
  2517 075d 04       		.byte	0x4
  2518 075e 08       		.uleb128 0x8
- 2519 075f D4040000 		.4byte	.LASF112
+ 2519 075f E0040000 		.4byte	.LASF112
  2520 0763 10       		.byte	0x10
  2521 0764 4B       		.byte	0x4b
  2522 0765 F5000000 		.4byte	0xf5
@@ -2672,7 +2672,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2528 076f 63010000 		.4byte	0x163
  2529 0773 0C       		.byte	0xc
  2530 0774 08       		.uleb128 0x8
- 2531 0775 87060000 		.4byte	.LASF113
+ 2531 0775 C1060000 		.4byte	.LASF113
  2532 0779 10       		.byte	0x10
  2533 077a 4D       		.byte	0x4d
  2534 077b 00010000 		.4byte	0x100
@@ -2689,35 +2689,35 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2545 078f 38       		.byte	0x38
  2546 0790 C5070000 		.4byte	0x7c5
  2547 0794 08       		.uleb128 0x8
- 2548 0795 A1040000 		.4byte	.LASF115
+ 2548 0795 AD040000 		.4byte	.LASF115
  2549 0799 11       		.byte	0x11
  2550 079a 39       		.byte	0x39
  2551 079b 63010000 		.4byte	0x163
  2552 079f 00       		.byte	0
  2553 07a0 08       		.uleb128 0x8
- 2554 07a1 2B070000 		.4byte	.LASF116
+ 2554 07a1 65070000 		.4byte	.LASF116
  2555 07a5 11       		.byte	0x11
  2556 07a6 3A       		.byte	0x3a
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 46
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 46
 
 
  2557 07a7 63010000 		.4byte	0x163
  2558 07ab 04       		.byte	0x4
  2559 07ac 08       		.uleb128 0x8
- 2560 07ad 620A0000 		.4byte	.LASF117
+ 2560 07ad 3D0A0000 		.4byte	.LASF117
  2561 07b1 11       		.byte	0x11
  2562 07b2 3B       		.byte	0x3b
  2563 07b3 81070000 		.4byte	0x781
  2564 07b7 08       		.byte	0x8
  2565 07b8 08       		.uleb128 0x8
- 2566 07b9 0F050000 		.4byte	.LASF118
+ 2566 07b9 1B050000 		.4byte	.LASF118
  2567 07bd 11       		.byte	0x11
  2568 07be 3D       		.byte	0x3d
  2569 07bf 81070000 		.4byte	0x781
  2570 07c3 20       		.byte	0x20
  2571 07c4 00       		.byte	0
  2572 07c5 03       		.uleb128 0x3
- 2573 07c6 B5040000 		.4byte	.LASF119
+ 2573 07c6 C1040000 		.4byte	.LASF119
  2574 07ca 11       		.byte	0x11
  2575 07cb 3F       		.byte	0x3f
  2576 07cc 8C070000 		.4byte	0x78c
@@ -2737,7 +2737,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2590 07ea 0801     		.2byte	0x108
  2591 07ec 42010000 		.4byte	0x142
  2592 07f0 1B       		.uleb128 0x1b
- 2593 07f1 FC090000 		.4byte	.LASF122
+ 2593 07f1 D7090000 		.4byte	.LASF122
  2594 07f5 02       		.byte	0x2
  2595 07f6 0F01     		.2byte	0x10f
  2596 07f8 8F030000 		.4byte	0x38f
@@ -2752,13 +2752,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2605 080e 1E01     		.2byte	0x11e
  2606 0810 58080000 		.4byte	0x858
  2607 0814 1B       		.uleb128 0x1b
- 2608 0815 8D080000 		.4byte	.LASF125
+ 2608 0815 C7080000 		.4byte	.LASF125
  2609 0819 02       		.byte	0x2
  2610 081a 2701     		.2byte	0x127
  2611 081c 9B080000 		.4byte	0x89b
  2612 0820 1B       		.uleb128 0x1b
- 2613 0821 99070000 		.4byte	.LASF126
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 47
+ 2613 0821 D3070000 		.4byte	.LASF126
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 47
 
 
  2614 0825 02       		.byte	0x2
@@ -2769,7 +2769,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2619 082e 04       		.byte	0x4
  2620 082f A7020000 		.4byte	0x2a7
  2621 0833 07       		.uleb128 0x7
- 2622 0834 1D080000 		.4byte	.LASF127
+ 2622 0834 57080000 		.4byte	.LASF127
  2623 0838 0C       		.byte	0xc
  2624 0839 12       		.byte	0x12
  2625 083a 34       		.byte	0x34
@@ -2781,7 +2781,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2631 0846 DC020000 		.4byte	0x2dc
  2632 084a 00       		.byte	0
  2633 084b 08       		.uleb128 0x8
- 2634 084c A7040000 		.4byte	.LASF129
+ 2634 084c B3040000 		.4byte	.LASF129
  2635 0850 12       		.byte	0x12
  2636 0851 37       		.byte	0x37
  2637 0852 58010000 		.4byte	0x158
@@ -2791,7 +2791,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2641 0859 04       		.byte	0x4
  2642 085a 33080000 		.4byte	0x833
  2643 085e 07       		.uleb128 0x7
- 2644 085f 49090000 		.4byte	.LASF130
+ 2644 085f 83090000 		.4byte	.LASF130
  2645 0863 14       		.byte	0x14
  2646 0864 13       		.byte	0x13
  2647 0865 39       		.byte	0x39
@@ -2803,13 +2803,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2653 0871 DC020000 		.4byte	0x2dc
  2654 0875 00       		.byte	0
  2655 0876 08       		.uleb128 0x8
- 2656 0877 6D0A0000 		.4byte	.LASF132
+ 2656 0877 480A0000 		.4byte	.LASF132
  2657 087b 13       		.byte	0x13
  2658 087c 3C       		.byte	0x3c
  2659 087d B2020000 		.4byte	0x2b2
  2660 0881 08       		.byte	0x8
  2661 0882 08       		.uleb128 0x8
- 2662 0883 AD080000 		.4byte	.LASF133
+ 2662 0883 E7080000 		.4byte	.LASF133
  2663 0887 13       		.byte	0x13
  2664 0888 3E       		.byte	0x3e
  2665 0889 F6090000 		.4byte	0x9f6
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2668 088f C7020000 		.4byte	.LASF134
  2669 0893 13       		.byte	0x13
  2670 0894 41       		.byte	0x41
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 48
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 48
 
 
  2671 0895 58010000 		.4byte	0x158
@@ -2835,7 +2835,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2682 08ac 04       		.uleb128 0x4
  2683 08ad 01       		.byte	0x1
  2684 08ae 08       		.byte	0x8
- 2685 08af 88080000 		.4byte	.LASF135
+ 2685 08af C2080000 		.4byte	.LASF135
  2686 08b3 05       		.uleb128 0x5
  2687 08b4 AC080000 		.4byte	0x8ac
  2688 08b8 0B       		.uleb128 0xb
@@ -2862,40 +2862,40 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2709 08e2 34       		.byte	0x34
  2710 08e3 C0090000 		.4byte	0x9c0
  2711 08e7 08       		.uleb128 0x8
- 2712 08e8 7F0A0000 		.4byte	.LASF136
+ 2712 08e8 5A0A0000 		.4byte	.LASF136
  2713 08ec 14       		.byte	0x14
  2714 08ed 35       		.byte	0x35
  2715 08ee C0090000 		.4byte	0x9c0
  2716 08f2 00       		.byte	0
  2717 08f3 08       		.uleb128 0x8
- 2718 08f4 69050000 		.4byte	.LASF137
+ 2718 08f4 75050000 		.4byte	.LASF137
  2719 08f8 14       		.byte	0x14
  2720 08f9 36       		.byte	0x36
  2721 08fa B4000000 		.4byte	0xb4
  2722 08fe 04       		.byte	0x4
  2723 08ff 08       		.uleb128 0x8
- 2724 0900 6E080000 		.4byte	.LASF138
+ 2724 0900 A8080000 		.4byte	.LASF138
  2725 0904 14       		.byte	0x14
  2726 0905 37       		.byte	0x37
  2727 0906 B4000000 		.4byte	0xb4
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 49
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 49
 
 
  2728 090a 05       		.byte	0x5
  2729 090b 08       		.uleb128 0x8
- 2730 090c 480A0000 		.4byte	.LASF139
+ 2730 090c 230A0000 		.4byte	.LASF139
  2731 0910 14       		.byte	0x14
  2732 0911 38       		.byte	0x38
  2733 0912 C4000000 		.4byte	0xc4
  2734 0916 06       		.byte	0x6
  2735 0917 08       		.uleb128 0x8
- 2736 0918 A4060000 		.4byte	.LASF140
+ 2736 0918 DE060000 		.4byte	.LASF140
  2737 091c 14       		.byte	0x14
  2738 091d 39       		.byte	0x39
  2739 091e B4000000 		.4byte	0xb4
  2740 0922 08       		.byte	0x8
  2741 0923 08       		.uleb128 0x8
- 2742 0924 15060000 		.4byte	.LASF141
+ 2742 0924 A1040000 		.4byte	.LASF141
  2743 0928 14       		.byte	0x14
  2744 0929 3A       		.byte	0x3a
  2745 092a B4000000 		.4byte	0xb4
@@ -2907,19 +2907,19 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2751 0936 B4000000 		.4byte	0xb4
  2752 093a 0A       		.byte	0xa
  2753 093b 08       		.uleb128 0x8
- 2754 093c 4A080000 		.4byte	.LASF143
+ 2754 093c 84080000 		.4byte	.LASF143
  2755 0940 14       		.byte	0x14
  2756 0941 3C       		.byte	0x3c
  2757 0942 B4000000 		.4byte	0xb4
  2758 0946 0B       		.byte	0xb
  2759 0947 08       		.uleb128 0x8
- 2760 0948 3E090000 		.4byte	.LASF144
+ 2760 0948 78090000 		.4byte	.LASF144
  2761 094c 14       		.byte	0x14
  2762 094d 3D       		.byte	0x3d
  2763 094e B4000000 		.4byte	0xb4
  2764 0952 0C       		.byte	0xc
  2765 0953 08       		.uleb128 0x8
- 2766 0954 FF070000 		.4byte	.LASF145
+ 2766 0954 39080000 		.4byte	.LASF145
  2767 0958 14       		.byte	0x14
  2768 0959 3E       		.byte	0x3e
  2769 095a B4000000 		.4byte	0xb4
@@ -2931,14 +2931,14 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2775 0966 B4000000 		.4byte	0xb4
  2776 096a 0E       		.byte	0xe
  2777 096b 08       		.uleb128 0x8
- 2778 096c 37060000 		.4byte	.LASF147
+ 2778 096c 71060000 		.4byte	.LASF147
  2779 0970 14       		.byte	0x14
  2780 0971 40       		.byte	0x40
  2781 0972 B4000000 		.4byte	0xb4
  2782 0976 0F       		.byte	0xf
  2783 0977 08       		.uleb128 0x8
  2784 0978 BE010000 		.4byte	.LASF148
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 50
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 50
 
 
  2785 097c 14       		.byte	0x14
@@ -2958,19 +2958,19 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2799 0996 B4000000 		.4byte	0xb4
  2800 099a 12       		.byte	0x12
  2801 099b 08       		.uleb128 0x8
- 2802 099c 71050000 		.4byte	.LASF151
+ 2802 099c 7D050000 		.4byte	.LASF151
  2803 09a0 14       		.byte	0x14
  2804 09a1 45       		.byte	0x45
  2805 09a2 B4000000 		.4byte	0xb4
  2806 09a6 13       		.byte	0x13
  2807 09a7 08       		.uleb128 0x8
- 2808 09a8 AC070000 		.4byte	.LASF152
+ 2808 09a8 E6070000 		.4byte	.LASF152
  2809 09ac 14       		.byte	0x14
  2810 09ad 46       		.byte	0x46
  2811 09ae B4000000 		.4byte	0xb4
  2812 09b2 14       		.byte	0x14
  2813 09b3 08       		.uleb128 0x8
- 2814 09b4 84070000 		.4byte	.LASF153
+ 2814 09b4 BE070000 		.4byte	.LASF153
  2815 09b8 14       		.byte	0x14
  2816 09b9 48       		.byte	0x48
  2817 09ba B4000000 		.4byte	0xb4
@@ -2996,9 +2996,9 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2837 09e6 6E       		.byte	0x6e
  2838 09e7 DB090000 		.4byte	0x9db
  2839 09eb 03       		.uleb128 0x3
- 2840 09ec 5A0A0000 		.4byte	.LASF156
+ 2840 09ec 350A0000 		.4byte	.LASF156
  2841 09f0 13       		.byte	0x13
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 51
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 51
 
 
  2842 09f1 34       		.byte	0x34
@@ -3012,7 +3012,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2850 0a02 3F       		.byte	0x3f
  2851 0a03 070A0000 		.4byte	0xa07
  2852 0a07 07       		.uleb128 0x7
- 2853 0a08 AA050000 		.4byte	.LASF158
+ 2853 0a08 B6050000 		.4byte	.LASF158
  2854 0a0c 24       		.byte	0x24
  2855 0a0d 03       		.byte	0x3
  2856 0a0e 4D       		.byte	0x4d
@@ -3024,7 +3024,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2862 0a1a DC020000 		.4byte	0x2dc
  2863 0a1e 00       		.byte	0
  2864 0a1f 08       		.uleb128 0x8
- 2865 0a20 FF050000 		.4byte	.LASF160
+ 2865 0a20 0B060000 		.4byte	.LASF160
  2866 0a24 03       		.byte	0x3
  2867 0a25 4F       		.byte	0x4f
  2868 0a26 2C000000 		.4byte	0x2c
@@ -3042,35 +3042,35 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2880 0a3e 960A0000 		.4byte	0xa96
  2881 0a42 10       		.byte	0x10
  2882 0a43 08       		.uleb128 0x8
- 2883 0a44 AD040000 		.4byte	.LASF163
+ 2883 0a44 B9040000 		.4byte	.LASF163
  2884 0a48 03       		.byte	0x3
  2885 0a49 53       		.byte	0x53
  2886 0a4a 960A0000 		.4byte	0xa96
  2887 0a4e 14       		.byte	0x14
  2888 0a4f 08       		.uleb128 0x8
- 2889 0a50 23070000 		.4byte	.LASF164
+ 2889 0a50 5D070000 		.4byte	.LASF164
  2890 0a54 03       		.byte	0x3
  2891 0a55 54       		.byte	0x54
  2892 0a56 960A0000 		.4byte	0xa96
  2893 0a5a 18       		.byte	0x18
  2894 0a5b 08       		.uleb128 0x8
- 2895 0a5c C0090000 		.4byte	.LASF165
+ 2895 0a5c 9B090000 		.4byte	.LASF165
  2896 0a60 03       		.byte	0x3
  2897 0a61 55       		.byte	0x55
  2898 0a62 740A0000 		.4byte	0xa74
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 52
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 52
 
 
  2899 0a66 1C       		.byte	0x1c
  2900 0a67 08       		.uleb128 0x8
- 2901 0a68 530A0000 		.4byte	.LASF166
+ 2901 0a68 2E0A0000 		.4byte	.LASF166
  2902 0a6c 03       		.byte	0x3
  2903 0a6d 56       		.byte	0x56
  2904 0a6e 8F030000 		.4byte	0x38f
  2905 0a72 20       		.byte	0x20
  2906 0a73 00       		.byte	0
  2907 0a74 03       		.uleb128 0x3
- 2908 0a75 EE060000 		.4byte	.LASF167
+ 2908 0a75 28070000 		.4byte	.LASF167
  2909 0a79 03       		.byte	0x3
  2910 0a7a 42       		.byte	0x42
  2911 0a7b 7F0A0000 		.4byte	0xa7f
@@ -3089,7 +3089,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2924 0a97 04       		.byte	0x4
  2925 0a98 B4000000 		.4byte	0xb4
  2926 0a9c 03       		.uleb128 0x3
- 2927 0a9d 50070000 		.4byte	.LASF168
+ 2927 0a9d 8A070000 		.4byte	.LASF168
  2928 0aa1 03       		.byte	0x3
  2929 0aa2 64       		.byte	0x64
  2930 0aa3 FC090000 		.4byte	0x9fc
@@ -3102,7 +3102,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2937 0ab3 04       		.byte	0x4
  2938 0ab4 BF000000 		.4byte	0xbf
  2939 0ab8 1D       		.uleb128 0x1d
- 2940 0ab9 49050000 		.4byte	.LASF171
+ 2940 0ab9 55050000 		.4byte	.LASF171
  2941 0abd 01       		.byte	0x1
  2942 0abe 9A01     		.2byte	0x19a
  2943 0ac0 2C000000 		.4byte	0x2c
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2953 0ada 4A0D0000 		.4byte	0xd4a
  2954 0ade 00000000 		.4byte	.LLST43
  2955 0ae2 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 53
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 53
 
 
  2956 0ae3 627000   		.ascii	"bp\000"
@@ -3152,7 +3152,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  2984 0b23 2C000000 		.4byte	0x2c
  2985 0b27 D4000000 		.4byte	.LLST47
  2986 0b2b 22       		.uleb128 0x22
- 2987 0b2c C3070000 		.4byte	.LASF180
+ 2987 0b2c FD070000 		.4byte	.LASF180
  2988 0b30 600D0000 		.4byte	0xd60
  2989 0b34 05       		.uleb128 0x5
  2990 0b35 03       		.byte	0x3
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3010 0b6f 0E       		.byte	0xe
  3011 0b70 BF01     		.2byte	0x1bf
  3012 0b72 25       		.uleb128 0x25
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 54
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 54
 
 
  3013 0b73 7E170000 		.4byte	0x177e
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3067 0bfd 00000000 		.4byte	.LANCHOR0
  3068 0c01 00       		.byte	0
  3069 0c02 00       		.byte	0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 55
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 55
 
 
  3070 0c03 00       		.byte	0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3124 0c97 01       		.byte	0x1
  3125 0c98 A501     		.2byte	0x1a5
  3126 0c9a FE0C0000 		.4byte	0xcfe
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 56
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 56
 
 
  3127 0c9e 28       		.uleb128 0x28
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3181 0d1b 2C       		.uleb128 0x2c
  3182 0d1c 01       		.uleb128 0x1
  3183 0d1d 50       		.byte	0x50
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 57
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 57
 
 
  3184 0d1e 02       		.uleb128 0x2
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3238 0d8f 21       		.uleb128 0x21
  3239 0d90 6200     		.ascii	"b\000"
  3240 0d92 01       		.byte	0x1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 58
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 58
 
 
  3241 0d93 6F01     		.2byte	0x16f
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3295 0e12 4A0D0000 		.4byte	0xd4a
  3296 0e16 F5010000 		.4byte	.LLST33
  3297 0e1a 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 59
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 59
 
 
  3298 0e1b 6200     		.ascii	"b\000"
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3352 0eac 92000000 		.4byte	.LVL101
  3353 0eb0 AC170000 		.4byte	0x17ac
  3354 0eb4 2B       		.uleb128 0x2b
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 60
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 60
 
 
  3355 0eb5 AA000000 		.4byte	.LVL102
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3409 0f24 1C000000 		.4byte	.LVL88
  3410 0f28 8B170000 		.4byte	0x178b
  3411 0f2c 26       		.uleb128 0x26
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 61
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 61
 
 
  3412 0f2d 20000000 		.4byte	.LVL89
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3466 0fbb B8000000 		.4byte	.LVL105
  3467 0fbf B7170000 		.4byte	0x17b7
  3468 0fc3 2C       		.uleb128 0x2c
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 62
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 62
 
 
  3469 0fc4 01       		.uleb128 0x1
@@ -3684,7 +3684,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3489 0fe4 D9170000 		.4byte	0x17d9
  3490 0fe8 00       		.byte	0
  3491 0fe9 32       		.uleb128 0x32
- 3492 0fea FC080000 		.4byte	.LASF174
+ 3492 0fea 36090000 		.4byte	.LASF174
  3493 0fee 01       		.byte	0x1
  3494 0fef 2B01     		.2byte	0x12b
  3495 0ff1 00000000 		.4byte	.LFB225
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3523 102f 02       		.uleb128 0x2
  3524 1030 09       		.byte	0x9
  3525 1031 FE       		.byte	0xfe
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 63
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 63
 
 
  3526 1032 00       		.byte	0
@@ -3727,7 +3727,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3529 1038 D9170000 		.4byte	0x17d9
  3530 103c 00       		.byte	0
  3531 103d 32       		.uleb128 0x32
- 3532 103e 27090000 		.4byte	.LASF175
+ 3532 103e 61090000 		.4byte	.LASF175
  3533 1042 01       		.byte	0x1
  3534 1043 1301     		.2byte	0x113
  3535 1045 00000000 		.4byte	.LFB224
@@ -3748,7 +3748,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3550 106a 960A0000 		.4byte	0xa96
  3551 106e 1B030000 		.4byte	.LLST28
  3552 1072 1F       		.uleb128 0x1f
- 3553 1073 0A0A0000 		.4byte	.LASF176
+ 3553 1073 E5090000 		.4byte	.LASF176
  3554 1077 01       		.byte	0x1
  3555 1078 1301     		.2byte	0x113
  3556 107a 2C000000 		.4byte	0x2c
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3580 10bc 45170000 		.4byte	0x1745
  3581 10c0 0C000000 		.4byte	.LBB158
  3582 10c4 04000000 		.4byte	.LBE158-.LBB158
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 64
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 64
 
 
  3583 10c8 15       		.byte	0x15
@@ -3838,11 +3838,11 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3637 113f E2       		.byte	0xe2
  3638 1140 2C000000 		.4byte	0x2c
  3639 1144 99040000 		.4byte	.LLST21
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 65
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 65
 
 
  3640 1148 22       		.uleb128 0x22
- 3641 1149 C3070000 		.4byte	.LASF180
+ 3641 1149 FD070000 		.4byte	.LASF180
  3642 114d 72130000 		.4byte	0x1372
  3643 1151 05       		.uleb128 0x5
  3644 1152 03       		.byte	0x3
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3694 11d7 70000000 		.4byte	.LBB140
  3695 11db 48000000 		.4byte	.Ldebug_ranges0+0x48
  3696 11df 01       		.byte	0x1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 66
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 66
 
 
  3697 11e0 F8       		.byte	0xf8
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3751 1266 5C01     		.2byte	0x15c
  3752 1268 87120000 		.4byte	0x1287
  3753 126c 24       		.uleb128 0x24
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 67
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 67
 
 
  3754 126d 71170000 		.4byte	0x1771
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3808 12fd C2000000 		.4byte	.LVL66
  3809 1301 B7170000 		.4byte	0x17b7
  3810 1305 2C       		.uleb128 0x2c
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 68
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 68
 
 
  3811 1306 01       		.uleb128 0x1
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3865 1363 B3080000 		.4byte	0x8b3
  3866 1367 72130000 		.4byte	0x1372
  3867 136b 19       		.uleb128 0x19
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 69
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 69
 
 
  3868 136c 37000000 		.4byte	0x37
@@ -4087,7 +4087,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3871 1372 05       		.uleb128 0x5
  3872 1373 62130000 		.4byte	0x1362
  3873 1377 35       		.uleb128 0x35
- 3874 1378 950A0000 		.4byte	.LASF181
+ 3874 1378 700A0000 		.4byte	.LASF181
  3875 137c 01       		.byte	0x1
  3876 137d AD       		.byte	0xad
  3877 137e 42010000 		.4byte	0x142
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3922 13e8 51       		.byte	0x51
  3923 13e9 02       		.uleb128 0x2
  3924 13ea 76       		.byte	0x76
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 70
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 70
 
 
  3925 13eb 00       		.sleb128 0
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  3979 1474 01       		.byte	0x1
  3980 1475 C2       		.byte	0xc2
  3981 1476 DA140000 		.4byte	0x14da
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 71
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 71
 
 
  3982 147a 28       		.uleb128 0x28
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4036 14f4 35       		.uleb128 0x35
  4037 14f5 BE020000 		.4byte	.LASF182
  4038 14f9 01       		.byte	0x1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 72
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 72
 
 
  4039 14fa 86       		.byte	0x86
@@ -4318,10 +4318,10 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4093 1576 D9170000 		.4byte	0x17d9
  4094 157a 00       		.byte	0
  4095 157b 3D       		.uleb128 0x3d
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 73
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 73
 
 
- 4096 157c 15090000 		.4byte	.LASF183
+ 4096 157c 4F090000 		.4byte	.LASF183
  4097 1580 01       		.byte	0x1
  4098 1581 6F       		.byte	0x6f
  4099 1582 00000000 		.4byte	.LFB220
@@ -4378,20 +4378,20 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4150 15f1 36       		.uleb128 0x36
  4151 15f2 627000   		.ascii	"bp\000"
  4152 15f5 01       		.byte	0x1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 74
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 74
 
 
  4153 15f6 57       		.byte	0x57
  4154 15f7 960A0000 		.4byte	0xa96
  4155 15fb AB060000 		.4byte	.LLST1
  4156 15ff 37       		.uleb128 0x37
- 4157 1600 0A0A0000 		.4byte	.LASF176
+ 4157 1600 E5090000 		.4byte	.LASF176
  4158 1604 01       		.byte	0x1
  4159 1605 57       		.byte	0x57
  4160 1606 2C000000 		.4byte	0x2c
  4161 160a D8060000 		.4byte	.LLST2
  4162 160e 37       		.uleb128 0x37
- 4163 160f A7070000 		.4byte	.LASF185
+ 4163 160f E1070000 		.4byte	.LASF185
  4164 1613 01       		.byte	0x1
  4165 1614 58       		.byte	0x58
  4166 1615 740A0000 		.4byte	0xa74
@@ -4428,7 +4428,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4197 1668 D9170000 		.4byte	0x17d9
  4198 166c 00       		.byte	0
  4199 166d 3E       		.uleb128 0x3e
- 4200 166e 0F070000 		.4byte	.LASF187
+ 4200 166e 49070000 		.4byte	.LASF187
  4201 1672 03       		.byte	0x3
  4202 1673 9301     		.2byte	0x193
  4203 1675 8B160000 		.4byte	0x168b
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4207 167f 6F717000 		.ascii	"oqp\000"
  4208 1683 03       		.byte	0x3
  4209 1684 9301     		.2byte	0x193
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 75
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 75
 
 
  4210 1686 4A0D0000 		.4byte	0xd4a
@@ -4446,9 +4446,9 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4212 168b 04       		.uleb128 0x4
  4213 168c 01       		.byte	0x1
  4214 168d 02       		.byte	0x2
- 4215 168e 34070000 		.4byte	.LASF186
+ 4215 168e 6E070000 		.4byte	.LASF186
  4216 1692 3E       		.uleb128 0x3e
- 4217 1693 0F0A0000 		.4byte	.LASF188
+ 4217 1693 EA090000 		.4byte	.LASF188
  4218 1697 03       		.byte	0x3
  4219 1698 8201     		.2byte	0x182
  4220 169a 8B160000 		.4byte	0x168b
@@ -4461,7 +4461,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4227 16ab 4A0D0000 		.4byte	0xd4a
  4228 16af 00       		.byte	0
  4229 16b0 3E       		.uleb128 0x3e
- 4230 16b1 35080000 		.4byte	.LASF189
+ 4230 16b1 6F080000 		.4byte	.LASF189
  4231 16b5 03       		.byte	0x3
  4232 16b6 4001     		.2byte	0x140
  4233 16b8 8B160000 		.4byte	0x168b
@@ -4474,7 +4474,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4240 16c9 5C130000 		.4byte	0x135c
  4241 16cd 00       		.byte	0
  4242 16ce 3E       		.uleb128 0x3e
- 4243 16cf 57060000 		.4byte	.LASF190
+ 4243 16cf 91060000 		.4byte	.LASF190
  4244 16d3 03       		.byte	0x3
  4245 16d4 2F01     		.2byte	0x12f
  4246 16d6 8B160000 		.4byte	0x168b
@@ -4487,7 +4487,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4253 16e7 5C130000 		.4byte	0x135c
  4254 16eb 00       		.byte	0
  4255 16ec 40       		.uleb128 0x40
- 4256 16ed 8E050000 		.4byte	.LASF191
+ 4256 16ed 9A050000 		.4byte	.LASF191
  4257 16f1 15       		.byte	0x15
  4258 16f2 1601     		.2byte	0x116
  4259 16f4 03       		.byte	0x3
@@ -4498,22 +4498,22 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4264 16ff 1601     		.2byte	0x116
  4265 1701 06170000 		.4byte	0x1706
  4266 1705 00       		.byte	0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 76
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 76
 
 
  4267 1706 0B       		.uleb128 0xb
  4268 1707 04       		.byte	0x4
  4269 1708 DC020000 		.4byte	0x2dc
  4270 170c 40       		.uleb128 0x40
- 4271 170d 3C0A0000 		.4byte	.LASF192
+ 4271 170d 170A0000 		.4byte	.LASF192
  4272 1711 05       		.byte	0x5
  4273 1712 6601     		.2byte	0x166
  4274 1714 03       		.byte	0x3
  4275 1715 27170000 		.4byte	0x1727
  4276 1719 41       		.uleb128 0x41
- 4277 171a C3070000 		.4byte	.LASF180
+ 4277 171a FD070000 		.4byte	.LASF180
  4278 171e 37170000 		.4byte	0x1737
- 4279 1722 3C0A0000 		.4byte	.LASF192
+ 4279 1722 170A0000 		.4byte	.LASF192
  4280 1726 00       		.byte	0
  4281 1727 18       		.uleb128 0x18
  4282 1728 B3080000 		.4byte	0x8b3
@@ -4525,7 +4525,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4288 1737 05       		.uleb128 0x5
  4289 1738 27170000 		.4byte	0x1727
  4290 173c 42       		.uleb128 0x42
- 4291 173d D4070000 		.4byte	.LASF194
+ 4291 173d 0E080000 		.4byte	.LASF194
  4292 1741 05       		.byte	0x5
  4293 1742 5A01     		.2byte	0x15a
  4294 1744 03       		.byte	0x3
@@ -4552,13 +4552,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4315 176e BC01     		.2byte	0x1bc
  4316 1770 03       		.byte	0x3
  4317 1771 40       		.uleb128 0x40
- 4318 1772 DD080000 		.4byte	.LASF197
+ 4318 1772 17090000 		.4byte	.LASF197
  4319 1776 04       		.byte	0x4
  4320 1777 2002     		.2byte	0x220
  4321 1779 03       		.byte	0x3
  4322 177a 8B170000 		.4byte	0x178b
  4323 177e 43       		.uleb128 0x43
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 77
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 77
 
 
  4324 177f D5020000 		.4byte	.LASF198
@@ -4572,18 +4572,18 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4332 1794 11       		.byte	0x11
  4333 1795 4F       		.byte	0x4f
  4334 1796 44       		.uleb128 0x44
- 4335 1797 D8050000 		.4byte	.LASF200
- 4336 179b D8050000 		.4byte	.LASF200
+ 4335 1797 E4050000 		.4byte	.LASF200
+ 4336 179b E4050000 		.4byte	.LASF200
  4337 179f 0F       		.byte	0xf
  4338 17a0 D8       		.byte	0xd8
  4339 17a1 44       		.uleb128 0x44
- 4340 17a2 D7090000 		.4byte	.LASF201
- 4341 17a6 D7090000 		.4byte	.LASF201
+ 4340 17a2 B2090000 		.4byte	.LASF201
+ 4341 17a6 B2090000 		.4byte	.LASF201
  4342 17aa 0F       		.byte	0xf
  4343 17ab D9       		.byte	0xd9
  4344 17ac 44       		.uleb128 0x44
- 4345 17ad B3050000 		.4byte	.LASF202
- 4346 17b1 B3050000 		.4byte	.LASF202
+ 4345 17ad BF050000 		.4byte	.LASF202
+ 4346 17b1 BF050000 		.4byte	.LASF202
  4347 17b5 11       		.byte	0x11
  4348 17b6 50       		.byte	0x50
  4349 17b7 45       		.uleb128 0x45
@@ -4592,21 +4592,21 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4352 17c0 05       		.byte	0x5
  4353 17c1 1601     		.2byte	0x116
  4354 17c3 44       		.uleb128 0x44
- 4355 17c4 E0040000 		.4byte	.LASF204
- 4356 17c8 E0040000 		.4byte	.LASF204
+ 4355 17c4 EC040000 		.4byte	.LASF204
+ 4356 17c8 EC040000 		.4byte	.LASF204
  4357 17cc 0F       		.byte	0xf
  4358 17cd DE       		.byte	0xde
  4359 17ce 44       		.uleb128 0x44
- 4360 17cf A40A0000 		.4byte	.LASF205
- 4361 17d3 A40A0000 		.4byte	.LASF205
+ 4360 17cf 7F0A0000 		.4byte	.LASF205
+ 4361 17d3 7F0A0000 		.4byte	.LASF205
  4362 17d7 15       		.byte	0x15
  4363 17d8 92       		.byte	0x92
  4364 17d9 46       		.uleb128 0x46
- 4365 17da 0C080000 		.4byte	.LASF211
- 4366 17de 0C080000 		.4byte	.LASF211
+ 4365 17da 46080000 		.4byte	.LASF211
+ 4366 17de 46080000 		.4byte	.LASF211
  4367 17e2 44       		.uleb128 0x44
- 4368 17e3 FD040000 		.4byte	.LASF206
- 4369 17e7 FD040000 		.4byte	.LASF206
+ 4368 17e3 09050000 		.4byte	.LASF206
+ 4369 17e7 09050000 		.4byte	.LASF206
  4370 17eb 15       		.byte	0x15
  4371 17ec 93       		.byte	0x93
  4372 17ed 44       		.uleb128 0x44
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4378              		.section	.debug_abbrev,"",%progbits
  4379              	.Ldebug_abbrev0:
  4380 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 78
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 78
 
 
  4381 0001 11       		.uleb128 0x11
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4435 0037 26       		.uleb128 0x26
  4436 0038 00       		.byte	0
  4437 0039 49       		.uleb128 0x49
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 79
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 79
 
 
  4438 003a 13       		.uleb128 0x13
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4492 0070 00       		.byte	0
  4493 0071 0A       		.uleb128 0xa
  4494 0072 0D       		.uleb128 0xd
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 80
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 80
 
 
  4495 0073 00       		.byte	0
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4549 00a9 0F       		.uleb128 0xf
  4550 00aa 00       		.byte	0
  4551 00ab 0B       		.uleb128 0xb
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 81
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 81
 
 
  4552 00ac 0B       		.uleb128 0xb
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4606 00e2 0B       		.uleb128 0xb
  4607 00e3 3B       		.uleb128 0x3b
  4608 00e4 05       		.uleb128 0x5
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 82
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 82
 
 
  4609 00e5 49       		.uleb128 0x49
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4663 011b 13       		.uleb128 0x13
  4664 011c 01       		.byte	0x1
  4665 011d 0B       		.uleb128 0xb
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 83
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 83
 
 
  4666 011e 05       		.uleb128 0x5
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4720 0154 34       		.uleb128 0x34
  4721 0155 00       		.byte	0
  4722 0156 03       		.uleb128 0x3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 84
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 84
 
 
  4723 0157 08       		.uleb128 0x8
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4777 018e 00       		.byte	0
  4778 018f 1F       		.uleb128 0x1f
  4779 0190 05       		.uleb128 0x5
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 85
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 85
 
 
  4780 0191 00       		.byte	0
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4834 01c7 00       		.byte	0
  4835 01c8 00       		.byte	0
  4836 01c9 23       		.uleb128 0x23
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 86
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 86
 
 
  4837 01ca 1D       		.uleb128 0x1d
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4891 0202 52       		.uleb128 0x52
  4892 0203 01       		.uleb128 0x1
  4893 0204 55       		.uleb128 0x55
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 87
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 87
 
 
  4894 0205 17       		.uleb128 0x17
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  4948 0240 00       		.byte	0
  4949 0241 00       		.byte	0
  4950 0242 2D       		.uleb128 0x2d
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 88
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 88
 
 
  4951 0243 898201   		.uleb128 0x4109
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5005 027d 0B       		.uleb128 0xb
  5006 027e 3B       		.uleb128 0x3b
  5007 027f 05       		.uleb128 0x5
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 89
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 89
 
 
  5008 0280 27       		.uleb128 0x27
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5062 02ba 18       		.uleb128 0x18
  5063 02bb 9742     		.uleb128 0x2117
  5064 02bd 19       		.uleb128 0x19
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 90
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 90
 
 
  5065 02be 01       		.uleb128 0x1
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5119 02f4 3A       		.uleb128 0x3a
  5120 02f5 0B       		.uleb128 0xb
  5121 02f6 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 91
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 91
 
 
  5122 02f7 0B       		.uleb128 0xb
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5176 032d 01       		.byte	0x1
  5177 032e 3F       		.uleb128 0x3f
  5178 032f 19       		.uleb128 0x19
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 92
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 92
 
 
  5179 0330 03       		.uleb128 0x3
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5233 0367 01       		.byte	0x1
  5234 0368 03       		.uleb128 0x3
  5235 0369 0E       		.uleb128 0xe
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 93
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 93
 
 
  5236 036a 3A       		.uleb128 0x3a
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5290 03a0 2E       		.uleb128 0x2e
  5291 03a1 00       		.byte	0
  5292 03a2 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 94
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 94
 
 
  5293 03a3 19       		.uleb128 0x19
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5347 0015 54       		.byte	0x54
  5348 0016 00000000 		.4byte	0
  5349 001a 00000000 		.4byte	0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 95
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 95
 
 
  5350              	.LLST44:
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5404 00ad E0000000 		.4byte	.LVL146
  5405 00b1 0200     		.2byte	0x2
  5406 00b3 91       		.byte	0x91
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 96
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 96
 
 
  5407 00b4 4C       		.sleb128 -52
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5461              	.LLST49:
  5462 0140 82000000 		.4byte	.LVL131
  5463 0144 86000000 		.4byte	.LVL132
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 97
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 97
 
 
  5464 0148 0200     		.2byte	0x2
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5518 01d3 00000000 		.4byte	0
  5519              	.LLST42:
  5520 01d7 10000000 		.4byte	.LVL108
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 98
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 98
 
 
  5521 01db 1E000000 		.4byte	.LVL110
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5575 0268 8D000000 		.4byte	.LVL100-1
  5576 026c B2000000 		.4byte	.LVL104
  5577 0270 0100     		.2byte	0x1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 99
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 99
 
 
  5578 0272 55       		.byte	0x55
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5632              	.LLST27:
  5633 02fa 00000000 		.4byte	.LVL75
  5634 02fe 2F000000 		.4byte	.LVL79-1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 100
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 100
 
 
  5635 0302 0100     		.2byte	0x1
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5689 0380 53       		.byte	0x53
  5690 0381 9F       		.byte	0x9f
  5691 0382 00000000 		.4byte	0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 101
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 101
 
 
  5692 0386 00000000 		.4byte	0
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5746 040e E7000000 		.4byte	.LVL72-1
  5747 0412 EA000000 		.4byte	.LVL73
  5748 0416 0100     		.2byte	0x1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 102
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 102
 
 
  5749 0418 5A       		.byte	0x5a
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5803 04a3 30       		.byte	0x30
  5804 04a4 9F       		.byte	0x9f
  5805 04a5 34000000 		.4byte	.LVL47
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 103
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 103
 
 
  5806 04a9 D4000000 		.4byte	.LVL68
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5860              	.LLST25:
  5861 0537 94000000 		.4byte	.LVL59
  5862 053b 9A000000 		.4byte	.LVL60
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 104
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 104
 
 
  5863 053f 0300     		.2byte	0x3
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5917 05cc 08       		.byte	0x8
  5918 05cd 20       		.byte	0x20
  5919 05ce 9F       		.byte	0x9f
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 105
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 105
 
 
  5920 05cf 00000000 		.4byte	0
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  5974 065d 54       		.byte	0x54
  5975 065e 2E000000 		.4byte	.LVL9
  5976 0662 31000000 		.4byte	.LVL10-1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 106
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 106
 
 
  5977 0666 0100     		.2byte	0x1
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6031 06e7 38000000 		.4byte	.LFE219
  6032 06eb 0400     		.2byte	0x4
  6033 06ed F3       		.byte	0xf3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 107
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 107
 
 
  6034 06ee 01       		.uleb128 0x1
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6088 002c 9C000000 		.4byte	.LFE222-.LFB222
  6089 0030 00000000 		.4byte	.LFB223
  6090 0034 00010000 		.4byte	.LFE223-.LFB223
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 108
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 108
 
 
  6091 0038 00000000 		.4byte	.LFB224
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6145 00a0 00000000 		.4byte	0
  6146 00a4 00000000 		.4byte	0
  6147 00a8 32000000 		.4byte	.LBB230
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 109
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 109
 
 
  6148 00ac 34000000 		.4byte	.LBE230
@@ -6528,8 +6528,8 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6192 015c 00000000 		.4byte	0
  6193              		.section	.debug_line,"",%progbits
  6194              	.Ldebug_line0:
- 6195 0000 9F070000 		.section	.debug_str,"MS",%progbits,1
- 6195      0200B004 
+ 6195 0000 B5060000 		.section	.debug_str,"MS",%progbits,1
+ 6195      0200C603 
  6195      00000201 
  6195      FB0E0D00 
  6195      01010101 
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6197      50757454 
  6197      696D656F 
  6197      757400
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 110
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 110
 
 
  6198              	.LASF146:
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6223 0099 63684951 		.ascii	"chIQReadTimeout\000"
  6223      52656164 
  6223      54696D65 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 111
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 111
 
 
  6223      6F757400 
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6246              	.LASF77:
  6247 014f 76697274 		.ascii	"virtual_timers_list_t\000"
  6247      75616C5F 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 112
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 112
 
 
  6247      74696D65 
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6273 01eb 76746C69 		.ascii	"vtlist\000"
  6273      737400
  6274              	.LASF195:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 113
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 113
 
 
  6275 01f2 706F7274 		.ascii	"port_unlock\000"
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6302              	.LASF104:
  6303 027e 74625F73 		.ascii	"tb_size\000"
  6303      697A6500 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 114
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 114
 
 
  6304              	.LASF66:
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6333      20696E74 
  6333      00
  6334              	.LASF208:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 115
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 115
 
 
  6335 0311 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6352              	.LASF48:
  6353 0485 705F6D73 		.ascii	"p_msgqueue\000"
  6353      67717565 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 116
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 116
 
 
  6353      756500
@@ -6909,620 +6909,617 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 1
  6356              	.LASF170:
  6357 0499 74696D65 		.ascii	"timeout\000"
  6357      6F757400 
- 6358              	.LASF115:
- 6359 04a1 6E5F6972 		.ascii	"n_irq\000"
- 6359      7100
- 6360              	.LASF129:
- 6361 04a7 735F636E 		.ascii	"s_cnt\000"
- 6361      7400
- 6362              	.LASF163:
- 6363 04ad 715F7772 		.ascii	"q_wrptr\000"
- 6363      70747200 
- 6364              	.LASF119:
- 6365 04b5 6B65726E 		.ascii	"kernel_stats_t\000"
- 6365      656C5F73 
- 6365      74617473 
- 6365      5F7400
- 6366              	.LASF57:
- 6367 04c4 63685F74 		.ascii	"ch_thread\000"
- 6367      68726561 
- 6367      6400
- 6368              	.LASF28:
- 6369 04ce 6D73675F 		.ascii	"msg_t\000"
- 6369      7400
- 6370              	.LASF112:
- 6371 04d4 6C617374 		.ascii	"last\000"
- 6371      00
- 6372              	.LASF31:
- 6373 04d9 75636E74 		.ascii	"ucnt_t\000"
- 6373      5F7400
- 6374              	.LASF204:
- 6375 04e0 63684462 		.ascii	"chDbgCheckClassI\000"
- 6375      67436865 
- 6375      636B436C 
- 6375      61737349 
- 6375      00
- 6376              	.LASF86:
- 6377 04f1 63685F73 		.ascii	"ch_system_t\000"
- 6377      79737465 
- 6377      6D5F7400 
- 6378              	.LASF206:
- 6379 04fd 63685468 		.ascii	"chThdDequeueNextI\000"
- 6379      64446571 
- 6379      75657565 
- 6379      4E657874 
- 6379      4900
- 6380              	.LASF118:
- 6381 050f 6D5F6372 		.ascii	"m_crit_isr\000"
- 6381      69745F69 
- 6381      737200
- 6382              	.LASF62:
- 6383 051a 63685F72 		.ascii	"ch_ready_list\000"
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 117
+ 6358              	.LASF141:
+ 6359 04a1 63685F74 		.ascii	"ch_timesize\000"
+ 6359      696D6573 
+ 6359      697A6500 
+ 6360              	.LASF115:
+ 6361 04ad 6E5F6972 		.ascii	"n_irq\000"
+ 6361      7100
+ 6362              	.LASF129:
+ 6363 04b3 735F636E 		.ascii	"s_cnt\000"
+ 6363      7400
+ 6364              	.LASF163:
+ 6365 04b9 715F7772 		.ascii	"q_wrptr\000"
+ 6365      70747200 
+ 6366              	.LASF119:
+ 6367 04c1 6B65726E 		.ascii	"kernel_stats_t\000"
+ 6367      656C5F73 
+ 6367      74617473 
+ 6367      5F7400
+ 6368              	.LASF57:
+ 6369 04d0 63685F74 		.ascii	"ch_thread\000"
+ 6369      68726561 
+ 6369      6400
+ 6370              	.LASF28:
+ 6371 04da 6D73675F 		.ascii	"msg_t\000"
+ 6371      7400
+ 6372              	.LASF112:
+ 6373 04e0 6C617374 		.ascii	"last\000"
+ 6373      00
+ 6374              	.LASF31:
+ 6375 04e5 75636E74 		.ascii	"ucnt_t\000"
+ 6375      5F7400
+ 6376              	.LASF204:
+ 6377 04ec 63684462 		.ascii	"chDbgCheckClassI\000"
+ 6377      67436865 
+ 6377      636B436C 
+ 6377      61737349 
+ 6377      00
+ 6378              	.LASF86:
+ 6379 04fd 63685F73 		.ascii	"ch_system_t\000"
+ 6379      79737465 
+ 6379      6D5F7400 
+ 6380              	.LASF206:
+ 6381 0509 63685468 		.ascii	"chThdDequeueNextI\000"
+ 6381      64446571 
+ 6381      75657565 
+ 6381      4E657874 
+ 6381      4900
+ 6382              	.LASF118:
+ 6383 051b 6D5F6372 		.ascii	"m_crit_isr\000"
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 117
 
 
- 6383      65616479 
- 6383      5F6C6973 
- 6383      7400
- 6384              	.LASF29:
- 6385 0528 6576656E 		.ascii	"eventmask_t\000"
- 6385      746D6173 
- 6385      6B5F7400 
- 6386              	.LASF10:
- 6387 0534 5F5F696E 		.ascii	"__int32_t\000"
- 6387      7433325F 
- 6387      7400
- 6388              	.LASF96:
- 6389 053e 73746B61 		.ascii	"stkalign_t\000"
- 6389      6C69676E 
- 6389      5F7400
- 6390              	.LASF171:
- 6391 0549 63684F51 		.ascii	"chOQWriteTimeout\000"
- 6391      57726974 
- 6391      6554696D 
- 6391      656F7574 
- 6391      00
- 6392              	.LASF56:
- 6393 055a 74687265 		.ascii	"threads_list_t\000"
- 6393      6164735F 
- 6393      6C697374 
- 6393      5F7400
- 6394              	.LASF137:
- 6395 0569 63685F7A 		.ascii	"ch_zero\000"
- 6395      65726F00 
- 6396              	.LASF151:
- 6397 0571 63665F6F 		.ascii	"cf_off_refs\000"
- 6397      66665F72 
- 6397      65667300 
- 6398              	.LASF109:
- 6399 057d 746D5F63 		.ascii	"tm_calibration_t\000"
- 6399      616C6962 
- 6399      72617469 
- 6399      6F6E5F74 
- 6399      00
- 6400              	.LASF191:
- 6401 058e 63685468 		.ascii	"chThdQueueObjectInit\000"
- 6401      64517565 
- 6401      75654F62 
- 6401      6A656374 
- 6401      496E6974 
- 6402              	.LASF64:
- 6403 05a3 725F7072 		.ascii	"r_prio\000"
- 6403      696F00
- 6404              	.LASF158:
- 6405 05aa 696F5F71 		.ascii	"io_queue\000"
- 6405      75657565 
- 6405      00
- 6406              	.LASF202:
- 6407 05b3 5F737461 		.ascii	"_stats_stop_measure_crit_thd\000"
- 6407      74735F73 
- 6407      746F705F 
- 6407      6D656173 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 118
+ 6383      69745F69 
+ 6383      737200
+ 6384              	.LASF62:
+ 6385 0526 63685F72 		.ascii	"ch_ready_list\000"
+ 6385      65616479 
+ 6385      5F6C6973 
+ 6385      7400
+ 6386              	.LASF29:
+ 6387 0534 6576656E 		.ascii	"eventmask_t\000"
+ 6387      746D6173 
+ 6387      6B5F7400 
+ 6388              	.LASF10:
+ 6389 0540 5F5F696E 		.ascii	"__int32_t\000"
+ 6389      7433325F 
+ 6389      7400
+ 6390              	.LASF96:
+ 6391 054a 73746B61 		.ascii	"stkalign_t\000"
+ 6391      6C69676E 
+ 6391      5F7400
+ 6392              	.LASF171:
+ 6393 0555 63684F51 		.ascii	"chOQWriteTimeout\000"
+ 6393      57726974 
+ 6393      6554696D 
+ 6393      656F7574 
+ 6393      00
+ 6394              	.LASF56:
+ 6395 0566 74687265 		.ascii	"threads_list_t\000"
+ 6395      6164735F 
+ 6395      6C697374 
+ 6395      5F7400
+ 6396              	.LASF137:
+ 6397 0575 63685F7A 		.ascii	"ch_zero\000"
+ 6397      65726F00 
+ 6398              	.LASF151:
+ 6399 057d 63665F6F 		.ascii	"cf_off_refs\000"
+ 6399      66665F72 
+ 6399      65667300 
+ 6400              	.LASF109:
+ 6401 0589 746D5F63 		.ascii	"tm_calibration_t\000"
+ 6401      616C6962 
+ 6401      72617469 
+ 6401      6F6E5F74 
+ 6401      00
+ 6402              	.LASF191:
+ 6403 059a 63685468 		.ascii	"chThdQueueObjectInit\000"
+ 6403      64517565 
+ 6403      75654F62 
+ 6403      6A656374 
+ 6403      496E6974 
+ 6404              	.LASF64:
+ 6405 05af 725F7072 		.ascii	"r_prio\000"
+ 6405      696F00
+ 6406              	.LASF158:
+ 6407 05b6 696F5F71 		.ascii	"io_queue\000"
+ 6407      75657565 
+ 6407      00
+ 6408              	.LASF202:
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 118
 
 
- 6407      7572655F 
- 6408              	.LASF21:
- 6409 05d0 7274636E 		.ascii	"rtcnt_t\000"
- 6409      745F7400 
- 6410              	.LASF200:
- 6411 05d8 5F646267 		.ascii	"_dbg_check_lock\000"
- 6411      5F636865 
- 6411      636B5F6C 
- 6411      6F636B00 
- 6412              	.LASF78:
- 6413 05e8 63685F76 		.ascii	"ch_virtual_timers_list\000"
- 6413      69727475 
- 6413      616C5F74 
- 6413      696D6572 
- 6413      735F6C69 
- 6414              	.LASF160:
- 6415 05ff 715F636F 		.ascii	"q_counter\000"
- 6415      756E7465 
- 6415      7200
- 6416              	.LASF2:
- 6417 0609 6C6F6E67 		.ascii	"long double\000"
- 6417      20646F75 
- 6417      626C6500 
- 6418              	.LASF141:
- 6419 0615 63685F74 		.ascii	"ch_timesize\000"
- 6419      696D6573 
- 6419      697A6500 
- 6420              	.LASF105:
- 6421 0621 74625F70 		.ascii	"tb_ptr\000"
- 6421      747200
- 6422              	.LASF103:
- 6423 0628 63685F73 		.ascii	"ch_swc_event_t\000"
- 6423      77635F65 
- 6423      76656E74 
- 6423      5F7400
- 6424              	.LASF147:
- 6425 0637 63665F6F 		.ascii	"cf_off_name\000"
- 6425      66665F6E 
- 6425      616D6500 
- 6426              	.LASF39:
- 6427 0643 705F6F6C 		.ascii	"p_older\000"
- 6427      64657200 
- 6428              	.LASF65:
- 6429 064b 725F6374 		.ascii	"r_ctx\000"
- 6429      7800
- 6430              	.LASF37:
- 6431 0651 705F6374 		.ascii	"p_ctx\000"
- 6431      7800
- 6432              	.LASF190:
- 6433 0657 63684951 		.ascii	"chIQIsEmptyI\000"
- 6433      4973456D 
- 6433      70747949 
- 6433      00
- 6434              	.LASF111:
- 6435 0664 776F7273 		.ascii	"worst\000"
- 6435      7400
- 6436              	.LASF68:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 119
+ 6409 05bf 5F737461 		.ascii	"_stats_stop_measure_crit_thd\000"
+ 6409      74735F73 
+ 6409      746F705F 
+ 6409      6D656173 
+ 6409      7572655F 
+ 6410              	.LASF21:
+ 6411 05dc 7274636E 		.ascii	"rtcnt_t\000"
+ 6411      745F7400 
+ 6412              	.LASF200:
+ 6413 05e4 5F646267 		.ascii	"_dbg_check_lock\000"
+ 6413      5F636865 
+ 6413      636B5F6C 
+ 6413      6F636B00 
+ 6414              	.LASF78:
+ 6415 05f4 63685F76 		.ascii	"ch_virtual_timers_list\000"
+ 6415      69727475 
+ 6415      616C5F74 
+ 6415      696D6572 
+ 6415      735F6C69 
+ 6416              	.LASF160:
+ 6417 060b 715F636F 		.ascii	"q_counter\000"
+ 6417      756E7465 
+ 6417      7200
+ 6418              	.LASF2:
+ 6419 0615 6C6F6E67 		.ascii	"long double\000"
+ 6419      20646F75 
+ 6419      626C6500 
+ 6420              	.LASF210:
+ 6421 0621 433A5C55 		.ascii	"C:\\Users\\Michael Biselx\\Desktop\\TP-MicroInf\\Mi"
+ 6421      73657273 
+ 6421      5C4D6963 
+ 6421      6861656C 
+ 6421      20426973 
+ 6422 064f 63726F49 		.ascii	"croInf\\Code\000"
+ 6422      6E665C43 
+ 6422      6F646500 
+ 6423              	.LASF105:
+ 6424 065b 74625F70 		.ascii	"tb_ptr\000"
+ 6424      747200
+ 6425              	.LASF103:
+ 6426 0662 63685F73 		.ascii	"ch_swc_event_t\000"
+ 6426      77635F65 
+ 6426      76656E74 
+ 6426      5F7400
+ 6427              	.LASF147:
+ 6428 0671 63665F6F 		.ascii	"cf_off_name\000"
+ 6428      66665F6E 
+ 6428      616D6500 
+ 6429              	.LASF39:
+ 6430 067d 705F6F6C 		.ascii	"p_older\000"
+ 6430      64657200 
+ 6431              	.LASF65:
+ 6432 0685 725F6374 		.ascii	"r_ctx\000"
+ 6432      7800
+ 6433              	.LASF37:
+ 6434 068b 705F6374 		.ascii	"p_ctx\000"
+ 6434      7800
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 119
 
 
- 6437 066a 725F6375 		.ascii	"r_current\000"
- 6437      7272656E 
- 6437      7400
- 6438              	.LASF67:
- 6439 0674 725F6F6C 		.ascii	"r_older\000"
- 6439      64657200 
- 6440              	.LASF14:
- 6441 067c 5F5F7569 		.ascii	"__uint64_t\000"
- 6441      6E743634 
- 6441      5F7400
- 6442              	.LASF113:
- 6443 0687 63756D75 		.ascii	"cumulative\000"
- 6443      6C617469 
- 6443      766500
- 6444              	.LASF25:
- 6445 0692 74726566 		.ascii	"trefs_t\000"
- 6445      735F7400 
- 6446              	.LASF106:
- 6447 069a 74625F62 		.ascii	"tb_buffer\000"
- 6447      75666665 
- 6447      7200
- 6448              	.LASF140:
- 6449 06a4 63685F70 		.ascii	"ch_ptrsize\000"
- 6449      74727369 
- 6449      7A6500
- 6450              	.LASF209:
- 6451 06af 2E2E2F2E 		.ascii	"../../lib/e-puck2_main-processor/ChibiOS//os/rt/src"
- 6451      2E2F6C69 
- 6451      622F652D 
- 6451      7075636B 
- 6451      325F6D61 
- 6452 06e2 2F636871 		.ascii	"/chqueues.c\000"
- 6452      75657565 
- 6452      732E6300 
- 6453              	.LASF167:
- 6454 06ee 716E6F74 		.ascii	"qnotify_t\000"
- 6454      6966795F 
- 6454      7400
- 6455              	.LASF70:
- 6456 06f8 76697274 		.ascii	"virtual_timer_t\000"
- 6456      75616C5F 
- 6456      74696D65 
- 6456      725F7400 
- 6457              	.LASF35:
- 6458 0708 705F7072 		.ascii	"p_prev\000"
- 6458      657600
- 6459              	.LASF187:
- 6460 070f 63684F51 		.ascii	"chOQIsFullI\000"
- 6460      49734675 
- 6460      6C6C4900 
- 6461              	.LASF27:
- 6462 071b 74707269 		.ascii	"tprio_t\000"
- 6462      6F5F7400 
- 6463              	.LASF164:
- 6464 0723 715F7264 		.ascii	"q_rdptr\000"
- 6464      70747200 
- 6465              	.LASF116:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 120
+ 6435              	.LASF190:
+ 6436 0691 63684951 		.ascii	"chIQIsEmptyI\000"
+ 6436      4973456D 
+ 6436      70747949 
+ 6436      00
+ 6437              	.LASF111:
+ 6438 069e 776F7273 		.ascii	"worst\000"
+ 6438      7400
+ 6439              	.LASF68:
+ 6440 06a4 725F6375 		.ascii	"r_current\000"
+ 6440      7272656E 
+ 6440      7400
+ 6441              	.LASF67:
+ 6442 06ae 725F6F6C 		.ascii	"r_older\000"
+ 6442      64657200 
+ 6443              	.LASF14:
+ 6444 06b6 5F5F7569 		.ascii	"__uint64_t\000"
+ 6444      6E743634 
+ 6444      5F7400
+ 6445              	.LASF113:
+ 6446 06c1 63756D75 		.ascii	"cumulative\000"
+ 6446      6C617469 
+ 6446      766500
+ 6447              	.LASF25:
+ 6448 06cc 74726566 		.ascii	"trefs_t\000"
+ 6448      735F7400 
+ 6449              	.LASF106:
+ 6450 06d4 74625F62 		.ascii	"tb_buffer\000"
+ 6450      75666665 
+ 6450      7200
+ 6451              	.LASF140:
+ 6452 06de 63685F70 		.ascii	"ch_ptrsize\000"
+ 6452      74727369 
+ 6452      7A6500
+ 6453              	.LASF209:
+ 6454 06e9 2E2E2F2E 		.ascii	"../../lib/e-puck2_main-processor/ChibiOS//os/rt/src"
+ 6454      2E2F6C69 
+ 6454      622F652D 
+ 6454      7075636B 
+ 6454      325F6D61 
+ 6455 071c 2F636871 		.ascii	"/chqueues.c\000"
+ 6455      75657565 
+ 6455      732E6300 
+ 6456              	.LASF167:
+ 6457 0728 716E6F74 		.ascii	"qnotify_t\000"
+ 6457      6966795F 
+ 6457      7400
+ 6458              	.LASF70:
+ 6459 0732 76697274 		.ascii	"virtual_timer_t\000"
+ 6459      75616C5F 
+ 6459      74696D65 
+ 6459      725F7400 
+ 6460              	.LASF35:
+ 6461 0742 705F7072 		.ascii	"p_prev\000"
+ 6461      657600
+ 6462              	.LASF187:
+ 6463 0749 63684F51 		.ascii	"chOQIsFullI\000"
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 120
 
 
- 6466 072b 6E5F6374 		.ascii	"n_ctxswc\000"
- 6466      78737763 
- 6466      00
- 6467              	.LASF186:
- 6468 0734 5F426F6F 		.ascii	"_Bool\000"
- 6468      6C00
- 6469              	.LASF18:
- 6470 073a 696E7433 		.ascii	"int32_t\000"
- 6470      325F7400 
- 6471              	.LASF6:
- 6472 0742 756E7369 		.ascii	"unsigned char\000"
- 6472      676E6564 
- 6472      20636861 
- 6472      7200
- 6473              	.LASF168:
- 6474 0750 696E7075 		.ascii	"input_queue_t\000"
- 6474      745F7175 
- 6474      6575655F 
- 6474      7400
- 6475              	.LASF42:
- 6476 075e 705F7374 		.ascii	"p_state\000"
- 6476      61746500 
- 6477              	.LASF51:
- 6478 0766 705F6D74 		.ascii	"p_mtxlist\000"
- 6478      786C6973 
- 6478      7400
- 6479              	.LASF7:
- 6480 0770 73686F72 		.ascii	"short int\000"
- 6480      7420696E 
- 6480      7400
- 6481              	.LASF45:
- 6482 077a 705F7072 		.ascii	"p_preempt\000"
- 6482      65656D70 
- 6482      7400
- 6483              	.LASF153:
- 6484 0784 63665F6F 		.ascii	"cf_off_time\000"
- 6484      66665F74 
- 6484      696D6500 
- 6485              	.LASF102:
- 6486 0790 73655F73 		.ascii	"se_state\000"
- 6486      74617465 
- 6486      00
- 6487              	.LASF126:
- 6488 0799 65776D61 		.ascii	"ewmask\000"
- 6488      736B00
- 6489              	.LASF34:
- 6490 07a0 705F6E65 		.ascii	"p_next\000"
- 6490      787400
- 6491              	.LASF185:
- 6492 07a7 696E6679 		.ascii	"infy\000"
- 6492      00
- 6493              	.LASF152:
- 6494 07ac 63665F6F 		.ascii	"cf_off_preempt\000"
- 6494      66665F70 
- 6494      7265656D 
- 6494      707400
- 6495              	.LASF43:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 121
+ 6463      49734675 
+ 6463      6C6C4900 
+ 6464              	.LASF27:
+ 6465 0755 74707269 		.ascii	"tprio_t\000"
+ 6465      6F5F7400 
+ 6466              	.LASF164:
+ 6467 075d 715F7264 		.ascii	"q_rdptr\000"
+ 6467      70747200 
+ 6468              	.LASF116:
+ 6469 0765 6E5F6374 		.ascii	"n_ctxswc\000"
+ 6469      78737763 
+ 6469      00
+ 6470              	.LASF186:
+ 6471 076e 5F426F6F 		.ascii	"_Bool\000"
+ 6471      6C00
+ 6472              	.LASF18:
+ 6473 0774 696E7433 		.ascii	"int32_t\000"
+ 6473      325F7400 
+ 6474              	.LASF6:
+ 6475 077c 756E7369 		.ascii	"unsigned char\000"
+ 6475      676E6564 
+ 6475      20636861 
+ 6475      7200
+ 6476              	.LASF168:
+ 6477 078a 696E7075 		.ascii	"input_queue_t\000"
+ 6477      745F7175 
+ 6477      6575655F 
+ 6477      7400
+ 6478              	.LASF42:
+ 6479 0798 705F7374 		.ascii	"p_state\000"
+ 6479      61746500 
+ 6480              	.LASF51:
+ 6481 07a0 705F6D74 		.ascii	"p_mtxlist\000"
+ 6481      786C6973 
+ 6481      7400
+ 6482              	.LASF7:
+ 6483 07aa 73686F72 		.ascii	"short int\000"
+ 6483      7420696E 
+ 6483      7400
+ 6484              	.LASF45:
+ 6485 07b4 705F7072 		.ascii	"p_preempt\000"
+ 6485      65656D70 
+ 6485      7400
+ 6486              	.LASF153:
+ 6487 07be 63665F6F 		.ascii	"cf_off_time\000"
+ 6487      66665F74 
+ 6487      696D6500 
+ 6488              	.LASF102:
+ 6489 07ca 73655F73 		.ascii	"se_state\000"
+ 6489      74617465 
+ 6489      00
+ 6490              	.LASF126:
+ 6491 07d3 65776D61 		.ascii	"ewmask\000"
+ 6491      736B00
+ 6492              	.LASF34:
+ 6493 07da 705F6E65 		.ascii	"p_next\000"
+ 6493      787400
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 121
 
 
- 6496 07bb 705F666C 		.ascii	"p_flags\000"
- 6496      61677300 
- 6497              	.LASF180:
- 6498 07c3 5F5F6675 		.ascii	"__func__\000"
- 6498      6E635F5F 
- 6498      00
- 6499              	.LASF54:
- 6500 07cc 705F7374 		.ascii	"p_stats\000"
- 6500      61747300 
- 6501              	.LASF194:
- 6502 07d4 63685379 		.ascii	"chSysLock\000"
- 6502      734C6F63 
- 6502      6B00
- 6503              	.LASF59:
- 6504 07de 74687265 		.ascii	"threads_queue_t\000"
- 6504      6164735F 
- 6504      71756575 
- 6504      655F7400 
- 6505              	.LASF71:
- 6506 07ee 63685F76 		.ascii	"ch_virtual_timer\000"
- 6506      69727475 
- 6506      616C5F74 
- 6506      696D6572 
- 6506      00
- 6507              	.LASF145:
- 6508 07ff 63665F6F 		.ascii	"cf_off_newer\000"
- 6508      66665F6E 
- 6508      65776572 
- 6508      00
- 6509              	.LASF211:
- 6510 080c 5F5F7374 		.ascii	"__stack_chk_fail\000"
- 6510      61636B5F 
- 6510      63686B5F 
- 6510      6661696C 
- 6510      00
- 6511              	.LASF127:
- 6512 081d 63685F73 		.ascii	"ch_semaphore\000"
- 6512      656D6170 
- 6512      686F7265 
- 6512      00
- 6513              	.LASF50:
- 6514 082a 705F6570 		.ascii	"p_epending\000"
- 6514      656E6469 
- 6514      6E6700
- 6515              	.LASF189:
- 6516 0835 63684951 		.ascii	"chIQIsFullI\000"
- 6516      49734675 
- 6516      6C6C4900 
- 6517              	.LASF19:
- 6518 0841 75696E74 		.ascii	"uint32_t\000"
- 6518      33325F74 
- 6518      00
- 6519              	.LASF143:
- 6520 084a 63665F6F 		.ascii	"cf_off_prio\000"
- 6520      66665F70 
- 6520      72696F00 
- 6521              	.LASF63:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 122
+ 6494              	.LASF185:
+ 6495 07e1 696E6679 		.ascii	"infy\000"
+ 6495      00
+ 6496              	.LASF152:
+ 6497 07e6 63665F6F 		.ascii	"cf_off_preempt\000"
+ 6497      66665F70 
+ 6497      7265656D 
+ 6497      707400
+ 6498              	.LASF43:
+ 6499 07f5 705F666C 		.ascii	"p_flags\000"
+ 6499      61677300 
+ 6500              	.LASF180:
+ 6501 07fd 5F5F6675 		.ascii	"__func__\000"
+ 6501      6E635F5F 
+ 6501      00
+ 6502              	.LASF54:
+ 6503 0806 705F7374 		.ascii	"p_stats\000"
+ 6503      61747300 
+ 6504              	.LASF194:
+ 6505 080e 63685379 		.ascii	"chSysLock\000"
+ 6505      734C6F63 
+ 6505      6B00
+ 6506              	.LASF59:
+ 6507 0818 74687265 		.ascii	"threads_queue_t\000"
+ 6507      6164735F 
+ 6507      71756575 
+ 6507      655F7400 
+ 6508              	.LASF71:
+ 6509 0828 63685F76 		.ascii	"ch_virtual_timer\000"
+ 6509      69727475 
+ 6509      616C5F74 
+ 6509      696D6572 
+ 6509      00
+ 6510              	.LASF145:
+ 6511 0839 63665F6F 		.ascii	"cf_off_newer\000"
+ 6511      66665F6E 
+ 6511      65776572 
+ 6511      00
+ 6512              	.LASF211:
+ 6513 0846 5F5F7374 		.ascii	"__stack_chk_fail\000"
+ 6513      61636B5F 
+ 6513      63686B5F 
+ 6513      6661696C 
+ 6513      00
+ 6514              	.LASF127:
+ 6515 0857 63685F73 		.ascii	"ch_semaphore\000"
+ 6515      656D6170 
+ 6515      686F7265 
+ 6515      00
+ 6516              	.LASF50:
+ 6517 0864 705F6570 		.ascii	"p_epending\000"
+ 6517      656E6469 
+ 6517      6E6700
+ 6518              	.LASF189:
+ 6519 086f 63684951 		.ascii	"chIQIsFullI\000"
+ 6519      49734675 
+ 6519      6C6C4900 
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 122
 
 
- 6522 0856 725F7175 		.ascii	"r_queue\000"
- 6522      65756500 
- 6523              	.LASF58:
- 6524 085e 63685F74 		.ascii	"ch_threads_list\000"
- 6524      68726561 
- 6524      64735F6C 
- 6524      69737400 
- 6525              	.LASF138:
- 6526 086e 63685F73 		.ascii	"ch_size\000"
- 6526      697A6500 
- 6527              	.LASF13:
- 6528 0876 6C6F6E67 		.ascii	"long unsigned int\000"
- 6528      20756E73 
- 6528      69676E65 
- 6528      6420696E 
- 6528      7400
- 6529              	.LASF135:
- 6530 0888 63686172 		.ascii	"char\000"
- 6530      00
- 6531              	.LASF125:
- 6532 088d 77746D74 		.ascii	"wtmtxp\000"
- 6532      787000
- 6533              	.LASF8:
- 6534 0894 5F5F7569 		.ascii	"__uint16_t\000"
- 6534      6E743136 
- 6534      5F7400
- 6535              	.LASF33:
- 6536 089f 74687265 		.ascii	"thread_t\000"
- 6536      61645F74 
- 6536      00
- 6537              	.LASF110:
- 6538 08a8 62657374 		.ascii	"best\000"
- 6538      00
- 6539              	.LASF133:
- 6540 08ad 6D5F6E65 		.ascii	"m_next\000"
- 6540      787400
- 6541              	.LASF32:
- 6542 08b4 73797374 		.ascii	"systime_t\000"
- 6542      696D655F 
- 6542      7400
- 6543              	.LASF52:
- 6544 08be 705F7265 		.ascii	"p_realprio\000"
- 6544      616C7072 
- 6544      696F00
- 6545              	.LASF69:
- 6546 08c9 76746675 		.ascii	"vtfunc_t\000"
- 6546      6E635F74 
- 6546      00
- 6547              	.LASF12:
- 6548 08d2 5F5F7569 		.ascii	"__uint32_t\000"
- 6548      6E743332 
- 6548      5F7400
- 6549              	.LASF197:
- 6550 08dd 5F5F7365 		.ascii	"__set_BASEPRI\000"
- 6550      745F4241 
- 6550      53455052 
- 6550      4900
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 123
+ 6520              	.LASF19:
+ 6521 087b 75696E74 		.ascii	"uint32_t\000"
+ 6521      33325F74 
+ 6521      00
+ 6522              	.LASF143:
+ 6523 0884 63665F6F 		.ascii	"cf_off_prio\000"
+ 6523      66665F70 
+ 6523      72696F00 
+ 6524              	.LASF63:
+ 6525 0890 725F7175 		.ascii	"r_queue\000"
+ 6525      65756500 
+ 6526              	.LASF58:
+ 6527 0898 63685F74 		.ascii	"ch_threads_list\000"
+ 6527      68726561 
+ 6527      64735F6C 
+ 6527      69737400 
+ 6528              	.LASF138:
+ 6529 08a8 63685F73 		.ascii	"ch_size\000"
+ 6529      697A6500 
+ 6530              	.LASF13:
+ 6531 08b0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 6531      20756E73 
+ 6531      69676E65 
+ 6531      6420696E 
+ 6531      7400
+ 6532              	.LASF135:
+ 6533 08c2 63686172 		.ascii	"char\000"
+ 6533      00
+ 6534              	.LASF125:
+ 6535 08c7 77746D74 		.ascii	"wtmtxp\000"
+ 6535      787000
+ 6536              	.LASF8:
+ 6537 08ce 5F5F7569 		.ascii	"__uint16_t\000"
+ 6537      6E743136 
+ 6537      5F7400
+ 6538              	.LASF33:
+ 6539 08d9 74687265 		.ascii	"thread_t\000"
+ 6539      61645F74 
+ 6539      00
+ 6540              	.LASF110:
+ 6541 08e2 62657374 		.ascii	"best\000"
+ 6541      00
+ 6542              	.LASF133:
+ 6543 08e7 6D5F6E65 		.ascii	"m_next\000"
+ 6543      787400
+ 6544              	.LASF32:
+ 6545 08ee 73797374 		.ascii	"systime_t\000"
+ 6545      696D655F 
+ 6545      7400
+ 6546              	.LASF52:
+ 6547 08f8 705F7265 		.ascii	"p_realprio\000"
+ 6547      616C7072 
+ 6547      696F00
+ 6548              	.LASF69:
+ 6549 0903 76746675 		.ascii	"vtfunc_t\000"
+ 6549      6E635F74 
+ 6549      00
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 123
 
 
- 6551              	.LASF82:
- 6552 08eb 70616E69 		.ascii	"panic_msg\000"
- 6552      635F6D73 
- 6552      6700
- 6553              	.LASF108:
- 6554 08f5 6F666673 		.ascii	"offset\000"
- 6554      657400
- 6555              	.LASF174:
- 6556 08fc 63684F51 		.ascii	"chOQResetI\000"
- 6556      52657365 
- 6556      744900
- 6557              	.LASF97:
- 6558 0907 636F6E74 		.ascii	"context\000"
- 6558      65787400 
- 6559              	.LASF49:
- 6560 090f 705F6D73 		.ascii	"p_msg\000"
- 6560      6700
- 6561              	.LASF183:
- 6562 0915 63684951 		.ascii	"chIQResetI\000"
- 6562      52657365 
- 6562      744900
- 6563              	.LASF76:
- 6564 0920 76745F70 		.ascii	"vt_par\000"
- 6564      617200
- 6565              	.LASF175:
- 6566 0927 63684F51 		.ascii	"chOQObjectInit\000"
- 6566      4F626A65 
- 6566      6374496E 
- 6566      697400
- 6567              	.LASF99:
- 6568 0936 73655F74 		.ascii	"se_time\000"
- 6568      696D6500 
- 6569              	.LASF144:
- 6570 093e 63665F6F 		.ascii	"cf_off_ctx\000"
- 6570      66665F63 
- 6570      747800
- 6571              	.LASF130:
- 6572 0949 63685F6D 		.ascii	"ch_mutex\000"
- 6572      75746578 
- 6572      00
- 6573              	.LASF44:
- 6574 0952 705F7265 		.ascii	"p_refs\000"
- 6574      667300
- 6575              	.LASF83:
- 6576 0959 6973725F 		.ascii	"isr_cnt\000"
- 6576      636E7400 
- 6577              	.LASF210:
- 6578 0961 433A5C55 		.ascii	"C:\\Users\\samue\\Documents\\EPFL\\6. Semester\\Mic"
- 6578      73657273 
- 6578      5C73616D 
- 6578      75655C44 
- 6578      6F63756D 
- 6579 098e 726F696E 		.ascii	"roinformatique\\Microinformatique_TP\\MicroInf\\Cod"
- 6579      666F726D 
- 6579      61746971 
- 6579      75655C4D 
- 6579      6963726F 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 124
+ 6550              	.LASF12:
+ 6551 090c 5F5F7569 		.ascii	"__uint32_t\000"
+ 6551      6E743332 
+ 6551      5F7400
+ 6552              	.LASF197:
+ 6553 0917 5F5F7365 		.ascii	"__set_BASEPRI\000"
+ 6553      745F4241 
+ 6553      53455052 
+ 6553      4900
+ 6554              	.LASF82:
+ 6555 0925 70616E69 		.ascii	"panic_msg\000"
+ 6555      635F6D73 
+ 6555      6700
+ 6556              	.LASF108:
+ 6557 092f 6F666673 		.ascii	"offset\000"
+ 6557      657400
+ 6558              	.LASF174:
+ 6559 0936 63684F51 		.ascii	"chOQResetI\000"
+ 6559      52657365 
+ 6559      744900
+ 6560              	.LASF97:
+ 6561 0941 636F6E74 		.ascii	"context\000"
+ 6561      65787400 
+ 6562              	.LASF49:
+ 6563 0949 705F6D73 		.ascii	"p_msg\000"
+ 6563      6700
+ 6564              	.LASF183:
+ 6565 094f 63684951 		.ascii	"chIQResetI\000"
+ 6565      52657365 
+ 6565      744900
+ 6566              	.LASF76:
+ 6567 095a 76745F70 		.ascii	"vt_par\000"
+ 6567      617200
+ 6568              	.LASF175:
+ 6569 0961 63684F51 		.ascii	"chOQObjectInit\000"
+ 6569      4F626A65 
+ 6569      6374496E 
+ 6569      697400
+ 6570              	.LASF99:
+ 6571 0970 73655F74 		.ascii	"se_time\000"
+ 6571      696D6500 
+ 6572              	.LASF144:
+ 6573 0978 63665F6F 		.ascii	"cf_off_ctx\000"
+ 6573      66665F63 
+ 6573      747800
+ 6574              	.LASF130:
+ 6575 0983 63685F6D 		.ascii	"ch_mutex\000"
+ 6575      75746578 
+ 6575      00
+ 6576              	.LASF44:
+ 6577 098c 705F7265 		.ascii	"p_refs\000"
+ 6577      667300
+ 6578              	.LASF83:
+ 6579 0993 6973725F 		.ascii	"isr_cnt\000"
+ 6579      636E7400 
+ 6580              	.LASF165:
+ 6581 099b 715F6E6F 		.ascii	"q_notify\000"
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 124
 
 
- 6580 09be 6500     		.ascii	"e\000"
- 6581              	.LASF165:
- 6582 09c0 715F6E6F 		.ascii	"q_notify\000"
- 6582      74696679 
- 6582      00
- 6583              	.LASF88:
- 6584 09c9 726C6973 		.ascii	"rlist\000"
- 6584      7400
- 6585              	.LASF16:
- 6586 09cf 75696E74 		.ascii	"uint8_t\000"
- 6586      385F7400 
- 6587              	.LASF201:
- 6588 09d7 5F646267 		.ascii	"_dbg_check_unlock\000"
- 6588      5F636865 
- 6588      636B5F75 
- 6588      6E6C6F63 
- 6588      6B00
- 6589              	.LASF55:
- 6590 09e9 74687265 		.ascii	"thread_reference_t\000"
- 6590      61645F72 
- 6590      65666572 
- 6590      656E6365 
- 6590      5F7400
- 6591              	.LASF122:
- 6592 09fc 77746F62 		.ascii	"wtobjp\000"
- 6592      6A7000
- 6593              	.LASF40:
- 6594 0a03 705F6E61 		.ascii	"p_name\000"
- 6594      6D6500
- 6595              	.LASF176:
- 6596 0a0a 73697A65 		.ascii	"size\000"
- 6596      00
- 6597              	.LASF188:
- 6598 0a0f 63684F51 		.ascii	"chOQIsEmptyI\000"
- 6598      4973456D 
- 6598      70747949 
- 6598      00
- 6599              	.LASF79:
- 6600 0a1c 76745F73 		.ascii	"vt_systime\000"
- 6600      79737469 
- 6600      6D6500
- 6601              	.LASF23:
- 6602 0a27 746D6F64 		.ascii	"tmode_t\000"
- 6602      655F7400 
- 6603              	.LASF85:
- 6604 0a2f 74726163 		.ascii	"trace_buffer\000"
- 6604      655F6275 
- 6604      66666572 
- 6604      00
- 6605              	.LASF192:
- 6606 0a3c 63685379 		.ascii	"chSysUnlock\000"
- 6606      73556E6C 
- 6606      6F636B00 
- 6607              	.LASF139:
- 6608 0a48 63685F76 		.ascii	"ch_version\000"
- 6608      65727369 
- 6608      6F6E00
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 125
+ 6581      74696679 
+ 6581      00
+ 6582              	.LASF88:
+ 6583 09a4 726C6973 		.ascii	"rlist\000"
+ 6583      7400
+ 6584              	.LASF16:
+ 6585 09aa 75696E74 		.ascii	"uint8_t\000"
+ 6585      385F7400 
+ 6586              	.LASF201:
+ 6587 09b2 5F646267 		.ascii	"_dbg_check_unlock\000"
+ 6587      5F636865 
+ 6587      636B5F75 
+ 6587      6E6C6F63 
+ 6587      6B00
+ 6588              	.LASF55:
+ 6589 09c4 74687265 		.ascii	"thread_reference_t\000"
+ 6589      61645F72 
+ 6589      65666572 
+ 6589      656E6365 
+ 6589      5F7400
+ 6590              	.LASF122:
+ 6591 09d7 77746F62 		.ascii	"wtobjp\000"
+ 6591      6A7000
+ 6592              	.LASF40:
+ 6593 09de 705F6E61 		.ascii	"p_name\000"
+ 6593      6D6500
+ 6594              	.LASF176:
+ 6595 09e5 73697A65 		.ascii	"size\000"
+ 6595      00
+ 6596              	.LASF188:
+ 6597 09ea 63684F51 		.ascii	"chOQIsEmptyI\000"
+ 6597      4973456D 
+ 6597      70747949 
+ 6597      00
+ 6598              	.LASF79:
+ 6599 09f7 76745F73 		.ascii	"vt_systime\000"
+ 6599      79737469 
+ 6599      6D6500
+ 6600              	.LASF23:
+ 6601 0a02 746D6F64 		.ascii	"tmode_t\000"
+ 6601      655F7400 
+ 6602              	.LASF85:
+ 6603 0a0a 74726163 		.ascii	"trace_buffer\000"
+ 6603      655F6275 
+ 6603      66666572 
+ 6603      00
+ 6604              	.LASF192:
+ 6605 0a17 63685379 		.ascii	"chSysUnlock\000"
+ 6605      73556E6C 
+ 6605      6F636B00 
+ 6606              	.LASF139:
+ 6607 0a23 63685F76 		.ascii	"ch_version\000"
+ 6607      65727369 
+ 6607      6F6E00
+ 6608              	.LASF166:
+ 6609 0a2e 715F6C69 		.ascii	"q_link\000"
+ 6609      6E6B00
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 125
 
 
- 6609              	.LASF166:
- 6610 0a53 715F6C69 		.ascii	"q_link\000"
- 6610      6E6B00
- 6611              	.LASF156:
- 6612 0a5a 6D757465 		.ascii	"mutex_t\000"
- 6612      785F7400 
- 6613              	.LASF117:
- 6614 0a62 6D5F6372 		.ascii	"m_crit_thd\000"
- 6614      69745F74 
- 6614      686400
- 6615              	.LASF132:
- 6616 0a6d 6D5F6F77 		.ascii	"m_owner\000"
- 6616      6E657200 
- 6617              	.LASF101:
- 6618 0a75 73655F77 		.ascii	"se_wtobjp\000"
- 6618      746F626A 
- 6618      7000
- 6619              	.LASF136:
- 6620 0a7f 63685F69 		.ascii	"ch_identifier\000"
- 6620      64656E74 
- 6620      69666965 
- 6620      7200
- 6621              	.LASF75:
- 6622 0a8d 76745F66 		.ascii	"vt_func\000"
- 6622      756E6300 
- 6623              	.LASF181:
- 6624 0a95 63684951 		.ascii	"chIQGetTimeout\000"
- 6624      47657454 
- 6624      696D656F 
- 6624      757400
- 6625              	.LASF205:
- 6626 0aa4 63685468 		.ascii	"chThdEnqueueTimeoutS\000"
- 6626      64456E71 
- 6626      75657565 
- 6626      54696D65 
- 6626      6F757453 
- 6627              	.LASF47:
- 6628 0ab9 705F7761 		.ascii	"p_waiting\000"
- 6628      6974696E 
- 6628      6700
- 6629              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccynvpam.s 			page 126
+ 6610              	.LASF156:
+ 6611 0a35 6D757465 		.ascii	"mutex_t\000"
+ 6611      785F7400 
+ 6612              	.LASF117:
+ 6613 0a3d 6D5F6372 		.ascii	"m_crit_thd\000"
+ 6613      69745F74 
+ 6613      686400
+ 6614              	.LASF132:
+ 6615 0a48 6D5F6F77 		.ascii	"m_owner\000"
+ 6615      6E657200 
+ 6616              	.LASF101:
+ 6617 0a50 73655F77 		.ascii	"se_wtobjp\000"
+ 6617      746F626A 
+ 6617      7000
+ 6618              	.LASF136:
+ 6619 0a5a 63685F69 		.ascii	"ch_identifier\000"
+ 6619      64656E74 
+ 6619      69666965 
+ 6619      7200
+ 6620              	.LASF75:
+ 6621 0a68 76745F66 		.ascii	"vt_func\000"
+ 6621      756E6300 
+ 6622              	.LASF181:
+ 6623 0a70 63684951 		.ascii	"chIQGetTimeout\000"
+ 6623      47657454 
+ 6623      696D656F 
+ 6623      757400
+ 6624              	.LASF205:
+ 6625 0a7f 63685468 		.ascii	"chThdEnqueueTimeoutS\000"
+ 6625      64456E71 
+ 6625      75657565 
+ 6625      54696D65 
+ 6625      6F757453 
+ 6626              	.LASF47:
+ 6627 0a94 705F7761 		.ascii	"p_waiting\000"
+ 6627      6974696E 
+ 6627      6700
+ 6628              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s 			page 126
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chqueues.c
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:18     .text.chIQObjectInit:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:26     .text.chIQObjectInit:00000000 chIQObjectInit
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:107    .text.chIQObjectInit:00000034 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:112    .text.chIQResetI:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:120    .text.chIQResetI:00000000 chIQResetI
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:181    .text.chIQResetI:00000038 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:186    .text.chIQPutI:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:194    .text.chIQPutI:00000000 chIQPutI
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:292    .text.chIQPutI:0000005c $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:297    .text.chIQGetTimeout:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:305    .text.chIQGetTimeout:00000000 chIQGetTimeout
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:481    .text.chIQGetTimeout:00000090 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:488    .text.chIQReadTimeout:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:496    .text.chIQReadTimeout:00000000 chIQReadTimeout
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:764    .text.chIQReadTimeout:000000f0 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:772    .text.chOQObjectInit:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:780    .text.chOQObjectInit:00000000 chOQObjectInit
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:846    .text.chOQObjectInit:00000030 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:851    .text.chOQResetI:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:859    .text.chOQResetI:00000000 chOQResetI
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:921    .text.chOQResetI:00000038 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:926    .text.chOQPutTimeout:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:934    .text.chOQPutTimeout:00000000 chOQPutTimeout
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1149   .text.chOQPutTimeout:000000c0 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1156   .text.chOQGetI:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1164   .text.chOQGetI:00000000 chOQGetI
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1264   .text.chOQGetI:00000058 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1269   .text.chOQWriteTimeout:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1277   .text.chOQWriteTimeout:00000000 chOQWriteTimeout
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1567   .text.chOQWriteTimeout:000000f4 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1575   .rodata.__func__.7153:00000000 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1579   .rodata.__func__.7153:00000000 __func__.7153
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1582   .rodata.__func__.7877:00000000 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1586   .rodata.__func__.7877:00000000 __func__.7877
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1589   .rodata.__func__.7913:00000000 $d
-C:\Users\samue\AppData\Local\Temp\ccynvpam.s:1593   .rodata.__func__.7913:00000000 __func__.7913
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:18     .text.chIQObjectInit:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:26     .text.chIQObjectInit:00000000 chIQObjectInit
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:107    .text.chIQObjectInit:00000034 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:112    .text.chIQResetI:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:120    .text.chIQResetI:00000000 chIQResetI
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:181    .text.chIQResetI:00000038 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:186    .text.chIQPutI:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:194    .text.chIQPutI:00000000 chIQPutI
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:292    .text.chIQPutI:0000005c $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:297    .text.chIQGetTimeout:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:305    .text.chIQGetTimeout:00000000 chIQGetTimeout
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:481    .text.chIQGetTimeout:00000090 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:488    .text.chIQReadTimeout:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:496    .text.chIQReadTimeout:00000000 chIQReadTimeout
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:764    .text.chIQReadTimeout:000000f0 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:772    .text.chOQObjectInit:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:780    .text.chOQObjectInit:00000000 chOQObjectInit
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:846    .text.chOQObjectInit:00000030 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:851    .text.chOQResetI:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:859    .text.chOQResetI:00000000 chOQResetI
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:921    .text.chOQResetI:00000038 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:926    .text.chOQPutTimeout:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:934    .text.chOQPutTimeout:00000000 chOQPutTimeout
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1149   .text.chOQPutTimeout:000000c0 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1156   .text.chOQGetI:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1164   .text.chOQGetI:00000000 chOQGetI
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1264   .text.chOQGetI:00000058 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1269   .text.chOQWriteTimeout:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1277   .text.chOQWriteTimeout:00000000 chOQWriteTimeout
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1567   .text.chOQWriteTimeout:000000f4 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1575   .rodata.__func__.7153:00000000 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1579   .rodata.__func__.7153:00000000 __func__.7153
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1582   .rodata.__func__.7877:00000000 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1586   .rodata.__func__.7877:00000000 __func__.7877
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1589   .rodata.__func__.7913:00000000 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccYo1KuW.s:1593   .rodata.__func__.7913:00000000 __func__.7913
 
 UNDEFINED SYMBOLS
 __stack_chk_fail

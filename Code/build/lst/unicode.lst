@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
   55 0018 0131     		adds	r1, r1, #1
   56              	.LVL2:
   57              		.loc 1 517 0 discriminator 2
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 2
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 2
 
 
   58 001a 8029     		cmp	r1, #128
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  112              		.cfi_endproc
  113              	.LFE219:
  114              		.size	ff_convert, .-ff_convert
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 3
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 3
 
 
  115              		.section	.text.ff_wtoupper,"ax",%progbits
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  169              		.cfi_def_cfa_offset 8
  170              		@ sp needed
  171 002c 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 4
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 4
 
 
  172              	.LVL19:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  226 002a 2220     		.short	8226
  227 002c 1320     		.short	8211
  228 002e 1420     		.short	8212
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 5
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 5
 
 
  229 0030 DC02     		.short	732
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  283 009c CE00     		.short	206
  284 009e CF00     		.short	207
  285 00a0 D000     		.short	208
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 6
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 6
 
 
  286 00a2 D100     		.short	209
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  340 0002 6200     		.short	98
  341 0004 6300     		.short	99
  342 0006 6400     		.short	100
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 7
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 7
 
 
  343 0008 6500     		.short	101
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  397 0074 FB00     		.short	251
  398 0076 FC00     		.short	252
  399 0078 FD00     		.short	253
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 8
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 8
 
 
  400 007a FE00     		.short	254
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  454 00e6 6B01     		.short	363
  455 00e8 6D01     		.short	365
  456 00ea 6F01     		.short	367
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 9
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 9
 
 
  457 00ec 7101     		.short	369
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  511 0158 4504     		.short	1093
  512 015a 4604     		.short	1094
  513 015c 4704     		.short	1095
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 10
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 10
 
 
  514 015e 4804     		.short	1096
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  568 01ca 51FF     		.short	-175
  569 01cc 52FF     		.short	-174
  570 01ce 53FF     		.short	-173
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 11
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 11
 
 
  571 01d0 54FF     		.short	-172
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  625 0050 C800     		.short	200
  626 0052 C900     		.short	201
  627 0054 CA00     		.short	202
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 12
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 12
 
 
  628 0056 CB00     		.short	203
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  682 00c2 4501     		.short	325
  683 00c4 4701     		.short	327
  684 00c6 4A01     		.short	330
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 13
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 13
 
 
  685 00c8 4C01     		.short	332
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  739 0134 1304     		.short	1043
  740 0136 1404     		.short	1044
  741 0138 1504     		.short	1045
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 14
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 14
 
 
  742 013a 1604     		.short	1046
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  796 01a6 6E21     		.short	8558
  797 01a8 6F21     		.short	8559
  798 01aa 21FF     		.short	-223
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 15
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 15
 
 
  799 01ac 22FF     		.short	-222
@@ -870,9 +870,9 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  825              		.text
  826              	.Letext0:
  827              		.file 2 "../../lib/e-puck2_main-processor/ChibiOS_ext//ext/fatfs/src/option/../integer.h"
- 828              		.file 3 "c:\\users\\samue\\documents\\epfl\\6. semester\\microinformatique\\microinformatique_tp\\
- 829              		.file 4 "c:\\users\\samue\\documents\\epfl\\6. semester\\microinformatique\\microinformatique_tp\\
- 830              		.file 5 "c:\\users\\samue\\documents\\epfl\\6. semester\\microinformatique\\microinformatique_tp\\
+ 828              		.file 3 "c:\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\lib\\gcc\\arm-none-e
+ 829              		.file 4 "c:\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-none-eabi\\inclu
+ 830              		.file 5 "c:\\eclipse_e-puck2\\tools\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-none-eabi\\inclu
  831              		.file 6 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/compilers/GCC/chtypes.h"
  832              		.file 7 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chsystypes.h"
  833              		.file 8 "../../lib/e-puck2_main-processor/ChibiOS//os/rt/include/chschd.h"
@@ -895,10 +895,10 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  850 000b 01       		.uleb128 0x1
  851 000c 55020000 		.4byte	.LASF163
  852 0010 0C       		.byte	0xc
- 853 0011 A1050000 		.4byte	.LASF164
- 854 0015 B6070000 		.4byte	.LASF165
+ 853 0011 DB050000 		.4byte	.LASF164
+ 854 0015 E9040000 		.4byte	.LASF165
  855 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 16
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 16
 
 
  856 001d 00000000 		.4byte	0
@@ -906,17 +906,17 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  858 0025 02       		.uleb128 0x2
  859 0026 01       		.byte	0x1
  860 0027 08       		.byte	0x8
- 861 0028 06060000 		.4byte	.LASF0
+ 861 0028 40060000 		.4byte	.LASF0
  862 002c 02       		.uleb128 0x2
  863 002d 02       		.byte	0x2
  864 002e 05       		.byte	0x5
- 865 002f 1E060000 		.4byte	.LASF1
+ 865 002f 58060000 		.4byte	.LASF1
  866 0033 02       		.uleb128 0x2
  867 0034 02       		.byte	0x2
  868 0035 07       		.byte	0x7
- 869 0036 EE030000 		.4byte	.LASF2
+ 869 0036 FA030000 		.4byte	.LASF2
  870 003a 03       		.uleb128 0x3
- 871 003b 46080000 		.4byte	.LASF3
+ 871 003b 21080000 		.4byte	.LASF3
  872 003f 02       		.byte	0x2
  873 0040 15       		.byte	0x15
  874 0041 33000000 		.4byte	0x33
@@ -942,7 +942,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  894 006a 02       		.uleb128 0x2
  895 006b 04       		.byte	0x4
  896 006c 07       		.byte	0x7
- 897 006d 06070000 		.4byte	.LASF7
+ 897 006d 40070000 		.4byte	.LASF7
  898 0071 03       		.uleb128 0x3
  899 0072 2C000000 		.4byte	.LASF8
  900 0076 03       		.byte	0x3
@@ -955,10 +955,10 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  907 0083 02       		.uleb128 0x2
  908 0084 08       		.byte	0x8
  909 0085 04       		.byte	0x4
- 910 0086 D1040000 		.4byte	.LASF10
+ 910 0086 DD040000 		.4byte	.LASF10
  911 008a 02       		.uleb128 0x2
  912 008b 01       		.byte	0x1
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 17
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 17
 
 
  913 008c 06       		.byte	0x6
@@ -969,22 +969,22 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  918 0097 2B       		.byte	0x2b
  919 0098 25000000 		.4byte	0x25
  920 009c 03       		.uleb128 0x3
- 921 009d 24070000 		.4byte	.LASF13
+ 921 009d 5E070000 		.4byte	.LASF13
  922 00a1 04       		.byte	0x4
  923 00a2 39       		.byte	0x39
  924 00a3 33000000 		.4byte	0x33
  925 00a7 03       		.uleb128 0x3
- 926 00a8 69040000 		.4byte	.LASF14
+ 926 00a8 75040000 		.4byte	.LASF14
  927 00ac 04       		.byte	0x4
  928 00ad 4D       		.byte	0x4d
  929 00ae 63000000 		.4byte	0x63
  930 00b2 03       		.uleb128 0x3
- 931 00b3 62070000 		.4byte	.LASF15
+ 931 00b3 9C070000 		.4byte	.LASF15
  932 00b7 04       		.byte	0x4
  933 00b8 4F       		.byte	0x4f
  934 00b9 6A000000 		.4byte	0x6a
  935 00bd 03       		.uleb128 0x3
- 936 00be 42050000 		.4byte	.LASF16
+ 936 00be 7C050000 		.4byte	.LASF16
  937 00c2 04       		.byte	0x4
  938 00c3 69       		.byte	0x69
  939 00c4 C8000000 		.4byte	0xc8
@@ -993,7 +993,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  942 00ca 07       		.byte	0x7
  943 00cb 92000000 		.4byte	.LASF17
  944 00cf 03       		.uleb128 0x3
- 945 00d0 24080000 		.4byte	.LASF18
+ 945 00d0 FF070000 		.4byte	.LASF18
  946 00d4 05       		.byte	0x5
  947 00d5 18       		.byte	0x18
  948 00d6 91000000 		.4byte	0x91
@@ -1003,14 +1003,14 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  952 00e0 24       		.byte	0x24
  953 00e1 9C000000 		.4byte	0x9c
  954 00e5 03       		.uleb128 0x3
- 955 00e6 FE050000 		.4byte	.LASF20
+ 955 00e6 38060000 		.4byte	.LASF20
  956 00ea 05       		.byte	0x5
  957 00eb 2C       		.byte	0x2c
  958 00ec A7000000 		.4byte	0xa7
  959 00f0 06       		.uleb128 0x6
  960 00f1 E5000000 		.4byte	0xe5
  961 00f5 03       		.uleb128 0x3
- 962 00f6 D1060000 		.4byte	.LASF21
+ 962 00f6 0B070000 		.4byte	.LASF21
  963 00fa 05       		.byte	0x5
  964 00fb 30       		.byte	0x30
  965 00fc B2000000 		.4byte	0xb2
@@ -1018,12 +1018,12 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  967 0101 3A000000 		.4byte	.LASF22
  968 0105 05       		.byte	0x5
  969 0106 3C       		.byte	0x3c
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 18
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 18
 
 
  970 0107 BD000000 		.4byte	0xbd
  971 010b 03       		.uleb128 0x3
- 972 010c B2040000 		.4byte	.LASF23
+ 972 010c BE040000 		.4byte	.LASF23
  973 0110 06       		.byte	0x6
  974 0111 45       		.byte	0x45
  975 0112 F5000000 		.4byte	0xf5
@@ -1033,7 +1033,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  979 011c 46       		.byte	0x46
  980 011d 00010000 		.4byte	0x100
  981 0121 03       		.uleb128 0x3
- 982 0122 53060000 		.4byte	.LASF25
+ 982 0122 8D060000 		.4byte	.LASF25
  983 0126 06       		.byte	0x6
  984 0127 48       		.byte	0x48
  985 0128 CF000000 		.4byte	0xcf
@@ -1043,7 +1043,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  989 0132 49       		.byte	0x49
  990 0133 CF000000 		.4byte	0xcf
  991 0137 03       		.uleb128 0x3
- 992 0138 65050000 		.4byte	.LASF27
+ 992 0138 9F050000 		.4byte	.LASF27
  993 013c 06       		.byte	0x6
  994 013d 4A       		.byte	0x4a
  995 013e CF000000 		.4byte	0xcf
@@ -1053,17 +1053,17 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  999 0148 4B       		.byte	0x4b
  1000 0149 CF000000 		.4byte	0xcf
  1001 014d 03       		.uleb128 0x3
- 1002 014e 99050000 		.4byte	.LASF29
+ 1002 014e D3050000 		.4byte	.LASF29
  1003 0152 06       		.byte	0x6
  1004 0153 4C       		.byte	0x4c
  1005 0154 F5000000 		.4byte	0xf5
  1006 0158 03       		.uleb128 0x3
- 1007 0159 1A040000 		.4byte	.LASF30
+ 1007 0159 26040000 		.4byte	.LASF30
  1008 015d 06       		.byte	0x6
  1009 015e 4D       		.byte	0x4d
  1010 015f E5000000 		.4byte	0xe5
  1011 0163 03       		.uleb128 0x3
- 1012 0164 5D040000 		.4byte	.LASF31
+ 1012 0164 69040000 		.4byte	.LASF31
  1013 0168 06       		.byte	0x6
  1014 0169 4F       		.byte	0x4f
  1015 016a F5000000 		.4byte	0xf5
@@ -1073,39 +1073,39 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1019 0174 51       		.byte	0x51
  1020 0175 E5000000 		.4byte	0xe5
  1021 0179 03       		.uleb128 0x3
- 1022 017a 25040000 		.4byte	.LASF33
+ 1022 017a 31040000 		.4byte	.LASF33
  1023 017e 06       		.byte	0x6
  1024 017f 52       		.byte	0x52
  1025 0180 F5000000 		.4byte	0xf5
  1026 0184 03       		.uleb128 0x3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 19
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 19
 
 
- 1027 0185 44070000 		.4byte	.LASF34
+ 1027 0185 7E070000 		.4byte	.LASF34
  1028 0189 07       		.byte	0x7
  1029 018a 33       		.byte	0x33
  1030 018b F5000000 		.4byte	0xf5
  1031 018f 06       		.uleb128 0x6
  1032 0190 84010000 		.4byte	0x184
  1033 0194 03       		.uleb128 0x3
- 1034 0195 2F070000 		.4byte	.LASF35
+ 1034 0195 69070000 		.4byte	.LASF35
  1035 0199 07       		.byte	0x7
  1036 019a 3F       		.byte	0x3f
  1037 019b 9F010000 		.4byte	0x19f
  1038 019f 07       		.uleb128 0x7
- 1039 01a0 10040000 		.4byte	.LASF59
+ 1039 01a0 1C040000 		.4byte	.LASF59
  1040 01a4 68       		.byte	0x68
  1041 01a5 08       		.byte	0x8
  1042 01a6 C2       		.byte	0xc2
  1043 01a7 BD020000 		.4byte	0x2bd
  1044 01ab 08       		.uleb128 0x8
- 1045 01ac 4C060000 		.4byte	.LASF36
+ 1045 01ac 86060000 		.4byte	.LASF36
  1046 01b0 08       		.byte	0x8
  1047 01b1 C3       		.byte	0xc3
  1048 01b2 C8020000 		.4byte	0x2c8
  1049 01b6 00       		.byte	0
  1050 01b7 08       		.uleb128 0x8
- 1051 01b8 92050000 		.4byte	.LASF37
+ 1051 01b8 CC050000 		.4byte	.LASF37
  1052 01bc 08       		.byte	0x8
  1053 01bd C5       		.byte	0xc5
  1054 01be C8020000 		.4byte	0x2c8
@@ -1117,7 +1117,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1060 01ca 4D010000 		.4byte	0x14d
  1061 01ce 08       		.byte	0x8
  1062 01cf 08       		.uleb128 0x8
- 1063 01d0 19050000 		.4byte	.LASF39
+ 1063 01d0 53050000 		.4byte	.LASF39
  1064 01d4 08       		.byte	0x8
  1065 01d5 C8       		.byte	0xc8
  1066 01d6 41050000 		.4byte	0x541
@@ -1129,16 +1129,16 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1072 01e2 C8020000 		.4byte	0x2c8
  1073 01e6 10       		.byte	0x10
  1074 01e7 08       		.uleb128 0x8
- 1075 01e8 0B050000 		.4byte	.LASF41
+ 1075 01e8 45050000 		.4byte	.LASF41
  1076 01ec 08       		.byte	0x8
  1077 01ed CB       		.byte	0xcb
  1078 01ee C8020000 		.4byte	0x2c8
  1079 01f2 14       		.byte	0x14
  1080 01f3 08       		.uleb128 0x8
- 1081 01f4 EE050000 		.4byte	.LASF42
+ 1081 01f4 28060000 		.4byte	.LASF42
  1082 01f8 08       		.byte	0x8
  1083 01f9 D2       		.byte	0xd2
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 20
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 20
 
 
  1084 01fa B7080000 		.4byte	0x8b7
@@ -1150,25 +1150,25 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1090 0206 CE080000 		.4byte	0x8ce
  1091 020a 1C       		.byte	0x1c
  1092 020b 08       		.uleb128 0x8
- 1093 020c 28060000 		.4byte	.LASF44
+ 1093 020c 62060000 		.4byte	.LASF44
  1094 0210 08       		.byte	0x8
  1095 0211 DD       		.byte	0xdd
  1096 0212 2C010000 		.4byte	0x12c
  1097 0216 20       		.byte	0x20
  1098 0217 08       		.uleb128 0x8
- 1099 0218 6A060000 		.4byte	.LASF45
+ 1099 0218 A4060000 		.4byte	.LASF45
  1100 021c 08       		.byte	0x8
  1101 021d E1       		.byte	0xe1
  1102 021e 21010000 		.4byte	0x121
  1103 0222 21       		.byte	0x21
  1104 0223 08       		.uleb128 0x8
- 1105 0224 A7070000 		.4byte	.LASF46
+ 1105 0224 E1070000 		.4byte	.LASF46
  1106 0228 08       		.byte	0x8
  1107 0229 E6       		.byte	0xe6
  1108 022a 37010000 		.4byte	0x137
  1109 022e 22       		.byte	0x22
  1110 022f 08       		.uleb128 0x8
- 1111 0230 30060000 		.4byte	.LASF47
+ 1111 0230 6A060000 		.4byte	.LASF47
  1112 0234 08       		.byte	0x8
  1113 0235 EC       		.byte	0xec
  1114 0236 42010000 		.4byte	0x142
@@ -1186,7 +1186,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1126 024f E6070000 		.4byte	0x7e6
  1127 0253 28       		.byte	0x28
  1128 0254 0A       		.uleb128 0xa
- 1129 0255 A8040000 		.4byte	.LASF49
+ 1129 0255 B4040000 		.4byte	.LASF49
  1130 0259 08       		.byte	0x8
  1131 025a 3601     		.2byte	0x136
  1132 025c CE020000 		.4byte	0x2ce
@@ -1198,28 +1198,28 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1138 0269 F2020000 		.4byte	0x2f2
  1139 026d 30       		.byte	0x30
  1140 026e 0A       		.uleb128 0xa
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 21
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 21
 
 
- 1141 026f 86070000 		.4byte	.LASF51
+ 1141 026f C0070000 		.4byte	.LASF51
  1142 0273 08       		.byte	0x8
  1143 0274 4001     		.2byte	0x140
  1144 0276 58010000 		.4byte	0x158
  1145 027a 38       		.byte	0x38
  1146 027b 0A       		.uleb128 0xa
- 1147 027c C6060000 		.4byte	.LASF52
+ 1147 027c 00070000 		.4byte	.LASF52
  1148 0280 08       		.byte	0x8
  1149 0281 4601     		.2byte	0x146
  1150 0283 63010000 		.4byte	0x163
  1151 0287 3C       		.byte	0x3c
  1152 0288 0A       		.uleb128 0xa
- 1153 0289 14060000 		.4byte	.LASF53
+ 1153 0289 4E060000 		.4byte	.LASF53
  1154 028d 08       		.byte	0x8
  1155 028e 4D01     		.2byte	0x14d
  1156 0290 B1080000 		.4byte	0x8b1
  1157 0294 40       		.byte	0x40
  1158 0295 0A       		.uleb128 0xa
- 1159 0296 4E070000 		.4byte	.LASF54
+ 1159 0296 88070000 		.4byte	.LASF54
  1160 029a 08       		.byte	0x8
  1161 029b 5101     		.2byte	0x151
  1162 029d 4D010000 		.4byte	0x14d
@@ -1231,14 +1231,14 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1168 02aa A5030000 		.4byte	0x3a5
  1169 02ae 48       		.byte	0x48
  1170 02af 0A       		.uleb128 0xa
- 1171 02b0 72060000 		.4byte	.LASF56
+ 1171 02b0 AC060000 		.4byte	.LASF56
  1172 02b4 08       		.byte	0x8
  1173 02b5 5E01     		.2byte	0x15e
  1174 02b7 97070000 		.4byte	0x797
  1175 02bb 50       		.byte	0x50
  1176 02bc 00       		.byte	0
  1177 02bd 03       		.uleb128 0x3
- 1178 02be 2C080000 		.4byte	.LASF57
+ 1178 02be 07080000 		.4byte	.LASF57
  1179 02c2 07       		.byte	0x7
  1180 02c3 44       		.byte	0x44
  1181 02c4 C8020000 		.4byte	0x2c8
@@ -1246,19 +1246,19 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1183 02c9 04       		.byte	0x4
  1184 02ca 94010000 		.4byte	0x194
  1185 02ce 03       		.uleb128 0x3
- 1186 02cf 7E040000 		.4byte	.LASF58
+ 1186 02cf 8A040000 		.4byte	.LASF58
  1187 02d3 07       		.byte	0x7
  1188 02d4 49       		.byte	0x49
  1189 02d5 D9020000 		.4byte	0x2d9
  1190 02d9 07       		.uleb128 0x7
- 1191 02da EE060000 		.4byte	.LASF60
+ 1191 02da 28070000 		.4byte	.LASF60
  1192 02de 04       		.byte	0x4
  1193 02df 08       		.byte	0x8
  1194 02e0 B0       		.byte	0xb0
  1195 02e1 F2020000 		.4byte	0x2f2
  1196 02e5 08       		.uleb128 0x8
- 1197 02e6 4C060000 		.4byte	.LASF36
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 22
+ 1197 02e6 86060000 		.4byte	.LASF36
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 22
 
 
  1198 02ea 08       		.byte	0x8
@@ -1267,7 +1267,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1201 02f0 00       		.byte	0
  1202 02f1 00       		.byte	0
  1203 02f2 03       		.uleb128 0x3
- 1204 02f3 7A060000 		.4byte	.LASF61
+ 1204 02f3 B4060000 		.4byte	.LASF61
  1205 02f7 07       		.byte	0x7
  1206 02f8 50       		.byte	0x50
  1207 02f9 FD020000 		.4byte	0x2fd
@@ -1278,13 +1278,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1212 0304 B7       		.byte	0xb7
  1213 0305 22030000 		.4byte	0x322
  1214 0309 08       		.uleb128 0x8
- 1215 030a 4C060000 		.4byte	.LASF36
+ 1215 030a 86060000 		.4byte	.LASF36
  1216 030e 08       		.byte	0x8
  1217 030f B8       		.byte	0xb8
  1218 0310 C8020000 		.4byte	0x2c8
  1219 0314 00       		.byte	0
  1220 0315 08       		.uleb128 0x8
- 1221 0316 92050000 		.4byte	.LASF37
+ 1221 0316 CC050000 		.4byte	.LASF37
  1222 031a 08       		.byte	0x8
  1223 031b B9       		.byte	0xb9
  1224 031c C8020000 		.4byte	0x2c8
@@ -1296,29 +1296,29 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1230 0328 57       		.byte	0x57
  1231 0329 2D030000 		.4byte	0x32d
  1232 032d 0C       		.uleb128 0xc
- 1233 032e 4F040000 		.4byte	.LASF64
+ 1233 032e 5B040000 		.4byte	.LASF64
  1234 0332 1C       		.byte	0x1c
  1235 0333 08       		.byte	0x8
  1236 0334 9001     		.2byte	0x190
  1237 0336 89030000 		.4byte	0x389
  1238 033a 0A       		.uleb128 0xa
- 1239 033b E6060000 		.4byte	.LASF65
+ 1239 033b 20070000 		.4byte	.LASF65
  1240 033f 08       		.byte	0x8
  1241 0340 9101     		.2byte	0x191
  1242 0342 F2020000 		.4byte	0x2f2
  1243 0346 00       		.byte	0
  1244 0347 0A       		.uleb128 0xa
- 1245 0348 A1040000 		.4byte	.LASF66
+ 1245 0348 AD040000 		.4byte	.LASF66
  1246 034c 08       		.byte	0x8
  1247 034d 9201     		.2byte	0x192
  1248 034f 4D010000 		.4byte	0x14d
  1249 0353 08       		.byte	0x8
  1250 0354 0A       		.uleb128 0xa
- 1251 0355 13050000 		.4byte	.LASF67
+ 1251 0355 4D050000 		.4byte	.LASF67
  1252 0359 08       		.byte	0x8
  1253 035a 9401     		.2byte	0x194
  1254 035c 41050000 		.4byte	0x541
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 23
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 23
 
 
  1255 0360 0C       		.byte	0xc
@@ -1329,20 +1329,20 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1260 0369 C8020000 		.4byte	0x2c8
  1261 036d 10       		.byte	0x10
  1262 036e 0A       		.uleb128 0xa
- 1263 036f 3A050000 		.4byte	.LASF69
+ 1263 036f 74050000 		.4byte	.LASF69
  1264 0373 08       		.byte	0x8
  1265 0374 9801     		.2byte	0x198
  1266 0376 C8020000 		.4byte	0x2c8
  1267 037a 14       		.byte	0x14
  1268 037b 0A       		.uleb128 0xa
- 1269 037c 30050000 		.4byte	.LASF70
+ 1269 037c 6A050000 		.4byte	.LASF70
  1270 0380 08       		.byte	0x8
  1271 0381 9B01     		.2byte	0x19b
  1272 0383 C8020000 		.4byte	0x2c8
  1273 0387 18       		.byte	0x18
  1274 0388 00       		.byte	0
  1275 0389 03       		.uleb128 0x3
- 1276 038a 59070000 		.4byte	.LASF71
+ 1276 038a 93070000 		.4byte	.LASF71
  1277 038e 07       		.byte	0x7
  1278 038f 5C       		.byte	0x5c
  1279 0390 94030000 		.4byte	0x394
@@ -1357,12 +1357,12 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1288 03a5 0F       		.uleb128 0xf
  1289 03a6 04       		.byte	0x4
  1290 03a7 03       		.uleb128 0x3
- 1291 03a8 82050000 		.4byte	.LASF72
+ 1291 03a8 BC050000 		.4byte	.LASF72
  1292 03ac 07       		.byte	0x7
  1293 03ad 61       		.byte	0x61
  1294 03ae B2030000 		.4byte	0x3b2
  1295 03b2 0C       		.uleb128 0xc
- 1296 03b3 8A060000 		.4byte	.LASF73
+ 1296 03b3 C4060000 		.4byte	.LASF73
  1297 03b7 14       		.byte	0x14
  1298 03b8 08       		.byte	0x8
  1299 03b9 6B01     		.2byte	0x16b
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1309 03d1 08       		.byte	0x8
  1310 03d2 6D01     		.2byte	0x16d
  1311 03d4 D4080000 		.4byte	0x8d4
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 24
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 24
 
 
  1312 03d8 04       		.byte	0x4
@@ -1389,13 +1389,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1317 03e1 84010000 		.4byte	0x184
  1318 03e5 08       		.byte	0x8
  1319 03e6 0A       		.uleb128 0xa
- 1320 03e7 8F080000 		.4byte	.LASF77
+ 1320 03e7 6A080000 		.4byte	.LASF77
  1321 03eb 08       		.byte	0x8
  1322 03ec 6F01     		.2byte	0x16f
  1323 03ee 89030000 		.4byte	0x389
  1324 03f2 0C       		.byte	0xc
  1325 03f3 0A       		.uleb128 0xa
- 1326 03f4 8C070000 		.4byte	.LASF78
+ 1326 03f4 C6070000 		.4byte	.LASF78
  1327 03f8 08       		.byte	0x8
  1328 03f9 7101     		.2byte	0x171
  1329 03fb A5030000 		.4byte	0x3a5
@@ -1407,7 +1407,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1335 0407 66       		.byte	0x66
  1336 0408 0C040000 		.4byte	0x40c
  1337 040c 0C       		.uleb128 0xc
- 1338 040d BA040000 		.4byte	.LASF80
+ 1338 040d C6040000 		.4byte	.LASF80
  1339 0411 10       		.byte	0x10
  1340 0412 08       		.byte	0x8
  1341 0413 7B01     		.2byte	0x17b
@@ -1431,14 +1431,14 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1359 043b 84010000 		.4byte	0x184
  1360 043f 08       		.byte	0x8
  1361 0440 0A       		.uleb128 0xa
- 1362 0441 4C080000 		.4byte	.LASF81
+ 1362 0441 27080000 		.4byte	.LASF81
  1363 0445 08       		.byte	0x8
  1364 0446 8201     		.2byte	0x182
  1365 0448 8F010000 		.4byte	0x18f
  1366 044c 0C       		.byte	0xc
  1367 044d 00       		.byte	0
  1368 044e 03       		.uleb128 0x3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 25
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 25
 
 
  1369 044f 6A000000 		.4byte	.LASF82
@@ -1452,13 +1452,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1377 0461 A201     		.2byte	0x1a2
  1378 0463 9C040000 		.4byte	0x49c
  1379 0467 0A       		.uleb128 0xa
- 1380 0468 6D070000 		.4byte	.LASF84
+ 1380 0468 A7070000 		.4byte	.LASF84
  1381 046c 08       		.byte	0x8
  1382 046d AA01     		.2byte	0x1aa
  1383 046f BD080000 		.4byte	0x8bd
  1384 0473 00       		.byte	0
  1385 0474 0A       		.uleb128 0xa
- 1386 0475 AE070000 		.4byte	.LASF85
+ 1386 0475 E8070000 		.4byte	.LASF85
  1387 0479 08       		.byte	0x8
  1388 047a AF01     		.2byte	0x1af
  1389 047c 6E010000 		.4byte	0x16e
@@ -1470,14 +1470,14 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1395 0489 6E010000 		.4byte	0x16e
  1396 048d 08       		.byte	0x8
  1397 048e 0A       		.uleb128 0xa
- 1398 048f 57080000 		.4byte	.LASF87
+ 1398 048f 32080000 		.4byte	.LASF87
  1399 0493 08       		.byte	0x8
  1400 0494 B901     		.2byte	0x1b9
  1401 0496 29070000 		.4byte	0x729
  1402 049a 0C       		.byte	0xc
  1403 049b 00       		.byte	0
  1404 049c 03       		.uleb128 0x3
- 1405 049d 2C040000 		.4byte	.LASF88
+ 1405 049d 38040000 		.4byte	.LASF88
  1406 04a1 07       		.byte	0x7
  1407 04a2 70       		.byte	0x70
  1408 04a3 A7040000 		.4byte	0x4a7
@@ -1488,7 +1488,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1413 04af C201     		.2byte	0x1c2
  1414 04b1 14050000 		.4byte	0x514
  1415 04b5 0A       		.uleb128 0xa
- 1416 04b6 1E080000 		.4byte	.LASF90
+ 1416 04b6 F9070000 		.4byte	.LASF90
  1417 04ba 08       		.byte	0x8
  1418 04bb C601     		.2byte	0x1c6
  1419 04bd 22030000 		.4byte	0x322
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1423 04c7 08       		.byte	0x8
  1424 04c8 CA01     		.2byte	0x1ca
  1425 04ca 01040000 		.4byte	0x401
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 26
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 26
 
 
  1426 04ce 1C       		.byte	0x1c
@@ -1521,7 +1521,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1443 04f1 49070000 		.4byte	0x749
  1444 04f5 A804     		.2byte	0x4a8
  1445 04f7 11       		.uleb128 0x11
- 1446 04f8 58050000 		.4byte	.LASF93
+ 1446 04f8 92050000 		.4byte	.LASF93
  1447 04fc 08       		.byte	0x8
  1448 04fd DD01     		.2byte	0x1dd
  1449 04ff DB070000 		.4byte	0x7db
@@ -1549,16 +1549,16 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1471 0531 65       		.byte	0x65
  1472 0532 A5030000 		.4byte	0x3a5
  1473 0536 03       		.uleb128 0x3
- 1474 0537 73040000 		.4byte	.LASF98
+ 1474 0537 7F040000 		.4byte	.LASF98
  1475 053b 0B       		.byte	0xb
  1476 053c 6D       		.byte	0x6d
  1477 053d 00010000 		.4byte	0x100
  1478 0541 07       		.uleb128 0x7
- 1479 0542 7E070000 		.4byte	.LASF99
+ 1479 0542 B8070000 		.4byte	.LASF99
  1480 0546 04       		.byte	0x4
  1481 0547 0B       		.byte	0xb
  1482 0548 89       		.byte	0x89
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 27
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 27
 
 
  1483 0549 5A050000 		.4byte	0x55a
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1537 05b5 2B050000 		.4byte	0x52b
  1538 05b9 18       		.byte	0x18
  1539 05ba 15       		.uleb128 0x15
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 28
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 28
 
 
  1540 05bb 73323300 		.ascii	"s23\000"
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1594 062d 723400   		.ascii	"r4\000"
  1595 0630 0C       		.byte	0xc
  1596 0631 0701     		.2byte	0x107
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 29
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 29
 
 
  1597 0633 2B050000 		.4byte	0x52b
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1651 06a1 16       		.uleb128 0x16
  1652 06a2 10       		.byte	0x10
  1653 06a3 0D       		.byte	0xd
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 30
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 30
 
 
  1654 06a4 51       		.byte	0x51
@@ -1756,20 +1756,20 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1666 06bc C8020000 		.4byte	0x2c8
  1667 06c0 04       		.byte	0x4
  1668 06c1 08       		.uleb128 0x8
- 1669 06c2 77080000 		.4byte	.LASF103
+ 1669 06c2 52080000 		.4byte	.LASF103
  1670 06c6 0D       		.byte	0xd
  1671 06c7 5D       		.byte	0x5d
  1672 06c8 A5030000 		.4byte	0x3a5
  1673 06cc 08       		.byte	0x8
  1674 06cd 08       		.uleb128 0x8
- 1675 06ce 15080000 		.4byte	.LASF104
+ 1675 06ce F0070000 		.4byte	.LASF104
  1676 06d2 0D       		.byte	0xd
  1677 06d3 61       		.byte	0x61
  1678 06d4 CF000000 		.4byte	0xcf
  1679 06d8 0C       		.byte	0xc
  1680 06d9 00       		.byte	0
  1681 06da 03       		.uleb128 0x3
- 1682 06db F0040000 		.4byte	.LASF105
+ 1682 06db 2A050000 		.4byte	.LASF105
  1683 06df 0D       		.byte	0xd
  1684 06e0 62       		.byte	0x62
  1685 06e1 A1060000 		.4byte	0x6a1
@@ -1785,20 +1785,20 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1695 06f5 5C000000 		.4byte	0x5c
  1696 06f9 00       		.byte	0
  1697 06fa 08       		.uleb128 0x8
- 1698 06fb E9040000 		.4byte	.LASF107
+ 1698 06fb 23050000 		.4byte	.LASF107
  1699 06ff 0D       		.byte	0xd
  1700 0700 6F       		.byte	0x6f
  1701 0701 13070000 		.4byte	0x713
  1702 0705 04       		.byte	0x4
  1703 0706 08       		.uleb128 0x8
- 1704 0707 6D050000 		.4byte	.LASF108
+ 1704 0707 A7050000 		.4byte	.LASF108
  1705 070b 0D       		.byte	0xd
  1706 070c 73       		.byte	0x73
  1707 070d 19070000 		.4byte	0x719
  1708 0711 08       		.byte	0x8
  1709 0712 00       		.byte	0
  1710 0713 0B       		.uleb128 0xb
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 31
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 31
 
 
  1711 0714 04       		.byte	0x4
@@ -1821,14 +1821,14 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1728 0737 38       		.byte	0x38
  1729 0738 49070000 		.4byte	0x749
  1730 073c 08       		.uleb128 0x8
- 1731 073d 77070000 		.4byte	.LASF110
+ 1731 073d B1070000 		.4byte	.LASF110
  1732 0741 0E       		.byte	0xe
  1733 0742 3C       		.byte	0x3c
  1734 0743 0B010000 		.4byte	0x10b
  1735 0747 00       		.byte	0
  1736 0748 00       		.byte	0
  1737 0749 03       		.uleb128 0x3
- 1738 074a 1F050000 		.4byte	.LASF111
+ 1738 074a 59050000 		.4byte	.LASF111
  1739 074e 0E       		.byte	0xe
  1740 074f 3D       		.byte	0x3d
  1741 0750 34070000 		.4byte	0x734
@@ -1838,7 +1838,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1745 0757 48       		.byte	0x48
  1746 0758 97070000 		.4byte	0x797
  1747 075c 08       		.uleb128 0x8
- 1748 075d 38070000 		.4byte	.LASF112
+ 1748 075d 72070000 		.4byte	.LASF112
  1749 0761 0E       		.byte	0xe
  1750 0762 49       		.byte	0x49
  1751 0763 0B010000 		.4byte	0x10b
@@ -1850,7 +1850,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1757 076f 0B010000 		.4byte	0x10b
  1758 0773 04       		.byte	0x4
  1759 0774 08       		.uleb128 0x8
- 1760 0775 20040000 		.4byte	.LASF114
+ 1760 0775 2C040000 		.4byte	.LASF114
  1761 0779 0E       		.byte	0xe
  1762 077a 4B       		.byte	0x4b
  1763 077b 0B010000 		.4byte	0x10b
@@ -1858,14 +1858,14 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1765 0780 15       		.uleb128 0x15
  1766 0781 6E00     		.ascii	"n\000"
  1767 0783 0E       		.byte	0xe
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 32
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 32
 
 
  1768 0784 4C       		.byte	0x4c
  1769 0785 79010000 		.4byte	0x179
  1770 0789 0C       		.byte	0xc
  1771 078a 08       		.uleb128 0x8
- 1772 078b 4D050000 		.4byte	.LASF115
+ 1772 078b 87050000 		.4byte	.LASF115
  1773 078f 0E       		.byte	0xe
  1774 0790 4D       		.byte	0x4d
  1775 0791 16010000 		.4byte	0x116
@@ -1882,32 +1882,32 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1786 07a5 38       		.byte	0x38
  1787 07a6 DB070000 		.4byte	0x7db
  1788 07aa 08       		.uleb128 0x8
- 1789 07ab E2030000 		.4byte	.LASF117
+ 1789 07ab EE030000 		.4byte	.LASF117
  1790 07af 0F       		.byte	0xf
  1791 07b0 39       		.byte	0x39
  1792 07b1 79010000 		.4byte	0x179
  1793 07b5 00       		.byte	0
  1794 07b6 08       		.uleb128 0x8
- 1795 07b7 F5050000 		.4byte	.LASF118
+ 1795 07b7 2F060000 		.4byte	.LASF118
  1796 07bb 0F       		.byte	0xf
  1797 07bc 3A       		.byte	0x3a
  1798 07bd 79010000 		.4byte	0x179
  1799 07c1 04       		.byte	0x4
  1800 07c2 08       		.uleb128 0x8
- 1801 07c3 64080000 		.4byte	.LASF119
+ 1801 07c3 3F080000 		.4byte	.LASF119
  1802 07c7 0F       		.byte	0xf
  1803 07c8 3B       		.byte	0x3b
  1804 07c9 97070000 		.4byte	0x797
  1805 07cd 08       		.byte	0x8
  1806 07ce 08       		.uleb128 0x8
- 1807 07cf 44040000 		.4byte	.LASF120
+ 1807 07cf 50040000 		.4byte	.LASF120
  1808 07d3 0F       		.byte	0xf
  1809 07d4 3D       		.byte	0x3d
  1810 07d5 97070000 		.4byte	0x797
  1811 07d9 20       		.byte	0x20
  1812 07da 00       		.byte	0
  1813 07db 03       		.uleb128 0x3
- 1814 07dc 01040000 		.4byte	.LASF121
+ 1814 07dc 0D040000 		.4byte	.LASF121
  1815 07e0 0F       		.byte	0xf
  1816 07e1 3F       		.byte	0x3f
  1817 07e2 A2070000 		.4byte	0x7a2
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1822 07ea 43080000 		.4byte	0x843
  1823 07ee 1B       		.uleb128 0x1b
  1824 07ef 33000000 		.4byte	.LASF122
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 33
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 33
 
 
  1825 07f3 08       		.byte	0x8
@@ -1930,7 +1930,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1831 0800 0801     		.2byte	0x108
  1832 0802 58010000 		.4byte	0x158
  1833 0806 1B       		.uleb128 0x1b
- 1834 0807 3F080000 		.4byte	.LASF124
+ 1834 0807 1A080000 		.4byte	.LASF124
  1835 080b 08       		.byte	0x8
  1836 080c 0F01     		.2byte	0x10f
  1837 080e A5030000 		.4byte	0x3a5
@@ -1945,12 +1945,12 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1846 0824 1E01     		.2byte	0x11e
  1847 0826 6E080000 		.4byte	0x86e
  1848 082a 1B       		.uleb128 0x1b
- 1849 082b 1D070000 		.4byte	.LASF127
+ 1849 082b 57070000 		.4byte	.LASF127
  1850 082f 08       		.byte	0x8
  1851 0830 2701     		.2byte	0x127
  1852 0832 B1080000 		.4byte	0x8b1
  1853 0836 1B       		.uleb128 0x1b
- 1854 0837 45060000 		.4byte	.LASF128
+ 1854 0837 7F060000 		.4byte	.LASF128
  1855 083b 08       		.byte	0x8
  1856 083c 2F01     		.2byte	0x12f
  1857 083e 63010000 		.4byte	0x163
@@ -1959,7 +1959,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1860 0844 04       		.byte	0x4
  1861 0845 BD020000 		.4byte	0x2bd
  1862 0849 07       		.uleb128 0x7
- 1863 084a B9060000 		.4byte	.LASF129
+ 1863 084a F3060000 		.4byte	.LASF129
  1864 084e 0C       		.byte	0xc
  1865 084f 10       		.byte	0x10
  1866 0850 34       		.byte	0x34
@@ -1971,20 +1971,20 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1872 085c F2020000 		.4byte	0x2f2
  1873 0860 00       		.byte	0
  1874 0861 08       		.uleb128 0x8
- 1875 0862 E8030000 		.4byte	.LASF131
+ 1875 0862 F4030000 		.4byte	.LASF131
  1876 0866 10       		.byte	0x10
  1877 0867 37       		.byte	0x37
  1878 0868 6E010000 		.4byte	0x16e
  1879 086c 08       		.byte	0x8
  1880 086d 00       		.byte	0
  1881 086e 0B       		.uleb128 0xb
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 34
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 34
 
 
  1882 086f 04       		.byte	0x4
  1883 0870 49080000 		.4byte	0x849
  1884 0874 07       		.uleb128 0x7
- 1885 0875 9E070000 		.4byte	.LASF132
+ 1885 0875 D8070000 		.4byte	.LASF132
  1886 0879 14       		.byte	0x14
  1887 087a 11       		.byte	0x11
  1888 087b 39       		.byte	0x39
@@ -1996,13 +1996,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1894 0887 F2020000 		.4byte	0x2f2
  1895 088b 00       		.byte	0
  1896 088c 08       		.uleb128 0x8
- 1897 088d 6F080000 		.4byte	.LASF134
+ 1897 088d 4A080000 		.4byte	.LASF134
  1898 0891 11       		.byte	0x11
  1899 0892 3C       		.byte	0x3c
  1900 0893 C8020000 		.4byte	0x2c8
  1901 0897 08       		.byte	0x8
  1902 0898 08       		.uleb128 0x8
- 1903 0899 3D070000 		.4byte	.LASF135
+ 1903 0899 77070000 		.4byte	.LASF135
  1904 089d 11       		.byte	0x11
  1905 089e 3E       		.byte	0x3e
  1906 089f 0C0A0000 		.4byte	0xa0c
@@ -2025,7 +2025,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1923 08c2 02       		.uleb128 0x2
  1924 08c3 01       		.byte	0x1
  1925 08c4 08       		.byte	0x8
- 1926 08c5 18070000 		.4byte	.LASF137
+ 1926 08c5 52070000 		.4byte	.LASF137
  1927 08c9 04       		.uleb128 0x4
  1928 08ca C2080000 		.4byte	0x8c2
  1929 08ce 0B       		.uleb128 0xb
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1936 08db 36050000 		.4byte	0x536
  1937 08df EA080000 		.4byte	0x8ea
  1938 08e3 19       		.uleb128 0x19
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 35
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 35
 
 
  1939 08e4 5C000000 		.4byte	0x5c
@@ -2055,37 +2055,37 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1950 08f8 34       		.byte	0x34
  1951 08f9 D6090000 		.4byte	0x9d6
  1952 08fd 08       		.uleb128 0x8
- 1953 08fe 81080000 		.4byte	.LASF138
+ 1953 08fe 5C080000 		.4byte	.LASF138
  1954 0902 12       		.byte	0x12
  1955 0903 35       		.byte	0x35
  1956 0904 D6090000 		.4byte	0x9d6
  1957 0908 00       		.byte	0
  1958 0909 08       		.uleb128 0x8
- 1959 090a 8D040000 		.4byte	.LASF139
+ 1959 090a 99040000 		.4byte	.LASF139
  1960 090e 12       		.byte	0x12
  1961 090f 36       		.byte	0x36
  1962 0910 CF000000 		.4byte	0xcf
  1963 0914 04       		.byte	0x4
  1964 0915 08       		.uleb128 0x8
- 1965 0916 FE060000 		.4byte	.LASF140
+ 1965 0916 38070000 		.4byte	.LASF140
  1966 091a 12       		.byte	0x12
  1967 091b 37       		.byte	0x37
  1968 091c CF000000 		.4byte	0xcf
  1969 0920 05       		.byte	0x5
  1970 0921 08       		.uleb128 0x8
- 1971 0922 3A060000 		.4byte	.LASF141
+ 1971 0922 74060000 		.4byte	.LASF141
  1972 0926 12       		.byte	0x12
  1973 0927 38       		.byte	0x38
  1974 0928 DA000000 		.4byte	0xda
  1975 092c 06       		.byte	0x6
  1976 092d 08       		.uleb128 0x8
- 1977 092e 77050000 		.4byte	.LASF142
+ 1977 092e B1050000 		.4byte	.LASF142
  1978 0932 12       		.byte	0x12
  1979 0933 39       		.byte	0x39
  1980 0934 CF000000 		.4byte	0xcf
  1981 0938 08       		.byte	0x8
  1982 0939 08       		.uleb128 0x8
- 1983 093a DD040000 		.4byte	.LASF143
+ 1983 093a E2030000 		.4byte	.LASF143
  1984 093e 12       		.byte	0x12
  1985 093f 3A       		.byte	0x3a
  1986 0940 CF000000 		.4byte	0xcf
@@ -2097,8 +2097,8 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1992 094c CF000000 		.4byte	0xcf
  1993 0950 0A       		.byte	0xa
  1994 0951 08       		.uleb128 0x8
- 1995 0952 DA060000 		.4byte	.LASF145
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 36
+ 1995 0952 14070000 		.4byte	.LASF145
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 36
 
 
  1996 0956 12       		.byte	0x12
@@ -2106,13 +2106,13 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  1998 0958 CF000000 		.4byte	0xcf
  1999 095c 0B       		.byte	0xb
  2000 095d 08       		.uleb128 0x8
- 2001 095e 93070000 		.4byte	.LASF146
+ 2001 095e CD070000 		.4byte	.LASF146
  2002 0962 12       		.byte	0x12
  2003 0963 3D       		.byte	0x3d
  2004 0964 CF000000 		.4byte	0xcf
  2005 0968 0C       		.byte	0xc
  2006 0969 08       		.uleb128 0x8
- 2007 096a 9B060000 		.4byte	.LASF147
+ 2007 096a D5060000 		.4byte	.LASF147
  2008 096e 12       		.byte	0x12
  2009 096f 3E       		.byte	0x3e
  2010 0970 CF000000 		.4byte	0xcf
@@ -2124,7 +2124,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2016 097c CF000000 		.4byte	0xcf
  2017 0980 0E       		.byte	0xe
  2018 0981 08       		.uleb128 0x8
- 2019 0982 FF040000 		.4byte	.LASF149
+ 2019 0982 39050000 		.4byte	.LASF149
  2020 0986 12       		.byte	0x12
  2021 0987 40       		.byte	0x40
  2022 0988 CF000000 		.4byte	0xcf
@@ -2148,22 +2148,22 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2040 09ac CF000000 		.4byte	0xcf
  2041 09b0 12       		.byte	0x12
  2042 09b1 08       		.uleb128 0x8
- 2043 09b2 95040000 		.4byte	.LASF153
+ 2043 09b2 A1040000 		.4byte	.LASF153
  2044 09b6 12       		.byte	0x12
  2045 09b7 45       		.byte	0x45
  2046 09b8 CF000000 		.4byte	0xcf
  2047 09bc 13       		.byte	0x13
  2048 09bd 08       		.uleb128 0x8
- 2049 09be 5B060000 		.4byte	.LASF154
+ 2049 09be 95060000 		.4byte	.LASF154
  2050 09c2 12       		.byte	0x12
  2051 09c3 46       		.byte	0x46
  2052 09c4 CF000000 		.4byte	0xcf
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 37
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 37
 
 
  2053 09c8 14       		.byte	0x14
  2054 09c9 08       		.uleb128 0x8
- 2055 09ca 38040000 		.4byte	.LASF155
+ 2055 09ca 44040000 		.4byte	.LASF155
  2056 09ce 12       		.byte	0x12
  2057 09cf 48       		.byte	0x48
  2058 09d0 CF000000 		.4byte	0xcf
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2107 0a3e 01       		.byte	0x1
  2108 0a3f 1002     		.2byte	0x210
  2109 0a41 3A000000 		.4byte	0x3a
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 38
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 38
 
 
  2110 0a45 00000000 		.4byte	.LFB220
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2164 0ac9 9C       		.byte	0x9c
  2165 0aca 060B0000 		.4byte	0xb06
  2166 0ace 1F       		.uleb128 0x1f
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 39
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 39
 
 
  2167 0acf 63687200 		.ascii	"chr\000"
@@ -2303,8 +2303,8 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2186 0b01 060B0000 		.4byte	0xb06
  2187 0b05 00       		.byte	0
  2188 0b06 23       		.uleb128 0x23
- 2189 0b07 A8060000 		.4byte	.LASF166
- 2190 0b0b A8060000 		.4byte	.LASF166
+ 2189 0b07 E2060000 		.4byte	.LASF166
+ 2190 0b0b E2060000 		.4byte	.LASF166
  2191 0b0f 00       		.byte	0
  2192              		.section	.debug_abbrev,"",%progbits
  2193              	.Ldebug_abbrev0:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2221 001b 0E       		.uleb128 0xe
  2222 001c 00       		.byte	0
  2223 001d 00       		.byte	0
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 40
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 40
 
 
  2224 001e 03       		.uleb128 0x3
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2278 0054 0D       		.uleb128 0xd
  2279 0055 00       		.byte	0
  2280 0056 03       		.uleb128 0x3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 41
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 41
 
 
  2281 0057 0E       		.uleb128 0xe
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2335 008d 0E       		.uleb128 0xe
  2336 008e 0B       		.uleb128 0xb
  2337 008f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 42
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 42
 
 
  2338 0090 3A       		.uleb128 0x3a
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2392 00c6 05       		.uleb128 0x5
  2393 00c7 49       		.uleb128 0x49
  2394 00c8 13       		.uleb128 0x13
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 43
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 43
 
 
  2395 00c9 38       		.uleb128 0x38
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2449 00ff 0D       		.uleb128 0xd
  2450 0100 00       		.byte	0
  2451 0101 03       		.uleb128 0x3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 44
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 44
 
 
  2452 0102 08       		.uleb128 0x8
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2506 0138 00       		.byte	0
  2507 0139 1A       		.uleb128 0x1a
  2508 013a 17       		.uleb128 0x17
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 45
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 45
 
 
  2509 013b 01       		.byte	0x1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2563 0171 00       		.byte	0
  2564 0172 00       		.byte	0
  2565 0173 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 46
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 46
 
 
  2566 0174 2E       		.uleb128 0x2e
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2620 01ab 00       		.byte	0
  2621 01ac 00       		.byte	0
  2622 01ad 21       		.uleb128 0x21
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 47
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 47
 
 
  2623 01ae 34       		.uleb128 0x34
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2677 0023 50       		.byte	0x50
  2678 0024 34000000 		.4byte	.LVL20
  2679 0028 36000000 		.4byte	.LVL21
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 48
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 48
 
 
  2680 002c 0400     		.2byte	0x4
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2734 00ac 50       		.byte	0x50
  2735 00ad 40000000 		.4byte	.LVL9
  2736 00b1 48000000 		.4byte	.LVL10
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 49
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 49
 
 
  2737 00b5 0400     		.2byte	0x4
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2791 012e 01       		.sleb128 1
  2792 012f 9F       		.byte	0x9f
  2793 0130 1E000000 		.4byte	.LVL3
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 50
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 50
 
 
  2794 0134 22000000 		.4byte	.LVL4
@@ -2984,8 +2984,8 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2834 0014 00000000 		.4byte	0
  2835              		.section	.debug_line,"",%progbits
  2836              	.Ldebug_line0:
- 2837 0000 2D050000 		.section	.debug_str,"MS",%progbits,1
- 2837      0200D704 
+ 2837 0000 43040000 		.section	.debug_str,"MS",%progbits,1
+ 2837      0200ED03 
  2837      00000201 
  2837      FB0E0D00 
  2837      01010101 
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2841 000d 72656164 		.ascii	"ready_list_t\000"
  2841      795F6C69 
  2841      73745F74 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 51
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 51
 
 
  2841      00
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2867      72616365 
  2867      5F627566 
  2867      6665725F 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 52
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 52
 
 
  2867      7400
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2893 014b 63665F6F 		.ascii	"cf_off_stklimit\000"
  2893      66665F73 
  2893      746B6C69 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 53
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 53
 
 
  2893      6D697400 
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2923      65756500 
  2924              	.LASF106:
  2925 01e0 74625F73 		.ascii	"tb_size\000"
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 54
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 54
 
 
  2925      697A6500 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2951 02bb 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
  2951      2D6D6670 
  2951      753D6670 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 55
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 55
 
 
  2951      76342D73 
@@ -3293,461 +3293,458 @@ ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 1
  2971 03d9 63685F64 		.ascii	"ch_debug\000"
  2971      65627567 
  2971      00
- 2972              	.LASF117:
- 2973 03e2 6E5F6972 		.ascii	"n_irq\000"
- 2973      7100
- 2974              	.LASF131:
- 2975 03e8 735F636E 		.ascii	"s_cnt\000"
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 56
+ 2972              	.LASF143:
+ 2973 03e2 63685F74 		.ascii	"ch_timesize\000"
+ 2973      696D6573 
+ 2973      697A6500 
+ 2974              	.LASF117:
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 56
 
 
- 2975      7400
- 2976              	.LASF2:
- 2977 03ee 73686F72 		.ascii	"short unsigned int\000"
- 2977      7420756E 
- 2977      7369676E 
- 2977      65642069 
- 2977      6E7400
- 2978              	.LASF121:
- 2979 0401 6B65726E 		.ascii	"kernel_stats_t\000"
- 2979      656C5F73 
- 2979      74617473 
- 2979      5F7400
- 2980              	.LASF59:
- 2981 0410 63685F74 		.ascii	"ch_thread\000"
- 2981      68726561 
- 2981      6400
- 2982              	.LASF30:
- 2983 041a 6D73675F 		.ascii	"msg_t\000"
- 2983      7400
- 2984              	.LASF114:
- 2985 0420 6C617374 		.ascii	"last\000"
- 2985      00
- 2986              	.LASF33:
- 2987 0425 75636E74 		.ascii	"ucnt_t\000"
- 2987      5F7400
- 2988              	.LASF88:
- 2989 042c 63685F73 		.ascii	"ch_system_t\000"
- 2989      79737465 
- 2989      6D5F7400 
- 2990              	.LASF155:
- 2991 0438 63665F6F 		.ascii	"cf_off_time\000"
- 2991      66665F74 
- 2991      696D6500 
- 2992              	.LASF120:
- 2993 0444 6D5F6372 		.ascii	"m_crit_isr\000"
- 2993      69745F69 
- 2993      737200
- 2994              	.LASF64:
- 2995 044f 63685F72 		.ascii	"ch_ready_list\000"
- 2995      65616479 
- 2995      5F6C6973 
- 2995      7400
- 2996              	.LASF31:
- 2997 045d 6576656E 		.ascii	"eventmask_t\000"
- 2997      746D6173 
- 2997      6B5F7400 
- 2998              	.LASF14:
- 2999 0469 5F5F696E 		.ascii	"__int32_t\000"
- 2999      7433325F 
- 2999      7400
- 3000              	.LASF98:
- 3001 0473 73746B61 		.ascii	"stkalign_t\000"
- 3001      6C69676E 
- 3001      5F7400
- 3002              	.LASF58:
- 3003 047e 74687265 		.ascii	"threads_list_t\000"
- 3003      6164735F 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 57
+ 2975 03ee 6E5F6972 		.ascii	"n_irq\000"
+ 2975      7100
+ 2976              	.LASF131:
+ 2977 03f4 735F636E 		.ascii	"s_cnt\000"
+ 2977      7400
+ 2978              	.LASF2:
+ 2979 03fa 73686F72 		.ascii	"short unsigned int\000"
+ 2979      7420756E 
+ 2979      7369676E 
+ 2979      65642069 
+ 2979      6E7400
+ 2980              	.LASF121:
+ 2981 040d 6B65726E 		.ascii	"kernel_stats_t\000"
+ 2981      656C5F73 
+ 2981      74617473 
+ 2981      5F7400
+ 2982              	.LASF59:
+ 2983 041c 63685F74 		.ascii	"ch_thread\000"
+ 2983      68726561 
+ 2983      6400
+ 2984              	.LASF30:
+ 2985 0426 6D73675F 		.ascii	"msg_t\000"
+ 2985      7400
+ 2986              	.LASF114:
+ 2987 042c 6C617374 		.ascii	"last\000"
+ 2987      00
+ 2988              	.LASF33:
+ 2989 0431 75636E74 		.ascii	"ucnt_t\000"
+ 2989      5F7400
+ 2990              	.LASF88:
+ 2991 0438 63685F73 		.ascii	"ch_system_t\000"
+ 2991      79737465 
+ 2991      6D5F7400 
+ 2992              	.LASF155:
+ 2993 0444 63665F6F 		.ascii	"cf_off_time\000"
+ 2993      66665F74 
+ 2993      696D6500 
+ 2994              	.LASF120:
+ 2995 0450 6D5F6372 		.ascii	"m_crit_isr\000"
+ 2995      69745F69 
+ 2995      737200
+ 2996              	.LASF64:
+ 2997 045b 63685F72 		.ascii	"ch_ready_list\000"
+ 2997      65616479 
+ 2997      5F6C6973 
+ 2997      7400
+ 2998              	.LASF31:
+ 2999 0469 6576656E 		.ascii	"eventmask_t\000"
+ 2999      746D6173 
+ 2999      6B5F7400 
+ 3000              	.LASF14:
+ 3001 0475 5F5F696E 		.ascii	"__int32_t\000"
+ 3001      7433325F 
+ 3001      7400
+ 3002              	.LASF98:
+ 3003 047f 73746B61 		.ascii	"stkalign_t\000"
+ 3003      6C69676E 
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 57
 
 
- 3003      6C697374 
  3003      5F7400
- 3004              	.LASF139:
- 3005 048d 63685F7A 		.ascii	"ch_zero\000"
- 3005      65726F00 
- 3006              	.LASF153:
- 3007 0495 63665F6F 		.ascii	"cf_off_refs\000"
- 3007      66665F72 
- 3007      65667300 
- 3008              	.LASF66:
- 3009 04a1 725F7072 		.ascii	"r_prio\000"
- 3009      696F00
- 3010              	.LASF49:
- 3011 04a8 705F7761 		.ascii	"p_waiting\000"
- 3011      6974696E 
- 3011      6700
- 3012              	.LASF23:
- 3013 04b2 7274636E 		.ascii	"rtcnt_t\000"
- 3013      745F7400 
- 3014              	.LASF80:
- 3015 04ba 63685F76 		.ascii	"ch_virtual_timers_list\000"
- 3015      69727475 
- 3015      616C5F74 
- 3015      696D6572 
- 3015      735F6C69 
- 3016              	.LASF10:
- 3017 04d1 6C6F6E67 		.ascii	"long double\000"
- 3017      20646F75 
- 3017      626C6500 
- 3018              	.LASF143:
- 3019 04dd 63685F74 		.ascii	"ch_timesize\000"
- 3019      696D6573 
- 3019      697A6500 
- 3020              	.LASF107:
- 3021 04e9 74625F70 		.ascii	"tb_ptr\000"
- 3021      747200
- 3022              	.LASF105:
- 3023 04f0 63685F73 		.ascii	"ch_swc_event_t\000"
- 3023      77635F65 
- 3023      76656E74 
- 3023      5F7400
- 3024              	.LASF149:
- 3025 04ff 63665F6F 		.ascii	"cf_off_name\000"
- 3025      66665F6E 
- 3025      616D6500 
- 3026              	.LASF41:
- 3027 050b 705F6F6C 		.ascii	"p_older\000"
- 3027      64657200 
- 3028              	.LASF67:
- 3029 0513 725F6374 		.ascii	"r_ctx\000"
- 3029      7800
- 3030              	.LASF39:
- 3031 0519 705F6374 		.ascii	"p_ctx\000"
- 3031      7800
- 3032              	.LASF111:
- 3033 051f 746D5F63 		.ascii	"tm_calibration_t\000"
- 3033      616C6962 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 58
+ 3004              	.LASF58:
+ 3005 048a 74687265 		.ascii	"threads_list_t\000"
+ 3005      6164735F 
+ 3005      6C697374 
+ 3005      5F7400
+ 3006              	.LASF139:
+ 3007 0499 63685F7A 		.ascii	"ch_zero\000"
+ 3007      65726F00 
+ 3008              	.LASF153:
+ 3009 04a1 63665F6F 		.ascii	"cf_off_refs\000"
+ 3009      66665F72 
+ 3009      65667300 
+ 3010              	.LASF66:
+ 3011 04ad 725F7072 		.ascii	"r_prio\000"
+ 3011      696F00
+ 3012              	.LASF49:
+ 3013 04b4 705F7761 		.ascii	"p_waiting\000"
+ 3013      6974696E 
+ 3013      6700
+ 3014              	.LASF23:
+ 3015 04be 7274636E 		.ascii	"rtcnt_t\000"
+ 3015      745F7400 
+ 3016              	.LASF80:
+ 3017 04c6 63685F76 		.ascii	"ch_virtual_timers_list\000"
+ 3017      69727475 
+ 3017      616C5F74 
+ 3017      696D6572 
+ 3017      735F6C69 
+ 3018              	.LASF10:
+ 3019 04dd 6C6F6E67 		.ascii	"long double\000"
+ 3019      20646F75 
+ 3019      626C6500 
+ 3020              	.LASF165:
+ 3021 04e9 433A5C55 		.ascii	"C:\\Users\\Michael Biselx\\Desktop\\TP-MicroInf\\Mi"
+ 3021      73657273 
+ 3021      5C4D6963 
+ 3021      6861656C 
+ 3021      20426973 
+ 3022 0517 63726F49 		.ascii	"croInf\\Code\000"
+ 3022      6E665C43 
+ 3022      6F646500 
+ 3023              	.LASF107:
+ 3024 0523 74625F70 		.ascii	"tb_ptr\000"
+ 3024      747200
+ 3025              	.LASF105:
+ 3026 052a 63685F73 		.ascii	"ch_swc_event_t\000"
+ 3026      77635F65 
+ 3026      76656E74 
+ 3026      5F7400
+ 3027              	.LASF149:
+ 3028 0539 63665F6F 		.ascii	"cf_off_name\000"
+ 3028      66665F6E 
+ 3028      616D6500 
+ 3029              	.LASF41:
+ 3030 0545 705F6F6C 		.ascii	"p_older\000"
+ 3030      64657200 
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 58
 
 
- 3033      72617469 
- 3033      6F6E5F74 
- 3033      00
- 3034              	.LASF70:
- 3035 0530 725F6375 		.ascii	"r_current\000"
- 3035      7272656E 
- 3035      7400
- 3036              	.LASF69:
- 3037 053a 725F6F6C 		.ascii	"r_older\000"
- 3037      64657200 
- 3038              	.LASF16:
- 3039 0542 5F5F7569 		.ascii	"__uint64_t\000"
- 3039      6E743634 
- 3039      5F7400
- 3040              	.LASF115:
- 3041 054d 63756D75 		.ascii	"cumulative\000"
- 3041      6C617469 
- 3041      766500
- 3042              	.LASF93:
- 3043 0558 6B65726E 		.ascii	"kernel_stats\000"
- 3043      656C5F73 
- 3043      74617473 
- 3043      00
- 3044              	.LASF27:
- 3045 0565 74726566 		.ascii	"trefs_t\000"
- 3045      735F7400 
- 3046              	.LASF108:
- 3047 056d 74625F62 		.ascii	"tb_buffer\000"
- 3047      75666665 
- 3047      7200
- 3048              	.LASF142:
- 3049 0577 63685F70 		.ascii	"ch_ptrsize\000"
- 3049      74727369 
- 3049      7A6500
- 3050              	.LASF72:
- 3051 0582 76697274 		.ascii	"virtual_timer_t\000"
- 3051      75616C5F 
- 3051      74696D65 
- 3051      725F7400 
- 3052              	.LASF37:
- 3053 0592 705F7072 		.ascii	"p_prev\000"
- 3053      657600
- 3054              	.LASF29:
- 3055 0599 74707269 		.ascii	"tprio_t\000"
- 3055      6F5F7400 
- 3056              	.LASF164:
- 3057 05a1 2E2E2F2E 		.ascii	"../../lib/e-puck2_main-processor/ChibiOS_ext//ext/f"
- 3057      2E2F6C69 
- 3057      622F652D 
- 3057      7075636B 
- 3057      325F6D61 
- 3058 05d4 61746673 		.ascii	"atfs/src/option/unicode.c\000"
- 3058      2F737263 
- 3058      2F6F7074 
- 3058      696F6E2F 
- 3058      756E6963 
- 3059              	.LASF42:
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 59
+ 3031              	.LASF67:
+ 3032 054d 725F6374 		.ascii	"r_ctx\000"
+ 3032      7800
+ 3033              	.LASF39:
+ 3034 0553 705F6374 		.ascii	"p_ctx\000"
+ 3034      7800
+ 3035              	.LASF111:
+ 3036 0559 746D5F63 		.ascii	"tm_calibration_t\000"
+ 3036      616C6962 
+ 3036      72617469 
+ 3036      6F6E5F74 
+ 3036      00
+ 3037              	.LASF70:
+ 3038 056a 725F6375 		.ascii	"r_current\000"
+ 3038      7272656E 
+ 3038      7400
+ 3039              	.LASF69:
+ 3040 0574 725F6F6C 		.ascii	"r_older\000"
+ 3040      64657200 
+ 3041              	.LASF16:
+ 3042 057c 5F5F7569 		.ascii	"__uint64_t\000"
+ 3042      6E743634 
+ 3042      5F7400
+ 3043              	.LASF115:
+ 3044 0587 63756D75 		.ascii	"cumulative\000"
+ 3044      6C617469 
+ 3044      766500
+ 3045              	.LASF93:
+ 3046 0592 6B65726E 		.ascii	"kernel_stats\000"
+ 3046      656C5F73 
+ 3046      74617473 
+ 3046      00
+ 3047              	.LASF27:
+ 3048 059f 74726566 		.ascii	"trefs_t\000"
+ 3048      735F7400 
+ 3049              	.LASF108:
+ 3050 05a7 74625F62 		.ascii	"tb_buffer\000"
+ 3050      75666665 
+ 3050      7200
+ 3051              	.LASF142:
+ 3052 05b1 63685F70 		.ascii	"ch_ptrsize\000"
+ 3052      74727369 
+ 3052      7A6500
+ 3053              	.LASF72:
+ 3054 05bc 76697274 		.ascii	"virtual_timer_t\000"
+ 3054      75616C5F 
+ 3054      74696D65 
+ 3054      725F7400 
+ 3055              	.LASF37:
+ 3056 05cc 705F7072 		.ascii	"p_prev\000"
+ 3056      657600
+ 3057              	.LASF29:
+ 3058 05d3 74707269 		.ascii	"tprio_t\000"
+ 3058      6F5F7400 
+ 3059              	.LASF164:
+ 3060 05db 2E2E2F2E 		.ascii	"../../lib/e-puck2_main-processor/ChibiOS_ext//ext/f"
+ 3060      2E2F6C69 
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 59
 
 
- 3060 05ee 705F6E61 		.ascii	"p_name\000"
- 3060      6D6500
- 3061              	.LASF118:
- 3062 05f5 6E5F6374 		.ascii	"n_ctxswc\000"
- 3062      78737763 
- 3062      00
- 3063              	.LASF20:
- 3064 05fe 696E7433 		.ascii	"int32_t\000"
- 3064      325F7400 
- 3065              	.LASF0:
- 3066 0606 756E7369 		.ascii	"unsigned char\000"
- 3066      676E6564 
- 3066      20636861 
- 3066      7200
- 3067              	.LASF53:
- 3068 0614 705F6D74 		.ascii	"p_mtxlist\000"
- 3068      786C6973 
- 3068      7400
- 3069              	.LASF1:
- 3070 061e 73686F72 		.ascii	"short int\000"
- 3070      7420696E 
- 3070      7400
- 3071              	.LASF44:
- 3072 0628 705F7374 		.ascii	"p_state\000"
- 3072      61746500 
- 3073              	.LASF47:
- 3074 0630 705F7072 		.ascii	"p_preempt\000"
- 3074      65656D70 
- 3074      7400
- 3075              	.LASF141:
- 3076 063a 63685F76 		.ascii	"ch_version\000"
- 3076      65727369 
- 3076      6F6E00
- 3077              	.LASF128:
- 3078 0645 65776D61 		.ascii	"ewmask\000"
- 3078      736B00
- 3079              	.LASF36:
- 3080 064c 705F6E65 		.ascii	"p_next\000"
- 3080      787400
- 3081              	.LASF25:
- 3082 0653 746D6F64 		.ascii	"tmode_t\000"
- 3082      655F7400 
- 3083              	.LASF154:
- 3084 065b 63665F6F 		.ascii	"cf_off_preempt\000"
- 3084      66665F70 
- 3084      7265656D 
- 3084      707400
- 3085              	.LASF45:
- 3086 066a 705F666C 		.ascii	"p_flags\000"
- 3086      61677300 
- 3087              	.LASF56:
- 3088 0672 705F7374 		.ascii	"p_stats\000"
- 3088      61747300 
- 3089              	.LASF61:
- 3090 067a 74687265 		.ascii	"threads_queue_t\000"
- 3090      6164735F 
- 3090      71756575 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 60
+ 3060      622F652D 
+ 3060      7075636B 
+ 3060      325F6D61 
+ 3061 060e 61746673 		.ascii	"atfs/src/option/unicode.c\000"
+ 3061      2F737263 
+ 3061      2F6F7074 
+ 3061      696F6E2F 
+ 3061      756E6963 
+ 3062              	.LASF42:
+ 3063 0628 705F6E61 		.ascii	"p_name\000"
+ 3063      6D6500
+ 3064              	.LASF118:
+ 3065 062f 6E5F6374 		.ascii	"n_ctxswc\000"
+ 3065      78737763 
+ 3065      00
+ 3066              	.LASF20:
+ 3067 0638 696E7433 		.ascii	"int32_t\000"
+ 3067      325F7400 
+ 3068              	.LASF0:
+ 3069 0640 756E7369 		.ascii	"unsigned char\000"
+ 3069      676E6564 
+ 3069      20636861 
+ 3069      7200
+ 3070              	.LASF53:
+ 3071 064e 705F6D74 		.ascii	"p_mtxlist\000"
+ 3071      786C6973 
+ 3071      7400
+ 3072              	.LASF1:
+ 3073 0658 73686F72 		.ascii	"short int\000"
+ 3073      7420696E 
+ 3073      7400
+ 3074              	.LASF44:
+ 3075 0662 705F7374 		.ascii	"p_state\000"
+ 3075      61746500 
+ 3076              	.LASF47:
+ 3077 066a 705F7072 		.ascii	"p_preempt\000"
+ 3077      65656D70 
+ 3077      7400
+ 3078              	.LASF141:
+ 3079 0674 63685F76 		.ascii	"ch_version\000"
+ 3079      65727369 
+ 3079      6F6E00
+ 3080              	.LASF128:
+ 3081 067f 65776D61 		.ascii	"ewmask\000"
+ 3081      736B00
+ 3082              	.LASF36:
+ 3083 0686 705F6E65 		.ascii	"p_next\000"
+ 3083      787400
+ 3084              	.LASF25:
+ 3085 068d 746D6F64 		.ascii	"tmode_t\000"
+ 3085      655F7400 
+ 3086              	.LASF154:
+ 3087 0695 63665F6F 		.ascii	"cf_off_preempt\000"
+ 3087      66665F70 
+ 3087      7265656D 
+ 3087      707400
+ 3088              	.LASF45:
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 60
 
 
- 3090      655F7400 
- 3091              	.LASF73:
- 3092 068a 63685F76 		.ascii	"ch_virtual_timer\000"
- 3092      69727475 
- 3092      616C5F74 
- 3092      696D6572 
- 3092      00
- 3093              	.LASF147:
- 3094 069b 63665F6F 		.ascii	"cf_off_newer\000"
- 3094      66665F6E 
- 3094      65776572 
- 3094      00
- 3095              	.LASF166:
- 3096 06a8 5F5F7374 		.ascii	"__stack_chk_fail\000"
- 3096      61636B5F 
- 3096      63686B5F 
- 3096      6661696C 
- 3096      00
- 3097              	.LASF129:
- 3098 06b9 63685F73 		.ascii	"ch_semaphore\000"
- 3098      656D6170 
- 3098      686F7265 
- 3098      00
- 3099              	.LASF52:
- 3100 06c6 705F6570 		.ascii	"p_epending\000"
- 3100      656E6469 
- 3100      6E6700
- 3101              	.LASF21:
- 3102 06d1 75696E74 		.ascii	"uint32_t\000"
- 3102      33325F74 
- 3102      00
- 3103              	.LASF145:
- 3104 06da 63665F6F 		.ascii	"cf_off_prio\000"
- 3104      66665F70 
- 3104      72696F00 
- 3105              	.LASF65:
- 3106 06e6 725F7175 		.ascii	"r_queue\000"
- 3106      65756500 
- 3107              	.LASF60:
- 3108 06ee 63685F74 		.ascii	"ch_threads_list\000"
- 3108      68726561 
- 3108      64735F6C 
- 3108      69737400 
- 3109              	.LASF140:
- 3110 06fe 63685F73 		.ascii	"ch_size\000"
- 3110      697A6500 
- 3111              	.LASF7:
- 3112 0706 6C6F6E67 		.ascii	"long unsigned int\000"
- 3112      20756E73 
- 3112      69676E65 
- 3112      6420696E 
- 3112      7400
- 3113              	.LASF137:
- 3114 0718 63686172 		.ascii	"char\000"
- 3114      00
- 3115              	.LASF127:
- 3116 071d 77746D74 		.ascii	"wtmtxp\000"
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 61
+ 3089 06a4 705F666C 		.ascii	"p_flags\000"
+ 3089      61677300 
+ 3090              	.LASF56:
+ 3091 06ac 705F7374 		.ascii	"p_stats\000"
+ 3091      61747300 
+ 3092              	.LASF61:
+ 3093 06b4 74687265 		.ascii	"threads_queue_t\000"
+ 3093      6164735F 
+ 3093      71756575 
+ 3093      655F7400 
+ 3094              	.LASF73:
+ 3095 06c4 63685F76 		.ascii	"ch_virtual_timer\000"
+ 3095      69727475 
+ 3095      616C5F74 
+ 3095      696D6572 
+ 3095      00
+ 3096              	.LASF147:
+ 3097 06d5 63665F6F 		.ascii	"cf_off_newer\000"
+ 3097      66665F6E 
+ 3097      65776572 
+ 3097      00
+ 3098              	.LASF166:
+ 3099 06e2 5F5F7374 		.ascii	"__stack_chk_fail\000"
+ 3099      61636B5F 
+ 3099      63686B5F 
+ 3099      6661696C 
+ 3099      00
+ 3100              	.LASF129:
+ 3101 06f3 63685F73 		.ascii	"ch_semaphore\000"
+ 3101      656D6170 
+ 3101      686F7265 
+ 3101      00
+ 3102              	.LASF52:
+ 3103 0700 705F6570 		.ascii	"p_epending\000"
+ 3103      656E6469 
+ 3103      6E6700
+ 3104              	.LASF21:
+ 3105 070b 75696E74 		.ascii	"uint32_t\000"
+ 3105      33325F74 
+ 3105      00
+ 3106              	.LASF145:
+ 3107 0714 63665F6F 		.ascii	"cf_off_prio\000"
+ 3107      66665F70 
+ 3107      72696F00 
+ 3108              	.LASF65:
+ 3109 0720 725F7175 		.ascii	"r_queue\000"
+ 3109      65756500 
+ 3110              	.LASF60:
+ 3111 0728 63685F74 		.ascii	"ch_threads_list\000"
+ 3111      68726561 
+ 3111      64735F6C 
+ 3111      69737400 
+ 3112              	.LASF140:
+ 3113 0738 63685F73 		.ascii	"ch_size\000"
+ 3113      697A6500 
+ 3114              	.LASF7:
+ 3115 0740 6C6F6E67 		.ascii	"long unsigned int\000"
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 61
 
 
- 3116      787000
- 3117              	.LASF13:
- 3118 0724 5F5F7569 		.ascii	"__uint16_t\000"
- 3118      6E743136 
- 3118      5F7400
- 3119              	.LASF35:
- 3120 072f 74687265 		.ascii	"thread_t\000"
- 3120      61645F74 
- 3120      00
- 3121              	.LASF112:
- 3122 0738 62657374 		.ascii	"best\000"
- 3122      00
- 3123              	.LASF135:
- 3124 073d 6D5F6E65 		.ascii	"m_next\000"
- 3124      787400
- 3125              	.LASF34:
- 3126 0744 73797374 		.ascii	"systime_t\000"
- 3126      696D655F 
- 3126      7400
- 3127              	.LASF54:
- 3128 074e 705F7265 		.ascii	"p_realprio\000"
- 3128      616C7072 
- 3128      696F00
- 3129              	.LASF71:
- 3130 0759 76746675 		.ascii	"vtfunc_t\000"
- 3130      6E635F74 
- 3130      00
- 3131              	.LASF15:
- 3132 0762 5F5F7569 		.ascii	"__uint32_t\000"
- 3132      6E743332 
- 3132      5F7400
- 3133              	.LASF84:
- 3134 076d 70616E69 		.ascii	"panic_msg\000"
- 3134      635F6D73 
- 3134      6700
- 3135              	.LASF110:
- 3136 0777 6F666673 		.ascii	"offset\000"
- 3136      657400
- 3137              	.LASF99:
- 3138 077e 636F6E74 		.ascii	"context\000"
- 3138      65787400 
- 3139              	.LASF51:
- 3140 0786 705F6D73 		.ascii	"p_msg\000"
- 3140      6700
- 3141              	.LASF78:
- 3142 078c 76745F70 		.ascii	"vt_par\000"
- 3142      617200
- 3143              	.LASF146:
- 3144 0793 63665F6F 		.ascii	"cf_off_ctx\000"
- 3144      66665F63 
- 3144      747800
- 3145              	.LASF132:
- 3146 079e 63685F6D 		.ascii	"ch_mutex\000"
- 3146      75746578 
- 3146      00
- 3147              	.LASF46:
- 3148 07a7 705F7265 		.ascii	"p_refs\000"
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 62
+ 3115      20756E73 
+ 3115      69676E65 
+ 3115      6420696E 
+ 3115      7400
+ 3116              	.LASF137:
+ 3117 0752 63686172 		.ascii	"char\000"
+ 3117      00
+ 3118              	.LASF127:
+ 3119 0757 77746D74 		.ascii	"wtmtxp\000"
+ 3119      787000
+ 3120              	.LASF13:
+ 3121 075e 5F5F7569 		.ascii	"__uint16_t\000"
+ 3121      6E743136 
+ 3121      5F7400
+ 3122              	.LASF35:
+ 3123 0769 74687265 		.ascii	"thread_t\000"
+ 3123      61645F74 
+ 3123      00
+ 3124              	.LASF112:
+ 3125 0772 62657374 		.ascii	"best\000"
+ 3125      00
+ 3126              	.LASF135:
+ 3127 0777 6D5F6E65 		.ascii	"m_next\000"
+ 3127      787400
+ 3128              	.LASF34:
+ 3129 077e 73797374 		.ascii	"systime_t\000"
+ 3129      696D655F 
+ 3129      7400
+ 3130              	.LASF54:
+ 3131 0788 705F7265 		.ascii	"p_realprio\000"
+ 3131      616C7072 
+ 3131      696F00
+ 3132              	.LASF71:
+ 3133 0793 76746675 		.ascii	"vtfunc_t\000"
+ 3133      6E635F74 
+ 3133      00
+ 3134              	.LASF15:
+ 3135 079c 5F5F7569 		.ascii	"__uint32_t\000"
+ 3135      6E743332 
+ 3135      5F7400
+ 3136              	.LASF84:
+ 3137 07a7 70616E69 		.ascii	"panic_msg\000"
+ 3137      635F6D73 
+ 3137      6700
+ 3138              	.LASF110:
+ 3139 07b1 6F666673 		.ascii	"offset\000"
+ 3139      657400
+ 3140              	.LASF99:
+ 3141 07b8 636F6E74 		.ascii	"context\000"
+ 3141      65787400 
+ 3142              	.LASF51:
+ 3143 07c0 705F6D73 		.ascii	"p_msg\000"
+ 3143      6700
+ 3144              	.LASF78:
+ 3145 07c6 76745F70 		.ascii	"vt_par\000"
+ 3145      617200
+ 3146              	.LASF146:
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 62
 
 
- 3148      667300
- 3149              	.LASF85:
- 3150 07ae 6973725F 		.ascii	"isr_cnt\000"
- 3150      636E7400 
- 3151              	.LASF165:
- 3152 07b6 433A5C55 		.ascii	"C:\\Users\\samue\\Documents\\EPFL\\6. Semester\\Mic"
- 3152      73657273 
- 3152      5C73616D 
- 3152      75655C44 
- 3152      6F63756D 
- 3153 07e3 726F696E 		.ascii	"roinformatique\\Microinformatique_TP\\MicroInf\\Cod"
- 3153      666F726D 
- 3153      61746971 
- 3153      75655C4D 
- 3153      6963726F 
- 3154 0813 6500     		.ascii	"e\000"
- 3155              	.LASF104:
- 3156 0815 73655F73 		.ascii	"se_state\000"
- 3156      74617465 
- 3156      00
- 3157              	.LASF90:
- 3158 081e 726C6973 		.ascii	"rlist\000"
- 3158      7400
- 3159              	.LASF18:
- 3160 0824 75696E74 		.ascii	"uint8_t\000"
- 3160      385F7400 
- 3161              	.LASF57:
- 3162 082c 74687265 		.ascii	"thread_reference_t\000"
- 3162      61645F72 
- 3162      65666572 
- 3162      656E6365 
- 3162      5F7400
- 3163              	.LASF124:
- 3164 083f 77746F62 		.ascii	"wtobjp\000"
- 3164      6A7000
- 3165              	.LASF3:
- 3166 0846 57434841 		.ascii	"WCHAR\000"
- 3166      5200
- 3167              	.LASF81:
- 3168 084c 76745F73 		.ascii	"vt_systime\000"
- 3168      79737469 
- 3168      6D6500
- 3169              	.LASF87:
- 3170 0857 74726163 		.ascii	"trace_buffer\000"
- 3170      655F6275 
- 3170      66666572 
- 3170      00
- 3171              	.LASF119:
- 3172 0864 6D5F6372 		.ascii	"m_crit_thd\000"
- 3172      69745F74 
- 3172      686400
- 3173              	.LASF134:
- 3174 086f 6D5F6F77 		.ascii	"m_owner\000"
- 3174      6E657200 
- 3175              	.LASF103:
- 3176 0877 73655F77 		.ascii	"se_wtobjp\000"
- 3176      746F626A 
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 63
+ 3147 07cd 63665F6F 		.ascii	"cf_off_ctx\000"
+ 3147      66665F63 
+ 3147      747800
+ 3148              	.LASF132:
+ 3149 07d8 63685F6D 		.ascii	"ch_mutex\000"
+ 3149      75746578 
+ 3149      00
+ 3150              	.LASF46:
+ 3151 07e1 705F7265 		.ascii	"p_refs\000"
+ 3151      667300
+ 3152              	.LASF85:
+ 3153 07e8 6973725F 		.ascii	"isr_cnt\000"
+ 3153      636E7400 
+ 3154              	.LASF104:
+ 3155 07f0 73655F73 		.ascii	"se_state\000"
+ 3155      74617465 
+ 3155      00
+ 3156              	.LASF90:
+ 3157 07f9 726C6973 		.ascii	"rlist\000"
+ 3157      7400
+ 3158              	.LASF18:
+ 3159 07ff 75696E74 		.ascii	"uint8_t\000"
+ 3159      385F7400 
+ 3160              	.LASF57:
+ 3161 0807 74687265 		.ascii	"thread_reference_t\000"
+ 3161      61645F72 
+ 3161      65666572 
+ 3161      656E6365 
+ 3161      5F7400
+ 3162              	.LASF124:
+ 3163 081a 77746F62 		.ascii	"wtobjp\000"
+ 3163      6A7000
+ 3164              	.LASF3:
+ 3165 0821 57434841 		.ascii	"WCHAR\000"
+ 3165      5200
+ 3166              	.LASF81:
+ 3167 0827 76745F73 		.ascii	"vt_systime\000"
+ 3167      79737469 
+ 3167      6D6500
+ 3168              	.LASF87:
+ 3169 0832 74726163 		.ascii	"trace_buffer\000"
+ 3169      655F6275 
+ 3169      66666572 
+ 3169      00
+ 3170              	.LASF119:
+ 3171 083f 6D5F6372 		.ascii	"m_crit_thd\000"
+ 3171      69745F74 
+ 3171      686400
+ 3172              	.LASF134:
+ 3173 084a 6D5F6F77 		.ascii	"m_owner\000"
+ 3173      6E657200 
+ 3174              	.LASF103:
+ 3175 0852 73655F77 		.ascii	"se_wtobjp\000"
+ 3175      746F626A 
+ 3175      7000
+ 3176              	.LASF138:
+ 3177 085c 63685F69 		.ascii	"ch_identifier\000"
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 63
 
 
- 3176      7000
- 3177              	.LASF138:
- 3178 0881 63685F69 		.ascii	"ch_identifier\000"
- 3178      64656E74 
- 3178      69666965 
- 3178      7200
- 3179              	.LASF77:
- 3180 088f 76745F66 		.ascii	"vt_func\000"
- 3180      756E6300 
- 3181              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s 			page 64
+ 3177      64656E74 
+ 3177      69666965 
+ 3177      7200
+ 3178              	.LASF77:
+ 3179 086a 76745F66 		.ascii	"vt_func\000"
+ 3179      756E6300 
+ 3180              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s 			page 64
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 unicode.c
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:18     .text.ff_convert:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:26     .text.ff_convert:00000000 ff_convert
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:110    .text.ff_convert:00000050 $d
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:116    .text.ff_wtoupper:00000000 $t
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:124    .text.ff_wtoupper:00000000 ff_wtoupper
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:193    .text.ff_wtoupper:00000040 $d
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:200    .rodata.Tbl:00000000 $d
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:204    .rodata.Tbl:00000000 Tbl
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:334    .rodata.tbl_lower.8049:00000000 $d
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:338    .rodata.tbl_lower.8049:00000000 tbl_lower.8049
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:580    .rodata.tbl_upper.8050:00000000 $d
-C:\Users\samue\AppData\Local\Temp\ccFWtYRS.s:584    .rodata.tbl_upper.8050:00000000 tbl_upper.8050
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:18     .text.ff_convert:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:26     .text.ff_convert:00000000 ff_convert
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:110    .text.ff_convert:00000050 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:116    .text.ff_wtoupper:00000000 $t
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:124    .text.ff_wtoupper:00000000 ff_wtoupper
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:193    .text.ff_wtoupper:00000040 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:200    .rodata.Tbl:00000000 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:204    .rodata.Tbl:00000000 Tbl
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:334    .rodata.tbl_lower.8049:00000000 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:338    .rodata.tbl_lower.8049:00000000 tbl_lower.8049
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:580    .rodata.tbl_upper.8050:00000000 $d
+C:\Users\MICHAE~1\AppData\Local\Temp\ccLPhpkK.s:584    .rodata.tbl_upper.8050:00000000 tbl_upper.8050
 
 UNDEFINED SYMBOLS
 __stack_chk_fail
