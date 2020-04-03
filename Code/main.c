@@ -5,9 +5,14 @@
 
 #include "ch.h"
 #include "hal.h"
+#include <sensors\proximity.h>
 #include "memory_protection.h"
 #include <main.h>
+#include <move.h>
 
+messagebus_t bus;
+MUTEX_DECL(bus_lock);
+CONDVAR_DECL(bus_condvar);
 
 int main(void)
 {
@@ -16,11 +21,14 @@ int main(void)
     chSysInit();
     mpu_init();
 
+    messagebus_init(&bus, &bus_lock, &bus_condvar);
+
     proximity_start();
     calibrate_ir();
-    //en witere test
 
-    movement_main();
+    motors_init();
+
+    move_main();
 
     /* Infinite loop. */
     while (1)

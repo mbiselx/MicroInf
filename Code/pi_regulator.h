@@ -8,7 +8,7 @@
 #ifndef PI_REGULATOR_H_
 #define PI_REGULATOR_H_
 
-
+int pi_regulator_regulator(int dist, float goal);
 
 
 
