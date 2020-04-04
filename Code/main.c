@@ -35,7 +35,7 @@ CONDVAR_DECL(bus_condvar);
 
 //----internal functions----
 
-void calibrate()
+void calibrate(void)
 {
     chThdSleepMilliseconds(500);
     calibrate_ir();
@@ -74,10 +74,8 @@ int main(void)
     //wait for robot to be stable, then calibrate
     calibrate();
 
-    move_main();			//contains infinite loop
+    //move_main();			//contains infinite loop
 
-   // map_display_all_points();
-    map_send_all_data_to_computer();
 
     /* Infinite loop. */
     while (1)
