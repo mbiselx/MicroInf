@@ -14,18 +14,29 @@
 
 #include "map.h"
 
-#define PI							3.1415f
+#define PI								3.1415f
 
-#define WHEEL_PERIMETER_CM 			13 																//cm
-#define WHEEL_PERIMITER_STEPS 		1000															//steps
-#define GOAL_DIST_CM 				3 																//cm
-#define GOAL_SENSOR 				230
-#define WHEEL_DISTANCE_CM      		5.28f    														//cm
-#define WHEEL_DISTANCE_STEPS		(WHEEL_DISTANCE_CM*WHEEL_PERIMITER_STEPS/WHEEL_PERIMETER_CM) 	//steps
+#define WHEEL_PERIMETER_CM 				13 																//cm
+#define WHEEL_PERIMITER_STEPS 			1000															//steps
+#define GOAL_DIST_CM 					3 																//cm
+#define GOAL_SENSOR 					230
+#define WHEEL_DISTANCE_CM      			5.28f    														//cm
+#define WHEEL_DISTANCE_STEPS			(WHEEL_DISTANCE_CM*WHEEL_PERIMITER_STEPS/WHEEL_PERIMETER_CM) 	//steps
 
 //max speed=1100steps/s
-#define BASIC_SPEED					500																//steps/s
-#define SPEED_FACTOR				0.1
+#define BASIC_SPEED						400																//steps/s
+#define SPEED_FACTOR					0.1
+#define SPEED_ACUTE_ANGLE_INNER_WHEEL	(0.2*BASIC_SPEED) 												//value found experimentally
+#define SPEED_ACUTE_ANGLE_OUTER_WHEEL	(1.7*BASIC_SPEED)												//value found experimentally
+#define SPEED_REFLEX_ANGLE_INNER_WHEEL	(0.9*BASIC_SPEED)												//value found experimentally
+#define SPEED_REFLEX_ANGLE_OUTER_WHEEL	(1.6*BASIC_SPEED)												//value found experimentally
+
+
+
+#define SENSOR_WALL_CLOSE			100																//if sensor closer to wall value sensor higher
+
+#define true	1
+#define false	0
 
 enum IR_SENSORS{IR_1, IR_2, IR_3, IR_4, IR_5, IR_6, IR_7, IR_8};
 enum WALL_SIDE{WALL_ON_LEFT, WALL_ON_RIGHT};
@@ -36,7 +47,12 @@ static int32_t current_pos_x=0; //steps
 static int32_t current_pos_y=0; //steps
 static float current_angle=0; //rad
 
-
+int move_is_wall_there(int sensor){
+	if(get_prox(sensor)>=SENSOR_WALL_CLOSE)
+		return true;
+	else
+		return false;
+}
 
 void move_robot_motors_speed(int16_t speed_left, int16_t speed_right){
 
@@ -108,18 +124,67 @@ Wall	 Front
 		move_robot_motors_speed(BASIC_SPEED, BASIC_SPEED);
 }
 
-//main for testing PI regulator and move
+void move_handler(void){
+	/*
+	 IR sensors on robot
+	 	   FRONT
+        , - ~ ~ - ,
+    , ' \       /   ' ,
+  ,     IR8    IR1      ,
+ , \                  /  ,
+,  IR7              IR2   ,
+,                         ,
+,-IR6                 IR3-,
+,                         ,
+ ,                       ,
+  ,  IR5         IR4    ,
+    , /           \  , '
+      ' - , _ _ ,  '
+
+     */
+	move_robot_motors_speed(BASIC_SPEED, BASIC_SPEED);
+
+	if(move_is_wall_there(IR_6) || move_is_wall_there(IR_7)){
+		while(true){//left wall mode
+			move_robot_along_wall(WALL_ON_LEFT);
+			while(move_is_wall_there(IR_6) && move_is_wall_there(IR_7) && move_is_wall_there(IR_8)){//robot in front of acute or obtuse angle corner (0-180°)
+				move_robot_motors_speed(SPEED_ACUTE_ANGLE_OUTER_WHEEL, SPEED_ACUTE_ANGLE_INNER_WHEEL);
+			}
+			while(!move_is_wall_there(IR_7)){//wall is far from IR_7 -> robot in front of reflex angle corner (180-360°)
+				move_robot_motors_speed(SPEED_REFLEX_ANGLE_INNER_WHEEL, SPEED_REFLEX_ANGLE_OUTER_WHEEL);
+			}
+		}
+	}
+
+	if(move_is_wall_there(IR_3) || move_is_wall_there(IR_2)){
+		while(true){//right wall mode
+			move_robot_along_wall(WALL_ON_RIGHT);
+			while(move_is_wall_there(IR_3) && move_is_wall_there(IR_2) && move_is_wall_there(IR_1)){//robot in front of acute or obtuse angle corner (0-180°)
+				move_robot_motors_speed(SPEED_ACUTE_ANGLE_INNER_WHEEL, SPEED_ACUTE_ANGLE_OUTER_WHEEL);
+			}
+			while(!move_is_wall_there(IR_2)){//wall is far from IR_7 -> robot in front of reflex angle corner (180-360°)
+				move_robot_motors_speed(SPEED_REFLEX_ANGLE_OUTER_WHEEL, SPEED_REFLEX_ANGLE_INNER_WHEEL);
+			}
+		}
+	}
+
+}
+
+
 void move_main(void){
 
-	int i = 0;
+	//int i = 0;
 
-	left_motor_set_pos(0);
-	right_motor_set_pos(0);
+	//left_motor_set_pos(0);
+	//right_motor_set_pos(0);
 
 	map_log_new_point(0,0);
 
 	while(1){
-		move_robot_along_wall(WALL_ON_RIGHT);
+
+		//move_robot_along_wall(WALL_ON_RIGHT);
+		move_handler();
+		/*
 		i++;
 		if (i > 50)
 		{
@@ -129,5 +194,6 @@ void move_main(void){
 			i=0;
 			map_send_all_data_to_computer();
 		}
+		*/
 	}
 }
