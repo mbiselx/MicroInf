@@ -1,8 +1,8 @@
 pkg load instrument-control
 
 %fclose(s1);
-s1 = serial("COM9");         %USB
-%s1 = serial("\\\\.\\COM13");  %Bluetooth
+%s1 = serial("COM9");         %USB-Michael
+s1 = serial("\\\\.\\COM13");  %Bluetooth-Michael+Samuel
 set(s1, 'baudrate', 115200, 'bytesize', 8, 'timeout', 150);
 nb_pts = 0;
 
