@@ -9,6 +9,7 @@
 #include "memory_protection.h"
 #include <main.h>
 #include <move.h>
+#include <motors.h>
 
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
