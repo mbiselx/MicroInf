@@ -8,8 +8,6 @@
 #ifndef MOVE_H_
 #define MOVE_H_
 
-void move_main(void);
-
-
+void move_handler(void);
 
 #endif /* MOVE_H_ */

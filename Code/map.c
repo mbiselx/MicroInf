@@ -57,6 +57,9 @@ Wall_t * start_w = NULL;
 Wall_t * end_w   = NULL;
 uint16_t nb_walls = 0;
 
+static const char* s = "START";
+static const char p = 'P';
+static const char w = 'W';
 
 //----internal functions----
 Point_t* new_point(void)
@@ -285,6 +288,7 @@ void map_display_all_points()
 		return;
 	}
 	chprintf((BaseSequentialStream*)&SD3, "\r\n--- START --- \r\n");
+	chprintf((BaseSequentialStream*)&SD3, "nb_points : %d \r\n", nb_points);
 	while (ptr->next)
 	{
 		chprintf((BaseSequentialStream*)&SD3, "x: %d   \t y: %d \t alpha: %f \r\n", ptr->x,ptr->y,ptr->alpha);
@@ -297,8 +301,6 @@ void map_display_all_points()
 void map_send_all_points_to_computer(void)
 {
 	Point_t* ptr = start_p;
-	static const char s = 'S';
-	static const char p = 'P';
 	static const int16_t zero = 0;
 	uint16_t data_size = 5*nb_points;
 
@@ -307,7 +309,7 @@ void map_send_all_points_to_computer(void)
 		return;
 	}
 
-	send_char_to_computer((char*)&s);					//transmission start character
+	send_str_to_computer((char*)s, 5);					//transmission start character
 	send_int16_to_computer((int16_t*)&data_size);			//transmission size in bytes
 	send_int16_to_computer((int16_t*)&nb_points);			//number of points to be transmitted
 	send_int16_to_computer((int16_t*)&zero);				//number of walls to be transmitted
@@ -327,8 +329,6 @@ void map_send_all_points_to_computer(void)
 void map_send_all_walls_to_computer(void)
 {
 	Wall_t* ptr = start_w;
-	static const char s = 'S';
-	static const char w = 'W';
 	static const int16_t zero = 0;
 	uint16_t data_size = 13*nb_walls;
 
@@ -337,7 +337,7 @@ void map_send_all_walls_to_computer(void)
 		return;
 	}
 
-	send_char_to_computer((char*)&s);					//transmission start character
+	send_str_to_computer((char*)s, 5);					//transmission start character
 	send_int16_to_computer((int16_t*)&data_size);			//transmission size in bytes
 	send_int16_to_computer((int16_t*)&zero);				//number of points to be transmitted
 	send_int16_to_computer((int16_t*)&nb_walls);			//number of walls to be transmitted
@@ -363,9 +363,6 @@ void map_send_all_data_to_computer(void)
 {
 	Wall_t* ptr_w = start_w;
 	Point_t* ptr_p = start_p;
-	static const char s = 'S';
-	static const char p = 'P';
-	static const char w = 'W';
 	uint16_t data_size = 5*nb_points + 13*nb_walls;
 
 
@@ -374,35 +371,41 @@ void map_send_all_data_to_computer(void)
 		return;
 	}
 
-	send_char_to_computer((char*)&s);					//transmission start character
+	send_str_to_computer((char*)s, 5);					//transmission start characters
 	send_int16_to_computer((int16_t*)&data_size);			//transmission size in bytes
 	send_int16_to_computer((int16_t*)&nb_points);			//number of points to be transmitted
 	send_int16_to_computer((int16_t*)&nb_walls);			//number of walls to be transmitted
 
-	while (ptr_p->next)							//send all points first
+	if (ptr_p)
 	{
-		send_char_to_computer((char*)&p);				//point start character
+		while (ptr_p->next)							//send all points first
+		{
+			send_char_to_computer((char*)&p);				//point start character
+			send_int16_to_computer(&(ptr_p->x));
+			send_int16_to_computer(&(ptr_p->y));
+			ptr_p = ptr_p->next;
+		}
+		send_char_to_computer((char*)&p);
 		send_int16_to_computer(&(ptr_p->x));
 		send_int16_to_computer(&(ptr_p->y));
-		ptr_p = ptr_p->next;
 	}
-	send_char_to_computer((char*)&p);
-	send_int16_to_computer(&(ptr_p->x));
-	send_int16_to_computer(&(ptr_p->y));
 
-	while (ptr_w->next)							//send all walls
+	if (ptr_w)
 	{
-		send_char_to_computer((char*)&w);				//wall start character
+		while (ptr_w->next)							//send all walls
+		{
+			send_char_to_computer((char*)&w);				//wall start character
+			send_float_to_computer(&(ptr_w->a));
+			send_float_to_computer(&(ptr_w->b));
+			send_int16_to_computer(&(ptr_w->x2));
+			send_int16_to_computer(&(ptr_w->y2));
+			ptr_w = ptr_w->next;
+		}
+		send_char_to_computer((char*)&w);
 		send_float_to_computer(&(ptr_w->a));
 		send_float_to_computer(&(ptr_w->b));
 		send_int16_to_computer(&(ptr_w->x2));
 		send_int16_to_computer(&(ptr_w->y2));
-		ptr_w = ptr_w->next;
 	}
-	send_char_to_computer((char*)&w);
-	send_float_to_computer(&(ptr_w->a));
-	send_float_to_computer(&(ptr_w->b));
-	send_int16_to_computer(&(ptr_w->x2));
-	send_int16_to_computer(&(ptr_w->y2));
 
 }

@@ -12,6 +12,8 @@ void serial_start(void);
 
 void send_char_to_computer(char* data);
 
+void send_str_to_computer(char* data, uint16_t strleng);
+
 void send_int8_to_computer(uint8_t* data);
 
 void send_int16_to_computer(int16_t* data);

@@ -7,9 +7,11 @@
 #include "ch.h"
 #include "hal.h"
 #include <chprintf.h>
-#include <sensors\proximity.h>
 
-#include "motors.h"
+#include <sensors\proximity.h>
+#include <motors.h>
+
+#include "move.h"
 #include "pi_regulator.h"
 
 #include "map.h"
@@ -42,11 +44,6 @@ enum IR_SENSORS{IR_1, IR_2, IR_3, IR_4, IR_5, IR_6, IR_7, IR_8};
 enum WALL_SIDE{WALL_ON_LEFT, WALL_ON_RIGHT};
 
 
-//maximal area that robot can map: circle of diameter ~8.5m (with only straight walls)
-static int32_t current_pos_x=0; //steps
-static int32_t current_pos_y=0; //steps
-static float current_angle=0; //rad
-
 int move_is_wall_there(int sensor){
 	if(get_prox(sensor)>=SENSOR_WALL_CLOSE)
 		return true;
@@ -55,13 +52,6 @@ int move_is_wall_there(int sensor){
 }
 
 void move_robot_motors_speed(int16_t speed_left, int16_t speed_right){
-
-	/*static int32_t steps_left=0;
-	static int32_t steps_right=0;
-	steps_left = left_motor_get_pos() - steps_left;
-	steps_right = right_motor_get_pos() - steps_right;
-	*/
-
 	right_motor_set_speed(speed_right);
 	left_motor_set_speed(speed_left);
 }
@@ -142,58 +132,122 @@ void move_handler(void){
       ' - , _ _ ,  '
 
      */
-	move_robot_motors_speed(BASIC_SPEED, BASIC_SPEED);
 
-	if(move_is_wall_there(IR_6) || move_is_wall_there(IR_7)){
-		while(true){//left wall mode
-			move_robot_along_wall(WALL_ON_LEFT);
-			while(move_is_wall_there(IR_6) && move_is_wall_there(IR_7) && move_is_wall_there(IR_8)){//robot in front of acute or obtuse angle corner (0-180°)
-				move_robot_motors_speed(SPEED_ACUTE_ANGLE_OUTER_WHEEL, SPEED_ACUTE_ANGLE_INNER_WHEEL);
-			}
-			while(!move_is_wall_there(IR_7)){//wall is far from IR_7 -> robot in front of reflex angle corner (180-360°)
-				move_robot_motors_speed(SPEED_REFLEX_ANGLE_INNER_WHEEL, SPEED_REFLEX_ANGLE_OUTER_WHEEL);
-			}
-		}
-	}
+	uint8_t cornerflag  = false;
+	int i = 0;
+    systime_t time = chVTGetSystemTime();
 
-	if(move_is_wall_there(IR_3) || move_is_wall_there(IR_2)){
-		while(true){//right wall mode
-			move_robot_along_wall(WALL_ON_RIGHT);
-			while(move_is_wall_there(IR_3) && move_is_wall_there(IR_2) && move_is_wall_there(IR_1)){//robot in front of acute or obtuse angle corner (0-180°)
-				move_robot_motors_speed(SPEED_ACUTE_ANGLE_INNER_WHEEL, SPEED_ACUTE_ANGLE_OUTER_WHEEL);
-			}
-			while(!move_is_wall_there(IR_2)){//wall is far from IR_7 -> robot in front of reflex angle corner (180-360°)
-				move_robot_motors_speed(SPEED_REFLEX_ANGLE_OUTER_WHEEL, SPEED_REFLEX_ANGLE_INNER_WHEEL);
-			}
-		}
-	}
+    map_log_new_point(0,0);
+	right_motor_set_pos(0);
+	left_motor_set_pos(0);
 
-}
+	while(true)	{
+		move_robot_motors_speed(BASIC_SPEED, BASIC_SPEED);
 
+		if(move_is_wall_there(IR_6) || move_is_wall_there(IR_7)){
 
-void move_main(void){
-
-	//int i = 0;
-
-	//left_motor_set_pos(0);
-	//right_motor_set_pos(0);
-
-	map_log_new_point(0,0);
-
-	while(1){
-
-		//move_robot_along_wall(WALL_ON_RIGHT);
-		move_handler();
-		/*
-		i++;
-		if (i > 50)
-		{
-			map_log_new_point(left_motor_get_pos(), right_motor_get_pos());
-			left_motor_set_pos(0);
+			map_log_new_point(right_motor_get_pos(),left_motor_get_pos());
 			right_motor_set_pos(0);
-			i=0;
-			map_send_all_data_to_computer();
+			left_motor_set_pos(0);
+			map_log_wall_encounter();
+
+			while(true){//left wall mode
+
+				i++;
+
+				if (i > 400)
+				{
+					map_log_new_point(right_motor_get_pos(),left_motor_get_pos());
+					right_motor_set_pos(0);
+					left_motor_set_pos(0);
+					i=0;
+				}
+
+				if (chVTGetSystemTime() - time > 1000)
+				{
+				    map_send_all_data_to_computer();
+				    time = chVTGetSystemTime();
+				}
+
+
+				while(move_is_wall_there(IR_6) && move_is_wall_there(IR_7) && move_is_wall_there(IR_8)){//robot in front of acute or obtuse angle corner (0-180°)
+					if (!cornerflag)
+					{
+						map_log_new_point(right_motor_get_pos(),left_motor_get_pos());
+						right_motor_set_pos(0);
+						left_motor_set_pos(0);
+						map_log_corner();
+						cornerflag = true;
+					}
+
+					move_robot_motors_speed(SPEED_ACUTE_ANGLE_OUTER_WHEEL, SPEED_ACUTE_ANGLE_INNER_WHEEL);
+				}
+
+				while(!move_is_wall_there(IR_7)){//wall is far from IR_7 -> robot in front of reflex angle corner (180-360°)
+					if (!cornerflag)
+					{
+						map_log_new_point(right_motor_get_pos(),left_motor_get_pos());
+						right_motor_set_pos(0);
+						left_motor_set_pos(0);
+						map_log_corner();
+						map_send_all_data_to_computer();
+						cornerflag = true;
+					}
+					move_robot_motors_speed(SPEED_REFLEX_ANGLE_INNER_WHEEL, SPEED_REFLEX_ANGLE_OUTER_WHEEL);
+				}
+
+				move_robot_along_wall(WALL_ON_LEFT);
+
+				cornerflag = false;
+			}
 		}
-		*/
+
+		if(move_is_wall_there(IR_3) || move_is_wall_there(IR_2)){
+			while(true){//right wall mode
+
+				i++;
+
+				if (i > 400)
+				{
+					map_log_new_point(right_motor_get_pos(),left_motor_get_pos());
+					right_motor_set_pos(0);
+					left_motor_set_pos(0);
+					i=0;
+				}
+
+				if (chVTGetSystemTime() - time > 1000)
+				{
+				    map_send_all_data_to_computer();
+				    time = chVTGetSystemTime();
+				}
+
+				move_robot_along_wall(WALL_ON_RIGHT);
+				while(move_is_wall_there(IR_3) && move_is_wall_there(IR_2) && move_is_wall_there(IR_1)){//robot in front of acute or obtuse angle corner (0-180°)
+					if (!cornerflag)
+					{
+						map_log_new_point(right_motor_get_pos(),left_motor_get_pos());
+						right_motor_set_pos(0);
+						left_motor_set_pos(0);
+						map_log_corner();
+						cornerflag = true;
+					}
+					move_robot_motors_speed(SPEED_ACUTE_ANGLE_INNER_WHEEL, SPEED_ACUTE_ANGLE_OUTER_WHEEL);
+				}
+				while(!move_is_wall_there(IR_2)){//wall is far from IR_7 -> robot in front of reflex angle corner (180-360°)
+					if (!cornerflag)
+					{
+						map_log_new_point(right_motor_get_pos(),left_motor_get_pos());
+						right_motor_set_pos(0);
+						left_motor_set_pos(0);
+						map_log_corner();
+						cornerflag = true;
+					}
+					move_robot_motors_speed(SPEED_REFLEX_ANGLE_OUTER_WHEEL, SPEED_REFLEX_ANGLE_INNER_WHEEL);
+				}
+			}
+		}
 	}
+
 }
+
+

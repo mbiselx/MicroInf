@@ -27,6 +27,11 @@ void send_char_to_computer(char* data)
 	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)data, sizeof(char));
 }
 
+void send_str_to_computer(char* data, uint16_t strleng)
+{
+	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)data, strleng);
+}
+
 void send_int8_to_computer(uint8_t* data)
 {
 	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)data, sizeof(int8_t));
