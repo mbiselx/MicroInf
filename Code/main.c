@@ -8,25 +8,19 @@
 #include "ch.h"
 #include "hal.h"
 #include "memory_protection.h"
-#include <main.h>
 
 //----specific epuck2 includes----
 #include <sensors\proximity.h>
 #include <sensors\imu.h>
 #include <motors.h>
 
-//----specific personal inlcudes----
+//----specific personal includes----
+#include "main.h"
 #include "move.h"
-#include "transmission.h"
 #include "map.h"
 
 //----debug includes----
 #include <chprintf.h>
-
-
-//----defines----
-#define THRESH_GYRO		0.01f
-#define THRESH_J 		1500
 
 //----global declarations----
 messagebus_t bus;
@@ -34,7 +28,6 @@ MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
 
 //----internal functions----
-
 void calibrate(void)
 {
     chThdSleepMilliseconds(500);
@@ -57,28 +50,33 @@ int main(void)
     proximity_start();
     imu_start();
     motors_init();
-
-    //debug inits
-    serial_start();
-
-
-    //variable declarations
-	float omega = 0,
-		  alpha = 0,
-		  h = 0;
-
-    systime_t time = chVTGetSystemTime();
+    map_init();
 
     //wait for robot to be stable, then calibrate
     calibrate();
+    map_start_mapping(true);
 
-    move_handler();
-
+   // move_handler();
 
     /* Infinite loop. */
     while (1)
     {
-    	;
+    	right_motor_set_speed(500);
+    	left_motor_set_speed(500);
+    	chThdSleepMilliseconds(2000);
+
+    	right_motor_set_speed(0);
+    	left_motor_set_speed(0);
+    	chThdSleepMilliseconds(10);
+
+
+    	right_motor_set_speed(500);
+    	left_motor_set_speed(-500);
+    	chThdSleepMilliseconds(510);
+
+    	right_motor_set_speed(0);
+    	left_motor_set_speed(0);
+    	chThdSleepMilliseconds(10);
     }
 }
 

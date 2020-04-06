@@ -63,20 +63,26 @@ while (true)
               endif
             endfor
 
-            printf("\ndone\n")
+            printf("\ndone\n");
 
             %figure
-            plot(xp/100, yp/100, 'bx', xw/100, yw/100, 'rd-');
-            axis("equal")
+            plot(xp, yp, 'bx', xw, yw, 'gd-');
+            axis("equal");
 
-            %if (nb_walls > 0)
-            %  x = [ min([xp; xw]) : max([xp; xw]) ];
-            %  y = a + b.*x;
-            %  hold on
-            %  plot (x/100,y/100, 'g');
-            %  axis([min([xp; xw]) , max([xp; xw])], "equal");
-            %  hold off
-            %end
+
+            if (nb_walls > 1)
+              x = [min(xw(1), 0) : max(xw(1), 0)];
+              for k = 2:nb_walls
+                x = [min(xw(k), xw(k-1)) : max(xw(k), xw(k-1))];
+                y = a(k) + b(k)*x;
+                hold on;
+                plot (x,y, 'r');
+                hold off;
+              end
+            end
+
+
+
 
             pause(1);
             srl_flush(s1);
