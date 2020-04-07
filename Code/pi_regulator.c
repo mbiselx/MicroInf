@@ -14,7 +14,7 @@
 
 #define KP 150
 #define KI 20
-#define ERROR_TRESHOLD 4
+#define ERROR_TRESHOLD 30
 #define MAX_SUM_ERROR 300
 #define MIN_SUM_ERROR -300
 

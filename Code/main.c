@@ -56,12 +56,12 @@ int main(void)
     calibrate();
     map_start_mapping(true);
 
-   // move_handler();
+   move_handler();
 
     /* Infinite loop. */
     while (1)
     {
-    	right_motor_set_speed(500);
+    	/*right_motor_set_speed(500);
     	left_motor_set_speed(500);
     	chThdSleepMilliseconds(2000);
 
@@ -76,7 +76,7 @@ int main(void)
 
     	right_motor_set_speed(0);
     	left_motor_set_speed(0);
-    	chThdSleepMilliseconds(10);
+    	chThdSleepMilliseconds(10);*/
     }
 }
 
