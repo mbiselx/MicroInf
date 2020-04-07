@@ -51,13 +51,7 @@ void map_display_all_points(void);
  */
 void map_send_all_points_to_computer(void);
 
-/*	\brief		sends all walls to computer in coded format to use in MATLAB
- */
-void map_send_all_walls_to_computer(void);
 
-/*	\brief		sends all active points and walls to computer in coded format to use in MATLAB
- */
-void map_send_all_data_to_computer(void);
 
 
 #endif /* MAP_H_ */
