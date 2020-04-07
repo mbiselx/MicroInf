@@ -56,7 +56,7 @@ int main(void)
     calibrate();
     map_start_mapping(true);
 
-   // move_handler();
+    move_handler();
 
     /* Infinite loop. */
     while (1)

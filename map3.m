@@ -44,9 +44,9 @@ while (true)
                 cnt_dn = 4;
               elseif (buffer(n) == 'T')
                 printf(".")
-                xt(wl_cnt) = typecast(uint8([buffer(n+1 : n+2)]), 'int16');
-                yt(wl_cnt) = typecast(uint8([buffer(n+3 : n+4)]), 'int16');
-                dom_cnt++;
+                xt(temp_cnt) = typecast(uint8([buffer(n+1 : n+2)]), 'int16');
+                yt(temp_cnt) = typecast(uint8([buffer(n+3 : n+4)]), 'int16');
+                temp_cnt++;
                 cnt_dn = 4;
               else
                 disp(" ! transmission error !");

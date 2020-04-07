@@ -22,14 +22,15 @@
 #include "transmission.h"
 
 //----debug includes----
+#include <pal.h>
 #include <chprintf.h>
 
 
 //----definitions----
-#define L_MIN2					20000	//minimum length of line segment, squared
-#define	E_MAX					50		//maximum deviation permissible
-#define MIN_POINTS_TO_SEND		50
-#define TIME_BETWEEN_SAMPLES	200
+#define L_MIN					50		//minimum length of line segment, squared
+#define	E_MAX					20		//maximum deviation from a line permissible
+#define MIN_POINTS_TO_SEND		40
+#define MS_BETWEEN_POINTS		100
 
 typedef enum POINT_T {DOMINANT, TEMPORARY} Point_t;
 
@@ -60,6 +61,7 @@ bool transmission_enabled 	= false;
 static const char* s = "START";	//transmission headers
 static const char  d = 'D';
 static const char  t = 'T';
+static const char  eot = 'f';	//end of transmission (debug)
 
 
 /***************** internal functions ************************/
@@ -112,35 +114,43 @@ Point* new_point(Point_t type)
 
 void destroy_point(Point* old)
 {
-	if (old == final_temp)
+	if (old == first_temp)
 	{
 		if (old->next)
 		{
-			final_temp = old->next;
+			first_temp = old->next;
 			old->next->last = NULL;
 		}
 		else
-			final_temp = NULL;
-	}
-	else if (old == final_dom)
-	{
-		if (old->next)
-		{
-			final_dom = old->next;
-			old->next->last = NULL;
-		}
-		else
-			final_dom = NULL;
+			first_temp = NULL;
 	}
 	else
 	{
-		if(old->last)
-			old->last->next = old->next;
-		if(old->next)
-			old->next->last = old->last;
+		if (old == first_dom)
+		{
+			if (old->next)
+			{
+				first_dom = old->next;
+				old->next->last = NULL;
+			}
+			else
+				first_dom = NULL;
+		}
+
+		else
+		{
+			if(old->last)
+				old->last->next = old->next;
+			if(old->next)
+				old->next->last = old->last;
+		}
 	}
 
-	(old->type == TEMPORARY) ? nb_temp-- : nb_dom--;
+	if (old->type == TEMPORARY)
+		nb_temp--;
+	else
+		nb_dom--;
+
 	free(old);
 	old = NULL;
 }
@@ -150,47 +160,66 @@ void destroy_all_type_points(Point_t type)
 	if (type == TEMPORARY)
 	{
 		while (first_temp)
-		destroy_point(first_temp);
+			destroy_point(first_temp);
+		if (nb_temp)
+			palClearPad(GPIOD, GPIOD_LED5);		//debug
 	}
 	else
 	{
 		while (first_dom)
-		destroy_point(first_dom);
+			destroy_point(first_dom);
 	}
 }
 
 
 //----map utility functions----
 
-float error_line_fit(int16_t x2, int16_t y2)
+int16_t max_error_line_fit(int16_t x, int16_t y)
 {
-	int     e = 0;
-	int16_t x = x2 - final_dom->x;
-	int16_t y = y2 - final_dom->y;
-	int16_t a = (x2 * final_dom->y) - (y2 * final_dom->x);
-	float div = sqrt(x*x + y*y);
+	Point* pt = first_temp;
+	int16_t e_max 	= 0;
+	int16_t	e		= 0;
+	int16_t delta_x = x - final_dom->x;
+	int16_t delta_y = y - final_dom->y;
 
-	for (Point* pt = first_temp; pt; pt = pt->next)
+	if (!delta_x && !delta_y)			//superposition
+		return 0;
+
+	int16_t a 		= (delta_y * x) - (delta_x * y);
+	float delta = sqrt(delta_x*delta_x + delta_y*delta_y);		//optimize sqrt()
+
+	while (pt)
 	{
-		e += abs(y*pt->x - x*pt->y + a);
+		e = abs(delta_x*pt->y - delta_y*pt->x + a);				//optimize abs()
+		if (e > e_max)
+			e_max = e;
+		pt = pt->next;
 	}
 
-	return ((float)e)/(nb_temp-1)/div;
+	return (int16_t) (2*e_max/delta);
 
 }
 
 void migrate_temp_point_to_dom(Point * pt)
 {
-	pt->type = DOMINANT;
-
-	pt->last->next = pt->next;			//cut
+	if(pt == final_temp)				//cut
+		final_temp = pt->last;
+	if(pt == first_temp)
+		first_temp = pt->next;
+	if(pt->last)
+		pt->last->next = pt->next;
 	if(pt->next)
 		pt->next->last = pt->last;
 
-	final_dom->next = pt;				//paste
+	final_dom->next = pt;				//paste to end of dom list
 	pt->last = final_dom;
 	pt->next = NULL;
 	final_dom = pt;
+
+	nb_temp--;
+	nb_dom++;
+	pt->type = DOMINANT;
+
 }
 
 /*	\brief		function to log a point -> must be done relatively often to
@@ -205,8 +234,9 @@ void log_new_temp_point(int16_t steps_r, int16_t steps_l)
 	float 	r 		= 0;
 	int16_t x 		= 0;
 	int16_t y	 	= 0;
-	int		d2		= 0;
+	int		d		= 0;
 
+	// calculate coords of point
 	alpha = last->alpha + (float)(steps_r-steps_l)/WHEEL_DISTANCE_STEPS;
 	if (alpha == last->alpha)							//straight line
 	{
@@ -217,28 +247,27 @@ void log_new_temp_point(int16_t steps_r, int16_t steps_l)
 	{
 		r = (steps_l+steps_r)/2/(alpha - last->alpha);
 		x = last->x + r*(cos(alpha) - cos(last->alpha));	//could use truly obscure trig identities
-		y = last->y + r*(sin(alpha) - sin(last->alpha));	//to gain one calculation here -> TODO: is it worth it?
+		y = last->y + r*(sin(alpha) - sin(last->alpha));	//to optimize one calculation here -> TODO: is it worth it?
 	}
 
-	d2 = (final_dom->x - x)*(final_dom->x - x) + (final_dom->y - y)*(final_dom->y - y);
-	if (d2 > L_MIN2)									//the point is far enough from other dominant points
+	//decide type of point
+	d = sqrt((final_dom->x - x)*(final_dom->x - x) + (final_dom->y - y)*(final_dom->y - y));	//distance between this point and last dominant point
+	if (d > L_MIN)											//the point is far enough from other dominant points
 	{
-		if (error_line_fit(x, y) > E_MAX)				//the error is too large to fit all points in a line
+		if (max_error_line_fit(x, y) > E_MAX)				//the maximum error is too large to fit all points in a single line
 		{
-			migrate_temp_point_to_dom(final_temp);
-			destroy_all_type_points(TEMPORARY);
+			migrate_temp_point_to_dom(final_temp);			//the last temp point becomes a dominant point
+			destroy_all_type_points(TEMPORARY);				//all other temp points are discarded
 		}
 	}
 
-	Point* new = new_point(TEMPORARY);
-	new->alpha = alpha;
-	new->x = x;
-	new->y = y;
-	return;
-
+	Point* new 	= new_point(TEMPORARY);					//the newly logged point is added as a temp point
+	new->alpha 	= alpha;
+	new->x 		= x;
+	new->y 		= y;
 }
 
-void log_origin()
+void log_origin(void)
 {
 	Point* origin 	= new_point(DOMINANT);
 	origin->alpha 	= 0;
@@ -248,7 +277,7 @@ void log_origin()
 
 
 /************************ THREAD ***************************/
-static THD_WORKING_AREA(waThdMap, 128);
+static THD_WORKING_AREA(waThdMap, 1024);
 static THD_FUNCTION(ThdMap, arg) {
 
     chRegSetThreadName(__FUNCTION__);
@@ -267,29 +296,33 @@ static THD_FUNCTION(ThdMap, arg) {
     	time = chVTGetSystemTime();
     	alpha_imu += h*get_gyro_rate(2); //integrate rate to get value
 
+		palTogglePad(GPIOD, GPIOD_LED1);
+
     	if (mapping_enabled)
     	{
 			log_new_temp_point(right_motor_get_pos(),left_motor_get_pos());
 			right_motor_set_pos(0);
 			left_motor_set_pos(0);
-
 			limiter++;
 
-			if (alpha_imu < -2*PI || 2*PI < alpha_imu)
+			/*if (alpha_imu < -2*PI || 2*PI < alpha_imu)
 			{
 				palClearPad(GPIOD, GPIOD_LED3);	//indicate a full turn has been made
-			}
+			}*/
 
     	}
 
-    	/*if (transmission_enabled && (limiter > MIN_POINTS_TO_SEND))
+    	if (transmission_enabled && (limiter > MIN_POINTS_TO_SEND))
     	{
+    		palClearPad(GPIOD, GPIOD_LED3);		//debug
     		map_send_all_points_to_computer();
     		limiter = 0;
-    	}*/
+    		palSetPad(GPIOD, GPIOD_LED3);		//debug
+    	}
+
 
         time = chVTGetSystemTime();
-        chThdSleepUntilWindowed(time, time + MS2ST(TIME_BETWEEN_SAMPLES));
+        chThdSleepUntilWindowed(time, time + MS2ST(MS_BETWEEN_POINTS));
     }
 }
 
@@ -370,7 +403,7 @@ void map_display_points(Point_t type)
 void map_send_points_to_computer(Point_t type)
 {
 	Point* ptr = (type == TEMPORARY)? first_temp : first_dom;
-	static const int16_t zero = 0;
+	static const uint16_t zero = 0;
 	uint16_t data_size = 5*((type == TEMPORARY)? nb_temp : nb_dom);
 
 	if (!ptr)									//no points to transmit
@@ -382,16 +415,15 @@ void map_send_points_to_computer(Point_t type)
 	send_int16_to_computer((int16_t*)&data_size);									//transmission size in bytes
 	send_int16_to_computer((int16_t*) ((type == TEMPORARY)? &zero : &nb_dom));		//number of dom_points to be transmitted
 	send_int16_to_computer((int16_t*) ((type == TEMPORARY)? &nb_temp : &zero));		//number of temp_points to be transmitted
-	while (ptr->next)
+	while (ptr)
 	{
 		send_char_to_computer((char*)((type == TEMPORARY)? &t : &d));	//point start character
 		send_int16_to_computer(&(ptr->x));
 		send_int16_to_computer(&(ptr->y));
 		ptr = ptr->next;
 	}
-	send_char_to_computer((char*)((type == TEMPORARY)? &t : &d));
-	send_int16_to_computer(&(ptr->x));
-	send_int16_to_computer(&(ptr->y));
+
+	send_char_to_computer((char*)&eot);
 
 }
 
@@ -410,34 +442,24 @@ void map_send_all_points_to_computer(void)
 	send_int16_to_computer((int16_t*) &nb_dom);			//number of points to be transmitted
 	send_int16_to_computer((int16_t*) &nb_temp);		//number of walls to be transmitted
 
-	if (ptr)
+	while (ptr)
 	{
-		while (ptr->next)
-		{
-			send_char_to_computer((char*)&d);			//dom point start character
-			send_int16_to_computer(&(ptr->x));
-			send_int16_to_computer(&(ptr->y));
-			ptr = ptr->next;
-		}
-		send_char_to_computer((char*)&d);
+		send_char_to_computer((char*)&d);			//dom point start character
 		send_int16_to_computer(&(ptr->x));
 		send_int16_to_computer(&(ptr->y));
+		ptr = ptr->next;
 	}
 
 	ptr = first_temp;
-	if(ptr)
+	while (ptr)
 	{
-		while (ptr->next)
-		{
-			send_char_to_computer((char*)&t);			//temp point start character
-			send_int16_to_computer(&(ptr->x));
-			send_int16_to_computer(&(ptr->y));
-			ptr = ptr->next;
-		}
-		send_char_to_computer((char*)&t);
+		send_char_to_computer((char*)&t);			//temp point start character
 		send_int16_to_computer(&(ptr->x));
 		send_int16_to_computer(&(ptr->y));
+		ptr = ptr->next;
 	}
 
+
+	send_char_to_computer((char*)&eot);
 }
 
