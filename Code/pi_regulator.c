@@ -19,14 +19,24 @@
 #define MIN_SUM_ERROR -300
 
 
-//simple PI regulator
-int pi_regulator_regulator(int dist, float goal){
+
+/**
+* pi_regulator_regulator
+*
+* @brief   					PI controller
+*
+* @param sensor_number		sensor value: value of sensor
+* 							goal: sensor value goal
+*
+* @return					-speed_to_wall: sign negative: because value of sensor gets bigger if distance of the sensor to the wall gets smaller
+*/
+int pi_regulator_regulator(int sensor_value, float goal){
 	float error_i=0;
 	float speed_to_wall=0;
 
 	static float sum_error=0;
 
-	error_i= dist -goal;
+	error_i= sensor_value -goal;
 
 	if(fabs(error_i) < ERROR_TRESHOLD)
 		return 0;

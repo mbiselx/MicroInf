@@ -1,13 +1,17 @@
-/*
- * move.h
- *
- *  Created on: 02.04.2020
- *      Author: samue
- */
-
 #ifndef MOVE_H_
 #define MOVE_H_
 
+
+
+/**
+* move_handler
+*
+* @brief   					function handles movement of robot
+*
+* @param sensor_number		-
+*
+* @return					-
+*/
 void move_handler(void);
 
 #endif /* MOVE_H_ */
