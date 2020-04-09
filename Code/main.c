@@ -50,25 +50,34 @@ int main(void)
     proximity_start();
     imu_start();
     motors_init();
-    map_init();
 
     //wait for robot to be stable, then calibrate
     calibrate();
+
+    map_init();
     map_start_mapping(true);
 
+<<<<<<< HEAD
    move_handler();
+=======
+    move_handler();
+>>>>>>> mapping
 
     /* Infinite loop. */
     while (1)
     {
+<<<<<<< HEAD
     	/*right_motor_set_speed(500);
     	left_motor_set_speed(500);
+=======
+    	right_motor_set_speed(700);
+    	left_motor_set_speed(700);
+>>>>>>> mapping
     	chThdSleepMilliseconds(2000);
 
     	right_motor_set_speed(0);
     	left_motor_set_speed(0);
     	chThdSleepMilliseconds(10);
-
 
     	right_motor_set_speed(500);
     	left_motor_set_speed(-500);
