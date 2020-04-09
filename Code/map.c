@@ -462,4 +462,3 @@ void map_send_all_points_to_computer(void)
 
 	send_char_to_computer((char*)&eot);
 }
-
