@@ -22,6 +22,7 @@
 //----debug includes----
 #include <chprintf.h>
 
+
 //----global declarations----
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
@@ -57,22 +58,14 @@ int main(void)
     map_init();
     map_start_mapping(true);
 
-<<<<<<< HEAD
-   move_handler();
-=======
     move_handler();
->>>>>>> mapping
 
     /* Infinite loop. */
     while (1)
     {
-<<<<<<< HEAD
-    	/*right_motor_set_speed(500);
-    	left_motor_set_speed(500);
-=======
+    	/*
     	right_motor_set_speed(700);
     	left_motor_set_speed(700);
->>>>>>> mapping
     	chThdSleepMilliseconds(2000);
 
     	right_motor_set_speed(0);
@@ -86,6 +79,7 @@ int main(void)
     	right_motor_set_speed(0);
     	left_motor_set_speed(0);
     	chThdSleepMilliseconds(10);*/
+
     }
 }
 

@@ -16,7 +16,7 @@
 
 //Speed defines
 //max speed=1100steps/s
-#define BASIC_SPEED								450																//steps/s
+#define BASIC_SPEED								600//450																//steps/s
 #define SPEED_FACTOR							0.1																//value found experimentally
 #define SPEED_ACUTE_ANGLE_INNER_WHEEL			(0.2*BASIC_SPEED)												//steps/s (value found experimentally)
 
