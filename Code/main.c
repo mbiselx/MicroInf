@@ -18,6 +18,8 @@
 #include "main.h"
 #include "move.h"
 #include "map.h"
+#include "imu_handler.h"
+#include "transmission.h"
 
 //----debug includes----
 #include <chprintf.h>
@@ -49,14 +51,16 @@ int main(void)
     //specific inits (sensors & motors)
     proximity_start();
     imu_start();
+    imu_handler_init();
     motors_init();
-    map_init();
+    serial_start();
+  //  map_init();
 
     //wait for robot to be stable, then calibrate
     calibrate();
-    map_start_mapping(true);
+   // map_start_mapping(true);
 
-   move_handler();
+    move_handler();
 
     /* Infinite loop. */
     while (1)

@@ -6,6 +6,7 @@
 //----specific epuck2 includes----
 #include <sensors\proximity.h>
 #include <motors.h>
+#include <leds.h>
 
 //----specific personal includes----
 #include "move.h"
@@ -28,9 +29,15 @@
 //other defines
 #define NUMBER_OF_INCREMENT						8
 
+//static variables
+static int8_t drive_mode=false; //if drive_mode==true -> robot drives; if drive_mode==false -> robot does not drive
+								//drive_mode is initially false until robot has been placed
+
 //enums
 enum WALL_SIDE{WALL_ON_LEFT, WALL_ON_RIGHT};
 enum IR_SENSORS{IR_1, IR_2, IR_3, IR_4, IR_5, IR_6, IR_7, IR_8};
+
+
 
 	/*
 	 IR sensors on robot
@@ -53,11 +60,45 @@ enum IR_SENSORS{IR_1, IR_2, IR_3, IR_4, IR_5, IR_6, IR_7, IR_8};
 
 
 /**
+* move_update_drive_mode
+*
+* @brief   					updates the state of driv_mode (changes state from true to false or from false to true)
+*
+* @param r					-
+*
+* @return					-
+*/
+void move_update_drive_mode(void){
+
+	drive_mode = !drive_mode;
+	chprintf((BaseSequentialStream*)&SD3, "drive_mode = %d\n\r", drive_mode);
+	palTogglePad(GPIOD, GPIOD_LED5);
+	chThdSleepSeconds(5);//wait for 5 sec
+}
+
+
+
+/**
+* move_get_drive_mode
+*
+* @brief   					returns state of drieve_mode
+*
+* @param r					-
+*
+* @return					state of drive_mode (true or false)
+*/
+uint8_t move_get_drive_mode(void){
+	return drive_mode;
+}
+
+
+
+/**
 * move_is_wall_close
 *
 * @brief   					Returns if a wall is close or not to given sensor
 *
-* @param sensor_number		0-7 (IR_1, IR_2, ... , IR_8)
+* @param 					sensor_number: 0-7 (IR_1, IR_2, ... , IR_8)
 *
 * @return					true: if given sensor close to wall (value of sensor is higher or equal tan SENSOR_WALL_CLOSE)
 * 							false: if given sensor far from wall (value of sensor is smaller tan SENSOR_WALL_CLOSE)
@@ -235,7 +276,11 @@ void move_handler(void){
 
      */
 
-	while(true)	{
+	while(true){
+		while(!drive_mode){//do not drive until drive_mode is true
+			move_robot_motors_speed(0, 0);//stop motors
+			chThdSleepSeconds(5);//wait for 5s
+		}
 		while(!move_is_wall_to_close()){
 			move_robot_motors_speed(BASIC_SPEED, BASIC_SPEED);//drive forward until wall is reached
 		}
