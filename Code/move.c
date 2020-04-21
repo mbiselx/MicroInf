@@ -71,7 +71,6 @@ enum IR_SENSORS{IR_1, IR_2, IR_3, IR_4, IR_5, IR_6, IR_7, IR_8};
 void move_update_drive_mode(void){
 
 	drive_mode = !drive_mode;
-	chprintf((BaseSequentialStream*)&SD3, "drive_mode = %d\n\r", drive_mode);
 	palTogglePad(GPIOD, GPIOD_LED5);
 	chThdSleepSeconds(1);//wait for 1 sec
 }
@@ -169,8 +168,12 @@ void move_robot_motors_speed_increment(int16_t speed_left, int16_t speed_right){
 	static int speed_right_before=0;
 	if(speed_left_before==speed_left && speed_right_before==speed_right)
 		return;
+
 	for(int count=NUMBER_OF_INCREMENT; count>=1; count--){//slow increment of speed
 		move_robot_motors_speed(speed_left/count, speed_right/count);
+		if(!speed_left && !speed_right){
+			break;
+		}
 	}
 	speed_left_before=speed_left;
 	speed_right_before=speed_right;
@@ -298,7 +301,7 @@ void move_handler(void){
 					move_robot_motors_speed(0, 0);//stops motors -> not too rapid change of speed of wheels
 					chThdSleepMilliseconds(100);//time for other threads
 					while(true){
-						move_robot_motors_speed_increment(BASIC_SPEED,-BASIC_SPEED);//turn on place
+						move_robot_motors_speed(BASIC_SPEED,-BASIC_SPEED);//turn on place
 						if(!move_is_wall_to_close() && !move_is_wall_close(IR_7)){//Robot aligned with wall after corner
 							move_robot_motors_speed_increment(0, 0);//stop motors -> not too rapid change of speed of wheels
 							break;
@@ -310,9 +313,9 @@ void move_handler(void){
 					move_robot_motors_speed(0, 0);//stops motors -> not too rapid change of speed of wheels
 					chThdSleepMilliseconds(100);//wait for other threads
 					while(true){
-						move_robot_motors_speed_increment(SPEED_ACUTE_ANGLE_INNER_WHEEL, BASIC_SPEED);//turn curve
+						move_robot_motors_speed(SPEED_ACUTE_ANGLE_INNER_WHEEL, BASIC_SPEED);//turn curve
 						if(move_is_wall_close(IR_7)){//Robot (more or less) aligned with wall after corner
-							move_robot_motors_speed_increment(0, 0);//stop motors -> not too rapid change of speed of wheels
+							move_robot_motors_speed(0, 0);//stop motors -> not too rapid change of speed of wheels
 							break;
 						}
 					}
