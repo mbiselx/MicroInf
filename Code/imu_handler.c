@@ -24,11 +24,10 @@
 #define ACC_MAX							3000 //not in m/s^2
 #define TIME_WITHOUT_ACC_OVER_ACC_MAX 	4000//ms
 
-
-
-
-
-
+/*
+ * This Thread controlls if
+ *
+ */
 static THD_WORKING_AREA(waThdImuHandler, 1024);
 static THD_FUNCTION(ThdImuHandler, arg){
 
@@ -44,11 +43,14 @@ static THD_FUNCTION(ThdImuHandler, arg){
     set_led(LED7, 1);//LED7 is on if calibrating is finished
 
     static systime_t time_before = false;	//system time when last time ACC_x, ACC_Y or ACC_Z was bigger than ACC_MAX
-        									//time_before == 0 if ACC_x, ACC_Y or ACC_Z was not jet bigger than ACC_MAX
+        									//time_before == 0 if ACC_x, ACC_Y or ACC_Z was not jet bigger than ACC_MAX and thus robot was not jet moved
+    										//(functions the same time as a flag if robot was moved or not -> )
 
     while(true){
-    	if(move_get_drive_mode())//if move in drive_mode this thread gets terminated
+    	if(move_get_drive_mode()){//if move in drive_mode this thread gets terminated
+    		imu_stop();
     		chThdExit(0);//Terminates current thread
+    	}
     	if(abs(get_acc(X_AXIS)-get_acc_offset(X_AXIS))>=ACC_MAX || abs(get_acc(Y_AXIS)-get_acc_offset(Y_AXIS))>=ACC_MAX || abs(get_acc(Z_AXIS)-get_acc_offset(Z_AXIS))>=ACC_MAX){
     		time_before = chVTGetSystemTime();//time_before is the last time ACC_x, ACC_Y or ACC_Z was bigger than ACC_MAX
     	}
