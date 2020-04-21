@@ -20,16 +20,16 @@
 //----debug includes----
 #include <chprintf.h>
 
-#define TIME_BETWEEN_SAMPLES	200//ms
-#define ACC_MAX					3000 //not in m/s^2
-//#define NB_FILTER_SIZE	     	20
+#define TIME_BETWEEN_SAMPLES			200//ms
+#define ACC_MAX							3000 //not in m/s^2
+#define TIME_WITHOUT_ACC_OVER_ACC_MAX 	4000//ms
 
 
 
 
 
 
-static THD_WORKING_AREA(waThdImuHandler, 1240);
+static THD_WORKING_AREA(waThdImuHandler, 1024);
 static THD_FUNCTION(ThdImuHandler, arg){
 
     chRegSetThreadName(__FUNCTION__);
@@ -37,16 +37,24 @@ static THD_FUNCTION(ThdImuHandler, arg){
 
     systime_t time 	= chVTGetSystemTime();
 
+
     chThdSleepSeconds(2);//wait for 2s otherwise robot can calibrate to fast after reset
     calibrate_acc();
     clear_leds();
     set_led(LED7, 1);//LED7 is on if calibrating is finished
 
+    static systime_t time_before = false;	//system time when last time ACC_x, ACC_Y or ACC_Z was bigger than ACC_MAX
+        									//time_before == 0 if ACC_x, ACC_Y or ACC_Z was not jet bigger than ACC_MAX
+
     while(true){
     	if(move_get_drive_mode())//if move in drive_mode this thread gets terminated
     		chThdExit(0);//Terminates current thread
     	if(abs(get_acc(X_AXIS)-get_acc_offset(X_AXIS))>=ACC_MAX || abs(get_acc(Y_AXIS)-get_acc_offset(Y_AXIS))>=ACC_MAX || abs(get_acc(Z_AXIS)-get_acc_offset(Z_AXIS))>=ACC_MAX){
-    		move_update_drive_mode();//if robot is moved -> drive_mode is updated to true
+    		time_before = chVTGetSystemTime();//time_before is the last time ACC_x, ACC_Y or ACC_Z was bigger than ACC_MAX
+    	}
+
+    	if(((chVTGetSystemTime()-time_before)>TIME_WITHOUT_ACC_OVER_ACC_MAX) && time_before){
+    		move_update_drive_mode();//if robot was moved and then was not moved during the last TIME_WITHOUT_ACC_OVER_ACC_MAX ms -> drive_mode is updated to true
     	}
         time = chVTGetSystemTime();
         chThdSleepUntilWindowed(time, time + MS2ST(TIME_BETWEEN_SAMPLES));

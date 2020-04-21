@@ -73,7 +73,7 @@ void move_update_drive_mode(void){
 	drive_mode = !drive_mode;
 	chprintf((BaseSequentialStream*)&SD3, "drive_mode = %d\n\r", drive_mode);
 	palTogglePad(GPIOD, GPIOD_LED5);
-	chThdSleepSeconds(5);//wait for 5 sec
+	chThdSleepSeconds(1);//wait for 1 sec
 }
 
 
@@ -279,7 +279,7 @@ void move_handler(void){
 	while(true){
 		while(!drive_mode){//do not drive until drive_mode is true
 			move_robot_motors_speed(0, 0);//stop motors
-			chThdSleepSeconds(5);//wait for 5s
+			chThdSleepSeconds(1);//wait for 1s
 		}
 		while(!move_is_wall_to_close()){
 			move_robot_motors_speed(BASIC_SPEED, BASIC_SPEED);//drive forward until wall is reached
