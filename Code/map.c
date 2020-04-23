@@ -367,25 +367,30 @@ bool simple_loop_detection(void)
 				ptr = ptr->next;
 			}*/
 
+			/*
 			d_phi = d_phi/nb_dom;
 			for (ptr = first_dom; ptr; ptr = ptr->next)
 			{
 				if(ptr->next)	// the last point doesn't need angular adjustment
 					ptr->phi = atan2( ( ptr->next->y - ptr->y) , ( ptr->next->x - ptr->x) ) - d_phi;
 
-				/*else			// it does need special positional adjustment
-				{
-					ptr->x = ptr->last->x + (ptr->l - ptr->last->l + d_l)*cos(ptr->last->phi);
-					ptr->y = ptr->last->y + (ptr->l - ptr->last->l + d_l)*sin(ptr->last->phi);
-					break;
-				}*/
-
 				if(ptr->last)	// the first point doesn't need positional adjustment
 				{
 					ptr->x = ptr->last->x + (ptr->l - ptr->last->l)*cos(ptr->last->phi);
 					ptr->y = ptr->last->y + (ptr->l - ptr->last->l)*sin(ptr->last->phi);
 				}
+			}*/
+
+			int16_t e_x = (final_dom->x-first_dom->x)/nb_dom;
+			int16_t e_y = (final_dom->y-first_dom->y)/nb_dom;
+			int i = 1;
+
+			for (ptr = first_dom->next; ptr; i++, ptr = ptr->next)
+			{
+				ptr->x = ptr->x - e_x*i;
+				ptr->y = ptr->y - e_y*i;
 			}
+
 
 			//*** END EXPERIMENTAL ZONE ***//
 

@@ -1,23 +1,22 @@
 clear
-pkg load instrument-control
 
-%s1 = serial("COM9",  115200, 150);         %USB
-s1 = serial("\\\\.\\COM13", 115200, 150);  %Bluetooth
+s1 = com_setup("\\\\.\\COM13");    % change this to suit your setup
+
 nb_dom = 0;
 nb_temp  = 0;
 
-srl_flush(s1);
+com_flush(s1);
 
 while (true)
-  if (char(srl_read(s1, 1)) == 'S')
-    if (char(srl_read(s1, 1)) == 'T')
-      if (char(srl_read(s1, 1)) == 'A')
-        if (char(srl_read(s1, 1)) == 'R')
-          if (char(srl_read(s1, 1)) == 'T')                                     % get start signal
+  if (char(com_read(s1, 1)) == 'S')
+    if (char(com_read(s1, 1)) == 'T')
+      if (char(com_read(s1, 1)) == 'A')
+        if (char(com_read(s1, 1)) == 'R')
+          if (char(com_read(s1, 1)) == 'T')                                     % get start signal
             disp('signal received');
-            data_size = uint32(typecast(uint8(srl_read(s1, 2)), 'uint16'));             % get transmission size
-            nb_dom = uint32(typecast(uint8(srl_read(s1, 2)), 'uint16'));
-            nb_temp  = uint32(typecast(uint8(srl_read(s1, 2)), 'uint16'));
+            data_size = uint32(typecast(uint8(com_read(s1, 2)), 'uint16'));             % get transmission size
+            nb_dom = uint32(typecast(uint8(com_read(s1, 2)), 'uint16'));
+            nb_temp  = uint32(typecast(uint8(com_read(s1, 2)), 'uint16'));
             buffer    = zeros(data_size, 1);
 
             dom_cnt    = 1;
@@ -29,7 +28,7 @@ while (true)
             xt = zeros(nb_temp, 1);
             yt = zeros(nb_temp, 1);
 
-            buffer = srl_read(s1, data_size);                                           %get transmission data
+            buffer = com_read(s1, data_size);                                           %get transmission data
 
             printf("signal end\ndecoding: ");
 
@@ -51,10 +50,10 @@ while (true)
               else
                 disp(" ! transmission error !");
                 printf(char(buffer(n-1:n+1)));
-                srl_flush(s1);
+                com_flush(s1);
                 break;
-              endif
-            endfor
+              end %if
+            end %for
 
             printf("\ndone\n");
 
@@ -63,10 +62,10 @@ while (true)
             axis("equal");
 
             pause(1);
-            srl_flush(s1);
-          endif % 'T'
-        endif   % 'R'
-      endif     % 'A'
-    endif       % 'T'
-  endif         % 'S'
-endwhile
+            com_flush(s1);
+          end %if % 'T'
+        end %if   % 'R'
+      end %if     % 'A'
+    end %if       % 'T'
+  end %if         % 'S'
+end %while

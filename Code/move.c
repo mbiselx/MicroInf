@@ -266,6 +266,7 @@ void move_handler(void){
 					chThdSleepMilliseconds(100);//wait for other threads
 					while(true){
 						move_robot_motors_speed_increment(SPEED_ACUTE_ANGLE_INNER_WHEEL, BASIC_SPEED);//turn curve
+						chThdSleepMilliseconds(10);																					//changed
 						if(move_is_wall_close(IR_7)){//Robot (more or less) aligned with wall after corner
 							move_robot_motors_speed_increment(0, 0);//stop motors -> not too rapid change of speed of wheels
 							break;
@@ -302,6 +303,7 @@ void move_handler(void){
 					chThdSleepMilliseconds(100);//wait for other threads
 					while(true){
 						move_robot_motors_speed_increment(BASIC_SPEED, SPEED_ACUTE_ANGLE_INNER_WHEEL);//turn curve
+						chThdSleepMilliseconds(10);																					//changed
 						if(move_is_wall_close(IR_2)){//Robot (more or less) aligned with wall after corner
 							move_robot_motors_speed_increment(0, 0);//stop motors -> not too rapid change of speed of wheels
 							break;
