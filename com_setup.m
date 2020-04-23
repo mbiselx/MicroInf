@@ -5,7 +5,9 @@ function s = com_setup(port)
     pkg load instrument-control
     s = serial(port, 115200, 150);
   else
-    s = serialport(port, 115200);
+    s = serial(port, 'BaudRate', 115200);
+    fopen(s)
+    s.ReadAsyncMode = 'manual';
   end
 
 end
