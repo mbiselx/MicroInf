@@ -73,6 +73,14 @@ void move_update_drive_mode(void){
 	drive_mode = !drive_mode;
 	palTogglePad(GPIOD, GPIOD_LED5);
 	chThdSleepSeconds(1);//wait for 1 sec
+
+	if (drive_mode){
+		//wait for robot to be stable, then calibrate ir and start mapping
+		calibrate_ir();
+		map_start_mapping(true);
+	}
+	else
+		map_pause_mapping();
 }
 
 
@@ -280,6 +288,7 @@ void move_handler(void){
      */
 
 	while(true){
+		//drive_mode = true;
 		while(!drive_mode){//do not drive until drive_mode is true
 			move_robot_motors_speed(0, 0);//stop motors
 			chThdSleepSeconds(1);//wait for 1s
@@ -297,7 +306,7 @@ void move_handler(void){
 		if(move_is_wall_close(IR_6) || move_is_wall_close(IR_7) || move_is_wall_close(IR_8)){
 
 			while(true){//robot stays in left wall mode until reset
-				if(move_is_wall_to_close()){//robot in front of acute or obtuse angle corner (0-180°)
+				if(move_is_wall_to_close()){//robot in front of acute or obtuse angle corner (0-180ï¿½)
 					move_robot_motors_speed(0, 0);//stops motors -> not too rapid change of speed of wheels
 					chThdSleepMilliseconds(100);//time for other threads
 					while(true){
@@ -309,11 +318,12 @@ void move_handler(void){
 					}
 				}
 
-				if(!move_is_wall_close(IR_6) && !move_is_wall_close(IR_7)){//robot in front of reflex angle corner (180-360°)
+				if(!move_is_wall_close(IR_6) && !move_is_wall_close(IR_7)){//robot in front of reflex angle corner (180-360ï¿½)
 					move_robot_motors_speed(0, 0);//stops motors -> not too rapid change of speed of wheels
 					chThdSleepMilliseconds(100);//wait for other threads
 					while(true){
 						move_robot_motors_speed(SPEED_ACUTE_ANGLE_INNER_WHEEL, BASIC_SPEED);//turn curve
+						chThdSleepMilliseconds(2);																					//changed
 						if(move_is_wall_close(IR_7)){//Robot (more or less) aligned with wall after corner
 							move_robot_motors_speed(0, 0);//stop motors -> not too rapid change of speed of wheels
 							break;
@@ -333,7 +343,7 @@ void move_handler(void){
 		if(move_is_wall_close(IR_3) || move_is_wall_close(IR_2) || move_is_wall_close(IR_1)){
 
 			while(true){//robot stays in right wall mode until reset
-				if(move_is_wall_to_close()){//robot in front of acute or obtuse angle corner (0-180°)
+				if(move_is_wall_to_close()){//robot in front of acute or obtuse angle corner (0-180ï¿½)
 					move_robot_motors_speed(0, 0);//stops motors -> not too rapid change of speed of wheels
 					chThdSleepMilliseconds(100);//wait for other threads
 					while(true){
@@ -345,11 +355,12 @@ void move_handler(void){
 					}
 				}
 
-				if(!move_is_wall_close(IR_2) && !move_is_wall_close(IR_3)){//robot in front of reflex angle corner (180-360°)
+				if(!move_is_wall_close(IR_2) && !move_is_wall_close(IR_3)){//robot in front of reflex angle corner (180-360ï¿½)
 					move_robot_motors_speed(0, 0);//stops motors -> not too rapid change of speed of wheels
 					chThdSleepMilliseconds(100);//wait for other threads
 					while(true){
 						move_robot_motors_speed_increment(BASIC_SPEED, SPEED_ACUTE_ANGLE_INNER_WHEEL);//turn curve
+						chThdSleepMilliseconds(2);																					//changed
 						if(move_is_wall_close(IR_2)){//Robot (more or less) aligned with wall after corner
 							move_robot_motors_speed_increment(0, 0);//stop motors -> not too rapid change of speed of wheels
 							break;
@@ -363,5 +374,3 @@ void move_handler(void){
 	}
 
 }
-
-

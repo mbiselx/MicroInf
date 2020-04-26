@@ -15,6 +15,6 @@
 #define WHEEL_DISTANCE_CM      		5.28f    														//cm
 #define WHEEL_DISTANCE_STEPS		(WHEEL_DISTANCE_CM*WHEEL_PERIMITER_STEPS/WHEEL_PERIMETER_CM) 	//steps
 
-
+#define FLOAT_MAX					2e38
 
 #endif /* CONSTANTS_H_ */

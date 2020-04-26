@@ -14,7 +14,6 @@
 
 //----specific epuck2 includes----
 #include <motors.h>
-#include <sensors\imu.h>
 
 //----specific personal includes----
 #include "constants.h"
@@ -22,340 +21,438 @@
 #include "transmission.h"
 
 //----debug includes----
+#include <pal.h>
 #include <chprintf.h>
 
 
 //----definitions----
-#define MAX_CURVATURE			0.1f
-#define MIN_POINTS_TO_SEND		50
-#define TIME_BETWEEN_SAMPLES	200
 
-typedef struct POINT Point_t;
-struct POINT		//defined by x, y coords
+/*
+ * coordinate system used :
+ *
+ * 				^ y
+ * 				|  /
+ * 				| /
+ * 				|/\	phi
+ * 	   <----------------->	x
+ * 				|
+ * 				|
+ * 				|
+ * 				v
+ */
+
+#define	E_MAX					10		//maximum deviation from a line permissible
+#define L_MIN					50		//minimum length of dominant line segment
+#define L_TOLERANCE				500		//lateral distance error tolerance for a loop
+#define PHI_TOLERANCE			0.5		//angular alignment error for a loop
+#define MIN_POSES_TO_SEND		40		//minimum number of poses to gather before sending data to the computer (avoid swamping the BT)
+#define MS_BETWEEN_POSES		100		//wait time in ms before gathering a new pose
+
+
+typedef enum POSE_T {DOMINANT, TEMPORARY} Pose_t;
+
+typedef struct POSE Pose;
+struct POSE		//defined by type & (x, y) coords & distance & angle
 {
+	Pose_t type;
 	int16_t x;
 	int16_t y;
-	float alpha;
-	Point_t * last;
-	Point_t * next;
-};
-
-typedef struct WALL  Wall_t;
-struct WALL			//defined by y = a+bx, and P_start, P_end
-{
-	float a;
-	float b;
-	int16_t x1;
-	int16_t y1;
-	int16_t x2;
-	int16_t y2;
-	Wall_t * last;
-	Wall_t * next;
+	uint32_t l;
+	float phi;
+	Pose * last;
+	Pose * next;
 };
 
 
 //----declarations----
-Point_t* start_p = NULL;		//point list
-Point_t* end_p   = NULL;
-uint16_t nb_points = 0;
+Pose* first_dom 	= NULL;		//dominant Pose list
+Pose* final_dom		= NULL;
+uint16_t nb_dom 	= 0;
 
-Wall_t * start_w = NULL;		//wall list
-Wall_t * end_w   = NULL;
-uint16_t nb_walls = 0;
+Pose* first_temp 	= NULL;		//temporary Pose list
+Pose* final_temp	= NULL;
+uint16_t nb_temp 	= 0;
 
 bool mapping_enabled 		= false;
 bool transmission_enabled 	= false;
 
 static const char* s = "START";	//transmission headers
-static const char  p = 'P';
-static const char  w = 'W';
+static const char  d = 'D';
+static const char  t = 'T';
+static const char  eot = 4;	//end of transmission (debug)
 
 
 /***************** internal functions ************************/
 //----struct organizing functions----
 
-Point_t* new_point(void)
+Pose* new_pose(Pose_t type)
 {
-	Point_t* new = (Point_t*) malloc(sizeof(Point_t));
+	Pose* new = (Pose*) malloc(sizeof(Pose));
 	if (!new)
 	{
+		//TODO: something better
 		return NULL;	//i'm going to hate myself for this
 	}
 
-	if (!start_p)
+	if (type == TEMPORARY)
 	{
-		start_p = new;
-		new->last = NULL;
+		if(!first_temp)
+		{
+			first_temp = new;
+			new->last = NULL;
+		}
+		else
+		{
+			final_temp->next = new;
+			new->last = final_temp;
+		}
+		final_temp = new;
+		nb_temp++;
 	}
 	else
 	{
-		end_p->next = new;
-		new->last = end_p;
+		if(!first_dom)
+		{
+			first_dom = new;
+			new->last = NULL;
+		}
+		else
+		{
+			final_dom->next = new;
+			new->last = final_dom;
+		}
+		final_dom = new;
+		nb_dom++;
 	}
-	end_p = new;
-	new->next = NULL;
 
-	nb_points++;
+	new->next = NULL;
+	new->type = type;
 
 	return new;
 }
 
-void destroy_point(Point_t* old)
+void destroy_pose(Pose* old)
 {
-	if (old == start_p)
+	if (old == first_temp)
 	{
 		if (old->next)
 		{
-			start_p = old->next;
+			first_temp = old->next;
 			old->next->last = NULL;
 		}
 		else
-			start_p = NULL;
+			first_temp = NULL;
 	}
 	else
 	{
-		if(old->last)
-			old->last->next = old->next;
-		if(old->next)
-			old->next->last = old->last;
-	}
-	free(old);
-	old = NULL;
-	nb_points--;
-}
-
-void destroy_all_points(void)
-{
-	while (start_p)
-	{
-		destroy_point(start_p);
-	}
-}
-
-Wall_t* new_wall(void)
-{
-	Wall_t* new = (Wall_t*) malloc(sizeof(Wall_t));
-	if (!new)
-	{
-		return NULL;	//i'm going to hate myself for this
-	}
-
-	if (!start_w)
-	{
-		start_w = new;
-		new->last = NULL;
-	}
-	else
-	{
-		end_w->next = new;
-		new->last = end_w;
-	}
-	end_w = new;
-	new->next = NULL;
-
-	nb_walls++;
-
-	return new;
-}
-
-void destroy_wall(Wall_t* old)
-{
-	if (old == start_w)
-	{
-		if (old->next)
+		if (old == first_dom)
 		{
-			start_w = old->next;
-			old->next->last = NULL;
+			if (old->next)
+			{
+				first_dom = old->next;
+				old->next->last = NULL;
+			}
+			else
+				first_dom = NULL;
 		}
+
 		else
-			start_w = NULL;
+		{
+			if(old->last)
+				old->last->next = old->next;
+			if(old->next)
+				old->next->last = old->last;
+		}
+	}
+
+	if (old->type == TEMPORARY)
+		nb_temp--;
+	else
+		nb_dom--;
+
+	free(old);
+	old = NULL;
+}
+
+void destroy_all_type_poses(Pose_t type)
+{
+	if (type == TEMPORARY)
+	{
+		while (first_temp)
+			destroy_pose(first_temp);
 	}
 	else
 	{
-		if(old->last)
-			old->last->next = old->next;
-		if(old->next)
-			old->next->last = old->last;
+		while (first_dom)
+			destroy_pose(first_dom);
 	}
-	free(old);
-	old = NULL;
-	nb_walls--;
 }
 
-void destroy_all_walls(void)
+void migrate_temp_pose_to_dom(Pose * pt)
 {
-	while (start_w)
-	{
-		destroy_wall(start_w);
-	}
+	if(pt == final_temp)				//cut
+		final_temp = pt->last;
+	if(pt == first_temp)
+		first_temp = pt->next;
+	if(pt->last)
+		pt->last->next = pt->next;
+	if(pt->next)
+		pt->next->last = pt->last;
+
+	if (!first_dom)
+		first_dom = pt;
+	else
+		final_dom->next = pt;				//paste to end of dom list
+	pt->last = final_dom;
+	pt->next = NULL;
+	final_dom = pt;
+
+	nb_temp--;
+	nb_dom++;
+	pt->type = DOMINANT;
 }
+
 
 //----map utility functions----
 
-/*	\brief		function to log a point -> must be done relatively often to
- * 				keep track of the robot's position
+void log_origin(void)
+{
+	Pose* origin 	= new_pose(DOMINANT);
+	origin->phi 	= 0;
+	origin->x		= 0;
+	origin->y		= 0;
+	origin->l		= 0;
+}
+
+/*
+ * \brief	find the maximum distance of a the temp points to a line defined by final_dom and (x,y)
+ *
+ * 							X (pt)
+ * 							|
+ * 							|
+ * 			X---------------+-----------------X
+ * 		(final_dom)							(x,y)
+ *
+ * \param	x
+ * \param	y
+ * \return	e_max
+ */
+int16_t max_error_line_fit(int16_t x, int16_t y)
+{
+	int e_max 	= 0;
+	int	e		= 0;
+	int16_t delta_x = x - final_dom->x;
+	int16_t delta_y = y - final_dom->y;
+
+	if (!delta_x && !delta_y)								//superposition of final_dom and (x,y)
+		return 0;
+
+	int a 		= (delta_x * final_dom->y) - (delta_y * final_dom->x);	//a constant
+	float delta = sqrt(delta_x*delta_x + delta_y*delta_y);		//optimize sqrt()
+
+	for (Pose* pt = first_temp; pt; pt=pt->next)
+	{
+		e = abs(delta_y*pt->x - delta_x*pt->y + a);				//optimize abs()
+		if (e > e_max)
+			e_max = e;
+	}
+
+	return (int16_t) (2*e_max/delta);
+
+}
+
+/*	\brief		function to log a Pose -> must be done relatively often to
+ * 				accurately keep track of the robot's position
  * 	steps_r		number of steps done by right motor since last call
  * 	steps_l		number of steps done by left motor since last call
  */
-void map_log_new_point(int16_t steps_r, int16_t steps_l)
+void log_pose(int16_t steps_r, int16_t steps_l)
 {
-	Point_t* new = new_point();
+	Pose* 	last 	= ((final_temp) ? final_temp : final_dom);	//last Pose to calculate from
+	float 	d_phi	= (float)(steps_r-steps_l)/WHEEL_DISTANCE_STEPS;
+	int32_t d_l		= (steps_l+steps_r)>>1;
+	int32_t x 		= 0;
+	int32_t y	 	= 0;
 
-	float r = 0;
-
-	if (!(new->last))
+	// calculate coords of Pose
+	if (!d_phi)											//straight line
 	{
-		new->alpha = (float)(steps_r-steps_l)/WHEEL_DISTANCE_STEPS;
-		if (new->alpha != 0)
-		{
-			r = (steps_l+steps_r)/2/(new->alpha);
-			new->x = r*(cos(new->alpha) - 1);
-			new->y = r*sin(new->alpha);
-		}
-		else
-		{
-			new->x = 0;
-			new->y = steps_r;
-		}
+		x = last->x + d_l*cos(last->phi);
+		y = last->y + d_l*sin(last->phi);
 	}
-	else
+	else												//curved line
 	{
-		new->alpha = new->last->alpha + (float)(steps_r-steps_l)/WHEEL_DISTANCE_STEPS;
-		if (new->alpha != new->last->alpha)
+		x = last->x + d_l/d_phi*(sin(last->phi + d_phi) - sin(last->phi));	//could use truly obscure trig identities
+		y = last->y + d_l/d_phi*(cos(last->phi) - cos(last->phi + d_phi));	//to optimize one calculation here -> TODO: is it worth it?
+	}
+
+	//decide type of pose
+	if((last->l + d_l - final_dom->l) > L_MIN)			//the Pose is far enough from other dominant Poses
+	{
+		if (max_error_line_fit(x, y) > E_MAX)			//the maximum error is too large to fit all Poses in a single line
 		{
-			r = (steps_l+steps_r)/2/(new->alpha - new->last->alpha);
-			new->x = new->last->x + r*(cos(new->alpha) - cos(new->last->alpha));
-			new->y = new->last->y + r*(sin(new->alpha) - sin(new->last->alpha));
-		}
-		else
-		{
-			new->x = new->last->x - steps_r*sin(new->alpha);
-			new->y = new->last->y + steps_r*cos(new->alpha);
+			migrate_temp_pose_to_dom(final_temp);		//the last temp Pose becomes a dominant Pose
+			destroy_all_type_poses(TEMPORARY);			//all other temp Poses are discarded
+
 		}
 	}
 
+	Pose* new 	= new_pose(TEMPORARY);					//the newly logged Pose is added as a temp pose
+	new->phi 	= last->phi + d_phi;
+	new->l		= last->l + d_l;
+	new->x 		= x;
+	new->y 		= y;
+}
+
+/*	\brief		checks all poses to see if one exists with a similar location
+ * 				and a similar orientation -> this is then considered a loop.
+ * 				A simple correction is then applied to correct the error in
+ * 				distance between the start and end points
+ * 	\return		if a loop has been detected
+ */
+bool loop_detection(void)
+{
+	Pose * ptr = first_dom->next;	// don't take the origin, it's usually not at a wall
+
+	float d_l = 0;
+	float d_phi = 0;
+
+	while (ptr->next && (final_dom->l - ptr->l > 2*L_TOLERANCE))
+	{
+		d_l 	= sqrt( (ptr->x - final_dom->x)*(ptr->x - final_dom->x) + (ptr->y - final_dom->y)*(ptr->y - final_dom->y));
+		d_phi 	= fmod(final_dom->phi - ptr->phi, 2*PI);
+
+		if ((d_l < L_TOLERANCE) && (fabs(d_phi) < PHI_TOLERANCE))
+		{
+			destroy_all_type_poses(TEMPORARY);
+
+			while (first_dom != ptr)
+				destroy_pose(first_dom);		// get rid of the useless part of the map
+
+			int16_t e_x = (final_dom->x-first_dom->x)/nb_dom;	//error in x
+			int16_t e_y = (final_dom->y-first_dom->y)/nb_dom;	//error in y
+
+			ptr = first_dom->next;								//first point doesn's get corrected
+			for (int i = 1; ptr; i++, ptr = ptr->next)
+			{
+				ptr->x = ptr->x - e_x*i;						//correct all points proportionally to their number
+				ptr->y = ptr->y - e_y*i;
+			}
+			return true;
+
+		}
+		ptr = ptr->next;
+	}
+	return false;
+}
+
+
+//----transmission functions----
+
+void map_send_poses_to_computer(Pose_t type)
+{
+	Pose* ptr = (type == TEMPORARY)? first_temp : first_dom;
+	static const uint16_t zero = 0;
+	uint16_t data_size = 5*((type == TEMPORARY)? nb_temp : nb_dom);
+
+	if (!ptr)									//no Poses to transmit
+	{
+		return;
+	}
+
+	send_str_to_computer((char*)s, 5);								//transmission start character
+	send_int16_to_computer((int16_t*)&data_size);									//transmission size in bytes
+	send_int16_to_computer((int16_t*) ((type == TEMPORARY)? &zero : &nb_dom));		//number of dom_poses to be transmitted
+	send_int16_to_computer((int16_t*) ((type == TEMPORARY)? &nb_temp : &zero));		//number of temp_poses to be transmitted
+	while (ptr)
+	{
+		send_char_to_computer((char*)((type == TEMPORARY)? &t : &d));	//Pose start character
+		send_int16_to_computer(&(ptr->x));
+		send_int16_to_computer(&(ptr->y));
+		ptr = ptr->next;
+	}
+
+	send_char_to_computer((char*)&eot);
 
 }
 
-/*	\brief		function to log the encounter of a wall -> must be called at first encounter of a wall
- * 	TODO : make this useful
+/*	\brief		sends all the pose data in (X-Y) coordinates
+ * 				to the computer via Bluetooth
  */
-void map_log_wall_encounter(void)
+void map_send_all_poses_to_computer(void)
 {
-	int16_t x   = end_p->x;				//save values of last point
-	int16_t y   = end_p->y;
-	float alpha = end_p->alpha;
-	destroy_all_points();				//clean list of useless points
-	Point_t * point = new_point();		//create beginning point of next wall
-	point->x = x;
-	point->y = y;
-	point->alpha = alpha;
-}
+	Pose* ptr = first_dom;
+	uint16_t data_size = 5*(nb_temp + nb_dom);
 
-/*	\brief		function to log the loss of a wall -> must be called at first loss of a wall
- */
-void map_log_wall_loss(void)
-{
-	// TODO this;
-}
+	send_str_to_computer((char*)s, 5);					//transmission start character
+	send_int16_to_computer((int16_t*)&data_size);		//transmission size in bytes
+	send_int16_to_computer((int16_t*) &nb_dom);			//number of Poses to be transmitted
+	send_int16_to_computer((int16_t*) &nb_temp);		//number of walls to be transmitted
 
-/*	\brief		function to log the encounter of a corner (=end of a wall segment)
- *				! must be called at every corner
- */
-void map_log_corner(void)
-{
-	float bp = 0;
-	float bq = 0;
-	float mean_x = 0;
-	float mean_y = 0;
-	float alpha = end_p->alpha;
-	Point_t * point;
-	Wall_t * wall = new_wall();
-
-	wall->x1 = start_p->x;		//fill in wall start- and end-points
-	wall->y1 = start_p->y;
-	wall->x2 = end_p->x;
-	wall->y2 = end_p->y;
-
-	//calculate least-squares linear regression line
-	for (point = start_p; point; point = point->next)
+	while (ptr)
 	{
-		mean_x += point->x;
-		mean_y += point->y;
+		send_char_to_computer((char*)&d);			//dom Pose start character
+		send_int16_to_computer(&(ptr->x));
+		send_int16_to_computer(&(ptr->y));
+		ptr = ptr->next;
 	}
-	mean_x = mean_x / nb_points;
-	mean_y = mean_y / nb_points;
 
-	for (point = start_p; point; point = point->next)
+	ptr = first_temp;
+	while (ptr)
 	{
-		bp += point->y * (point->x - mean_x);
-		bq += (point->x - mean_x)*(point->x - mean_x);				//could be optimized
+		send_char_to_computer((char*)&t);			//temp Pose start character
+		send_int16_to_computer(&(ptr->x));
+		send_int16_to_computer(&(ptr->y));
+		ptr = ptr->next;
 	}
-	wall->b = bp/bq;
-	wall->a = mean_y - wall->b * mean_x;
 
-	destroy_all_points();		//clean list of now-useless points
-	point = new_point();		//create new beginning point of next wall
-	point->x = wall->x2;
-	point->y = wall->y2;
-	point->alpha = alpha;
+
+	send_char_to_computer((char*)&eot);
 }
 
 
 /************************ THREAD ***************************/
-static THD_WORKING_AREA(waThdMap, 128);
+static THD_WORKING_AREA(waThdMap, 1024);
 static THD_FUNCTION(ThdMap, arg) {
 
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
 
     systime_t time 	= chVTGetSystemTime();
-    float h 		= 0;
-    float alpha_imu = 0;
-    float curvature = 0;
     uint8_t limiter = 0;
-
-    serial_start();
 
     while(true){
 
-    	h = ((float)(chVTGetSystemTime()-time)) * 0.001;
-    	time = chVTGetSystemTime();
-    	alpha_imu += h*get_gyro_rate(2);
-
     	if (mapping_enabled)
     	{
-			map_log_new_point(right_motor_get_pos(),left_motor_get_pos());
+			log_pose(right_motor_get_pos(), left_motor_get_pos());
 			right_motor_set_pos(0);
 			left_motor_set_pos(0);
-
 			limiter++;
 
-			curvature = (end_p->alpha - end_p->last->alpha);
-			if ((curvature < -MAX_CURVATURE) || (MAX_CURVATURE < curvature))
-			{
-				map_log_corner();
-			}
-
-			if (end_p->alpha < -2*PI || 2*PI < end_p->alpha)
-			{
-				palClearPad(GPIOD, GPIOD_LED1);	//indicate a full turn has been made
-			}
-			if (alpha_imu < -2*PI || 2*PI < alpha_imu)
-			{
-				palClearPad(GPIOD, GPIOD_LED3);	//indicate a full turn has been made
-			}
-
+			palTogglePad(GPIOD, GPIOD_LED1);		//indicate a point has been logged
     	}
 
-    	if (transmission_enabled && (limiter > MIN_POINTS_TO_SEND))
+    	if (transmission_enabled && (limiter > MIN_POSES_TO_SEND))
     	{
-    		map_send_all_data_to_computer();
+    		map_send_all_poses_to_computer();
     		limiter = 0;
+
+	    	if (first_dom->next && loop_detection())
+	    	{
+				palClearPad(GPIOD, GPIOD_LED1);		//indicate the mapping is done
+				chThdSleepMilliseconds(1000);
+				map_send_all_poses_to_computer();//(DOMINANT);
+				chThdSleepMilliseconds(1000);
+				map_send_all_poses_to_computer();//(DOMINANT);	//send twice because sometimes windows doesn't receive ??
+				mapping_enabled = false;
+				transmission_enabled = false;
+	    	}
+
     	}
 
         time = chVTGetSystemTime();
-        chThdSleepUntilWindowed(time, time + MS2ST(TIME_BETWEEN_SAMPLES));
+        chThdSleepUntilWindowed(time, time + MS2ST(MS_BETWEEN_POSES));
     }
 }
 
@@ -376,7 +473,7 @@ void map_init(void)
 
 void map_start_mapping(bool transmit)
 {
-	map_log_new_point(0,0);
+	log_origin();
 	right_motor_set_pos(0);
 	left_motor_set_pos(0);
 	mapping_enabled = true;
@@ -395,152 +492,24 @@ void map_unpause_mapping(bool transmit)
 	transmission_enabled = transmit;
 }
 
-void map_stop_mapping(void)
+
+//---- debug ----
+void map_display_poses(Pose_t type)
 {
-	mapping_enabled = false;
-	map_log_corner();
-
-	// TODO : create final map  & send to computer
-}
-
-/*
- * \brief		allows the user to manually add an "event" marker to the map
- */
-void map_log_event(void)
-{
-	// TODO : do this
-}
-
-
-
-//----debug functions----
-void map_display_all_points()
-{
-	Point_t* ptr = start_p;
-	if (!start_p)
+	Pose* ptr = (type == TEMPORARY)? first_temp : first_dom;
+	if (!ptr)
 	{
-		chprintf((BaseSequentialStream*)&SD3, "\r\n--- NO POINTS --- \r\n");
+		chprintf((BaseSequentialStream*)&SD3, "\r\n--- NO POSES --- \r\n");
 		return;
 	}
 	chprintf((BaseSequentialStream*)&SD3, "\r\n--- START --- \r\n");
-	chprintf((BaseSequentialStream*)&SD3, "nb_points : %d \r\n", nb_points);
+	chprintf((BaseSequentialStream*)&SD3, "nb_poses : %d \r\n", (type == TEMPORARY)? nb_temp : nb_dom);
 	while (ptr->next)
 	{
-		chprintf((BaseSequentialStream*)&SD3, "x: %d   \t y: %d \t alpha: %f \r\n", ptr->x,ptr->y,ptr->alpha);
+		chprintf((BaseSequentialStream*)&SD3, "x: %d   \t y: %d \t phi: %f \r\n", ptr->x,ptr->y,ptr->phi);
 		ptr=ptr->next;
 	}
-	chprintf((BaseSequentialStream*)&SD3, "x: %d   \t y: %d \t alpha: %f \r\n", ptr->x,ptr->y,ptr->alpha);
+	chprintf((BaseSequentialStream*)&SD3, "x: %d   \t y: %d \t phi: %f \r\n", ptr->x,ptr->y,ptr->phi);
 	chprintf((BaseSequentialStream*)&SD3, "--- END --- \r\n");
 }
 
-void map_send_all_points_to_computer(void)
-{
-	Point_t* ptr = start_p;
-	static const int16_t zero = 0;
-	uint16_t data_size = 5*nb_points;
-
-	if (!ptr)									//no points to transmit
-	{
-		return;
-	}
-
-	send_str_to_computer((char*)s, 5);					//transmission start character
-	send_int16_to_computer((int16_t*)&data_size);			//transmission size in bytes
-	send_int16_to_computer((int16_t*)&nb_points);			//number of points to be transmitted
-	send_int16_to_computer((int16_t*)&zero);				//number of walls to be transmitted
-	while (ptr->next)
-	{
-		send_char_to_computer((char*)&p);				//point start character
-		send_int16_to_computer(&(ptr->x));
-		send_int16_to_computer(&(ptr->y));
-		ptr = ptr->next;
-	}
-	send_char_to_computer((char*)&p);
-	send_int16_to_computer(&(ptr->x));
-	send_int16_to_computer(&(ptr->y));
-
-}
-
-void map_send_all_walls_to_computer(void)
-{
-	Wall_t* ptr = start_w;
-	static const int16_t zero = 0;
-	uint16_t data_size = 13*nb_walls;
-
-	if (!ptr)									//no walls to transmit
-	{
-		return;
-	}
-
-	send_str_to_computer((char*)s, 5);					//transmission start character
-	send_int16_to_computer((int16_t*)&data_size);			//transmission size in bytes
-	send_int16_to_computer((int16_t*)&zero);				//number of points to be transmitted
-	send_int16_to_computer((int16_t*)&nb_walls);			//number of walls to be transmitted
-	while (ptr->next)
-	{
-		send_char_to_computer((char*)&w);				//wall start character
-		send_float_to_computer(&(ptr->a));
-		send_float_to_computer(&(ptr->b));
-		send_int16_to_computer(&(ptr->x2));
-		send_int16_to_computer(&(ptr->y2));
-		ptr = ptr->next;
-	}
-	send_char_to_computer((char*)&w);
-	send_float_to_computer(&(ptr->a));
-	send_float_to_computer(&(ptr->b));
-	send_int16_to_computer(&(ptr->x2));
-	send_int16_to_computer(&(ptr->y2));
-
-}
-
-
-void map_send_all_data_to_computer(void)
-{
-	Wall_t* ptr_w = start_w;
-	Point_t* ptr_p = start_p;
-	uint16_t data_size = 5*nb_points + 13*nb_walls;
-
-
-	if (!(ptr_p || ptr_w) )									//no data to transmit
-	{
-		return;
-	}
-
-	send_str_to_computer((char*)s, 5);					//transmission start characters
-	send_int16_to_computer((int16_t*)&data_size);			//transmission size in bytes
-	send_int16_to_computer((int16_t*)&nb_points);			//number of points to be transmitted
-	send_int16_to_computer((int16_t*)&nb_walls);			//number of walls to be transmitted
-
-	if (ptr_p)
-	{
-		while (ptr_p->next)							//send all points first
-		{
-			send_char_to_computer((char*)&p);				//point start character
-			send_int16_to_computer(&(ptr_p->x));
-			send_int16_to_computer(&(ptr_p->y));
-			ptr_p = ptr_p->next;
-		}
-		send_char_to_computer((char*)&p);
-		send_int16_to_computer(&(ptr_p->x));
-		send_int16_to_computer(&(ptr_p->y));
-	}
-
-	if (ptr_w)
-	{
-		while (ptr_w->next)							//send all walls
-		{
-			send_char_to_computer((char*)&w);				//wall start character
-			send_float_to_computer(&(ptr_w->a));
-			send_float_to_computer(&(ptr_w->b));
-			send_int16_to_computer(&(ptr_w->x2));
-			send_int16_to_computer(&(ptr_w->y2));
-			ptr_w = ptr_w->next;
-		}
-		send_char_to_computer((char*)&w);
-		send_float_to_computer(&(ptr_w->a));
-		send_float_to_computer(&(ptr_w->b));
-		send_int16_to_computer(&(ptr_w->x2));
-		send_int16_to_computer(&(ptr_w->y2));
-	}
-
-}

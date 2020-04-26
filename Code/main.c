@@ -24,20 +24,12 @@
 //----debug includes----
 #include <chprintf.h>
 
+
 //----global declarations----
 messagebus_t bus;
 MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
 
-//----internal functions----
-void calibrate(void)
-{
-    chThdSleepMilliseconds(500);
-    calibrate_ir();
-    calibrate_acc();
-    calibrate_gyro();
-    chThdSleepMilliseconds(500);
-}
 
 //----MAIN----
 int main(void)
@@ -49,38 +41,19 @@ int main(void)
     messagebus_init(&bus, &bus_lock, &bus_condvar);	//If you don't do this nothing works right
 
     //specific inits (sensors & motors)
+    serial_start();
     proximity_start();
     imu_start();
     imu_handler_init();
     motors_init();
-    serial_start();
-  //  map_init();
-
-    //wait for robot to be stable, then calibrate
-    calibrate();
-   // map_start_mapping(true);
+    map_init();
 
     move_handler();
 
     /* Infinite loop. */
     while (1)
     {
-    	/*right_motor_set_speed(500);
-    	left_motor_set_speed(500);
-    	chThdSleepMilliseconds(2000);
-
-    	right_motor_set_speed(0);
-    	left_motor_set_speed(0);
-    	chThdSleepMilliseconds(10);
-
-
-    	right_motor_set_speed(500);
-    	left_motor_set_speed(-500);
-    	chThdSleepMilliseconds(510);
-
-    	right_motor_set_speed(0);
-    	left_motor_set_speed(0);
-    	chThdSleepMilliseconds(10);*/
+    	;
     }
 }
 
