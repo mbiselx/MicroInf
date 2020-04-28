@@ -22,20 +22,11 @@ void serial_start(void)
 	sdStart(&SD3, &ser_cfg); // UART3 -> COM9(USB) and COM13(Bluetooth)  (for me)
 }
 
-void send_char_to_computer(char* data)
-{
-	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)data, sizeof(char));
-}
-
 void send_str_to_computer(char* data, uint16_t strleng)
 {
 	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)data, strleng);
 }
 
-void send_int8_to_computer(uint8_t* data)
-{
-	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)data, sizeof(int8_t));
-}
 
 void send_int16_to_computer(int16_t* data)
 {
@@ -48,7 +39,8 @@ void send_float_to_computer(float* data)
 }
 
 
-//experimental
+//---- experimental ----
+
 void send_int16_to_computer_w_parity(int16_t* data)
 {
 	uint8_t parity = 0;

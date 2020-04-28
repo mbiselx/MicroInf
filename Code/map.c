@@ -14,14 +14,13 @@
 
 //----specific epuck2 includes----
 #include <motors.h>
+#include <leds.h>
 
 //----specific personal includes----
-#include "constants.h"
 #include "map.h"
 #include "transmission.h"
 
 //----debug includes----
-#include <pal.h>
 #include <chprintf.h>
 
 
@@ -40,6 +39,15 @@
  * 				|
  * 				v
  */
+
+#define PI						3.1415f
+#define FLOAT_MAX				2e38
+
+#define WHEEL_PERIMETER_CM 		13 		//cm
+#define WHEEL_PERIMITER_STEPS 	1000	//steps
+#define WHEEL_DISTANCE_CM      	5.28f   //cm
+#define WHEEL_DISTANCE_STEPS	(WHEEL_DISTANCE_CM*WHEEL_PERIMITER_STEPS/WHEEL_PERIMETER_CM) 	//steps
+
 
 #define	E_MAX					10		//maximum deviation from a line permissible
 #define L_MIN					50		//minimum length of dominant line segment
@@ -73,8 +81,8 @@ Pose* first_temp 	= NULL;		//temporary Pose list
 Pose* final_temp	= NULL;
 uint16_t nb_temp 	= 0;
 
-bool mapping_enabled 		= false;
-bool transmission_enabled 	= false;
+static bool mapping_enabled 		= false;
+static bool transmission_enabled 	= false;
 
 static const char* s = "START";	//transmission headers
 static const char  d = 'D';
@@ -90,7 +98,6 @@ Pose* new_pose(Pose_t type)
 	Pose* new = (Pose*) malloc(sizeof(Pose));
 	if (!new)
 	{
-		//TODO: something better
 		return NULL;	//i'm going to hate myself for this
 	}
 
@@ -224,8 +231,7 @@ void log_origin(void)
 	origin->l		= 0;
 }
 
-/*
- * \brief	find the maximum distance of a the temp points to a line defined by final_dom and (x,y)
+/*  \brief	find the maximum distance of a the temp points to a line defined by final_dom and (x,y)
  *
  * 							X (pt)
  * 							|
@@ -233,9 +239,9 @@ void log_origin(void)
  * 			X---------------+-----------------X
  * 		(final_dom)							(x,y)
  *
- * \param	x
- * \param	y
- * \return	e_max
+ *  \param	x			x coord of endpoint
+ *  \param	y			y coord of endpoint
+ *  \return	e_max		maximum deviation of the temp points from the line
  */
 int16_t max_error_line_fit(int16_t x, int16_t y)
 {
@@ -263,8 +269,8 @@ int16_t max_error_line_fit(int16_t x, int16_t y)
 
 /*	\brief		function to log a Pose -> must be done relatively often to
  * 				accurately keep track of the robot's position
- * 	steps_r		number of steps done by right motor since last call
- * 	steps_l		number of steps done by left motor since last call
+ * 	\param  steps_r		number of steps done by right motor since last call
+ * 	\param  steps_l		number of steps done by left motor since last call
  */
 void log_pose(int16_t steps_r, int16_t steps_l)
 {
@@ -283,7 +289,7 @@ void log_pose(int16_t steps_r, int16_t steps_l)
 	else												//curved line
 	{
 		x = last->x + d_l/d_phi*(sin(last->phi + d_phi) - sin(last->phi));	//could use truly obscure trig identities
-		y = last->y + d_l/d_phi*(cos(last->phi) - cos(last->phi + d_phi));	//to optimize one calculation here -> TODO: is it worth it?
+		y = last->y + d_l/d_phi*(cos(last->phi) - cos(last->phi + d_phi));	//to optimize calculations here -> TODO: is it worth it?
 	}
 
 	//decide type of pose
@@ -349,6 +355,11 @@ bool loop_detection(void)
 
 //----transmission functions----
 
+
+/*	\brief		sends all the pose data of a certain type of pose
+ * 				in (X-Y) coordinates to the computer via Bluetooth
+ * 	\param		type	the type of pose to send
+ */
 void map_send_poses_to_computer(Pose_t type)
 {
 	Pose* ptr = (type == TEMPORARY)? first_temp : first_dom;
@@ -366,13 +377,13 @@ void map_send_poses_to_computer(Pose_t type)
 	send_int16_to_computer((int16_t*) ((type == TEMPORARY)? &nb_temp : &zero));		//number of temp_poses to be transmitted
 	while (ptr)
 	{
-		send_char_to_computer((char*)((type == TEMPORARY)? &t : &d));	//Pose start character
+		send_str_to_computer((char*)((type == TEMPORARY)? &t : &d), 1);	//Pose start character
 		send_int16_to_computer(&(ptr->x));
 		send_int16_to_computer(&(ptr->y));
 		ptr = ptr->next;
 	}
 
-	send_char_to_computer((char*)&eot);
+	send_str_to_computer((char*)&eot, 1);
 
 }
 
@@ -391,7 +402,7 @@ void map_send_all_poses_to_computer(void)
 
 	while (ptr)
 	{
-		send_char_to_computer((char*)&d);			//dom Pose start character
+		send_str_to_computer((char*)&d, 1);			//dom Pose start character
 		send_int16_to_computer(&(ptr->x));
 		send_int16_to_computer(&(ptr->y));
 		ptr = ptr->next;
@@ -400,14 +411,14 @@ void map_send_all_poses_to_computer(void)
 	ptr = first_temp;
 	while (ptr)
 	{
-		send_char_to_computer((char*)&t);			//temp Pose start character
+		send_str_to_computer((char*)&t, 1);			//temp Pose start character
 		send_int16_to_computer(&(ptr->x));
 		send_int16_to_computer(&(ptr->y));
 		ptr = ptr->next;
 	}
 
 
-	send_char_to_computer((char*)&eot);
+	send_str_to_computer((char*)&eot, 1);
 }
 
 
@@ -430,23 +441,28 @@ static THD_FUNCTION(ThdMap, arg) {
 			left_motor_set_pos(0);
 			limiter++;
 
-			palTogglePad(GPIOD, GPIOD_LED1);		//indicate a point has been logged
+			set_led(LED1, 2);				//indicate a point has been logged by toggling
+			//palTogglePad(GPIOD, GPIOD_LED1);
     	}
 
-    	if (transmission_enabled && (limiter > MIN_POSES_TO_SEND))
+    	if (limiter > MIN_POSES_TO_SEND)
     	{
-    		map_send_all_poses_to_computer();
     		limiter = 0;
+
+    		if (transmission_enabled)
+    			map_send_all_poses_to_computer();
 
 	    	if (first_dom->next && loop_detection())
 	    	{
-				palClearPad(GPIOD, GPIOD_LED1);		//indicate the mapping is done
+				//palClearPad(GPIOD, GPIOD_LED1);
+				set_led(LED1, true);					//indicate the mapping is done
 				chThdSleepMilliseconds(1000);
-				map_send_all_poses_to_computer();//(DOMINANT);
+				map_send_all_poses_to_computer();
 				chThdSleepMilliseconds(1000);
-				map_send_all_poses_to_computer();//(DOMINANT);	//send twice because sometimes windows doesn't receive ??
+				map_send_all_poses_to_computer();	//send twice because sometimes Windows doesn't receive ??
 				mapping_enabled = false;
 				transmission_enabled = false;
+				chThdExit(0);						//terminates the thread
 	    	}
 
     	}
@@ -459,18 +475,23 @@ static THD_FUNCTION(ThdMap, arg) {
 
 /***************** public functions ************************/
 
-/*
- * \brief		initializes the thread for mapping the robot's movements
+/*  \brief		initializes the thread for mapping the robot's movements
  * 				this thread - once started - automatically logs the robot's
  * 				movement and creates a map of the path it followed.
  * 				Furthermore, if so instructed, the thread will periodically
  * 				send a copy of the entire map created to the computer via Bluetooth.
+ * 				If the tread detects a closed loop in the map, the map is finalized
+ * 				and sent to the computer a final time before the thread is shut down
  */
 void map_init(void)
 {
 	chThdCreateStatic(waThdMap, sizeof(waThdMap), NORMALPRIO-1, ThdMap, NULL);
 }
 
+
+/*  \brief		starts the mapping process
+ * 	\param		transmit	sets the transmission state for the thread
+ */
 void map_start_mapping(bool transmit)
 {
 	log_origin();
@@ -480,12 +501,17 @@ void map_start_mapping(bool transmit)
 	transmission_enabled = transmit;
 }
 
+/*	\brief		pauses the mapping process
+ */
 void map_pause_mapping(void)
 {
 	mapping_enabled = false;
 	transmission_enabled = true;
 }
 
+/*	\brief		unpauses the mapping process
+ * 	\param		transmit	sets the transmission state for the thread
+ */
 void map_unpause_mapping(bool transmit)
 {
 	mapping_enabled = true;

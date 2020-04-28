@@ -8,20 +8,29 @@
 #ifndef TRANSMISSION_H_
 #define TRANSMISSION_H_
 
+/* \brief		starts a serial connection for SD3
+ */
 void serial_start(void);
 
-void send_char_to_computer(char* data);
-
+/* \brief		send a string of chars to computer (like chprintf)
+ */
 void send_str_to_computer(char* data, uint16_t strleng);
 
-void send_int8_to_computer(uint8_t* data);
-
+/* \brief		send an int16 to computer in binary
+ */
 void send_int16_to_computer(int16_t* data);
 
+/* \brief		send an float to computer in binary
+ */
 void send_float_to_computer(float* data);
 
+
+//---- experimental ----
+
 /*
- * experimental functions -> detect errors when transmitting via bluetooth
+ *  experimental functions -> detect errors when transmitting via bluetooth
+ *  not used in final version : too slow and cumbersome
+ * 	needs more work before it can be useful
  */
 void send_int16_to_computer_w_parity(int16_t* data);
 

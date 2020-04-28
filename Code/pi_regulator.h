@@ -8,8 +8,6 @@
 #ifndef PI_REGULATOR_H_
 #define PI_REGULATOR_H_
 
-
-
 /**
 * pi_regulator_regulator
 *

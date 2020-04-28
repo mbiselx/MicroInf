@@ -38,6 +38,6 @@ void move_update_drive_mode(void);
 *
 * @return					state of drive_mode (true or false)
 */
-uint8_t move_get_drive_mode(void);
+bool move_get_drive_mode(void);
 
 #endif /* MOVE_H_ */

@@ -1,7 +1,6 @@
 //----global chibiOS includes----
-#include "ch.h"
-#include "hal.h"
-#include <chprintf.h>
+#include <ch.h>
+#include <hal.h>
 
 //----specific epuck2 includes----
 #include <sensors\proximity.h>
@@ -30,7 +29,7 @@
 #define NUMBER_OF_INCREMENT						8
 
 //static variables
-static int8_t drive_mode=false; //if drive_mode==true -> robot drives; if drive_mode==false -> robot does not drive
+static bool drive_mode=false; //if drive_mode==true -> robot drives; if drive_mode==false -> robot does not drive
 								//drive_mode is initially false until robot has been placed
 
 //enums
@@ -71,8 +70,9 @@ enum IR_SENSORS{IR_1, IR_2, IR_3, IR_4, IR_5, IR_6, IR_7, IR_8};
 void move_update_drive_mode(void){
 
 	drive_mode = !drive_mode;
-	palTogglePad(GPIOD, GPIOD_LED5);
-	chThdSleepSeconds(1);//wait for 1 sec
+
+	set_led(LED5, drive_mode);	//set LED "on" to indicate driving mode true
+	chThdSleepSeconds(1); //wait for 1 sec
 
 	if (drive_mode){
 		//wait for robot to be stable, then calibrate ir and start mapping
@@ -94,7 +94,7 @@ void move_update_drive_mode(void){
 *
 * @return					state of drive_mode (true or false)
 */
-uint8_t move_get_drive_mode(void){
+bool move_get_drive_mode(void){
 	return drive_mode;
 }
 
@@ -110,7 +110,7 @@ uint8_t move_get_drive_mode(void){
 * @return					true: if given sensor close to wall (value of sensor is higher or equal tan SENSOR_WALL_CLOSE)
 * 							false: if given sensor far from wall (value of sensor is smaller tan SENSOR_WALL_CLOSE)
 */
-int move_is_wall_close(int sensor){
+bool move_is_wall_close(int sensor){
 	if(get_prox(sensor)>=SENSOR_WALL_CLOSE)
 		return true;
 	else
@@ -129,7 +129,7 @@ int move_is_wall_close(int sensor){
 * @return					true: if one ore more of the sensors to close to wall (value of sensor is higher or equal tan SENSOR_WALL_TO_CLOSE)
 * 							false: if non of the sensors to close to wall (value of sensor is smaller tan SENSOR_WALL_TO_CLOSE)
 */
-int move_is_wall_to_close(void){//looks if Sensor IR1, IR2, IR7 or IR8 is to close to a wall
+bool move_is_wall_to_close(void){//looks if Sensor IR1, IR2, IR7 or IR8 is to close to a wall
 	for(int sensor=IR_1; sensor<=IR_8; sensor++){
 		if(sensor == IR_3)
 			sensor=IR_7;
@@ -308,7 +308,7 @@ void move_handler(void){
 			while(true){//robot stays in left wall mode until reset
 				if(move_is_wall_to_close()){//robot in front of acute or obtuse angle corner (0-180�)
 					move_robot_motors_speed(0, 0);//stops motors -> not too rapid change of speed of wheels
-					chThdSleepMilliseconds(100);//time for other threads
+					chThdSleepMilliseconds(50);//time for other threads
 					while(true){
 						move_robot_motors_speed(BASIC_SPEED,-BASIC_SPEED);//turn on place
 						if(!move_is_wall_to_close() && !move_is_wall_close(IR_7)){//Robot aligned with wall after corner
@@ -320,10 +320,10 @@ void move_handler(void){
 
 				if(!move_is_wall_close(IR_6) && !move_is_wall_close(IR_7)){//robot in front of reflex angle corner (180-360�)
 					move_robot_motors_speed(0, 0);//stops motors -> not too rapid change of speed of wheels
-					chThdSleepMilliseconds(100);//wait for other threads
+					chThdSleepMilliseconds(50);//wait for other threads
 					while(true){
 						move_robot_motors_speed(SPEED_ACUTE_ANGLE_INNER_WHEEL, BASIC_SPEED);//turn curve
-						chThdSleepMilliseconds(2);																					//changed
+						chThdSleepMilliseconds(2);//wait for other threads
 						if(move_is_wall_close(IR_7)){//Robot (more or less) aligned with wall after corner
 							move_robot_motors_speed(0, 0);//stop motors -> not too rapid change of speed of wheels
 							break;
@@ -360,7 +360,7 @@ void move_handler(void){
 					chThdSleepMilliseconds(100);//wait for other threads
 					while(true){
 						move_robot_motors_speed_increment(BASIC_SPEED, SPEED_ACUTE_ANGLE_INNER_WHEEL);//turn curve
-						chThdSleepMilliseconds(2);																					//changed
+						chThdSleepMilliseconds(2);//wait for other threads																					//changed
 						if(move_is_wall_close(IR_2)){//Robot (more or less) aligned with wall after corner
 							move_robot_motors_speed_increment(0, 0);//stop motors -> not too rapid change of speed of wheels
 							break;
