@@ -37,7 +37,7 @@ static THD_FUNCTION(ThdImuHandler, arg){
     systime_t time 	= chVTGetSystemTime();
 
 
-    chThdSleepSeconds(2);//wait for 2s otherwise robot can calibrate to fast after reset
+    chThdSleepSeconds(2);//wait for 2s otherwise robot can calibrate too fast after reset
     calibrate_acc();
     clear_leds();
     set_led(LED7, 1);//LED7 is on if calibrating is finished
