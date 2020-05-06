@@ -1,3 +1,6 @@
+//----stdlib includes----
+#include <stdlib.h>
+
 //----global chibiOS includes----
 #include <ch.h>
 #include <hal.h>
@@ -6,6 +9,10 @@
 #include <sensors\proximity.h>
 #include <motors.h>
 #include <leds.h>
+#include <msgbus\messagebus.h>
+#include <i2c_bus.h>
+#include <sensors\imu.h>
+
 
 //----specific personal includes----
 #include "move.h"
@@ -25,12 +32,13 @@
 #define SENSOR_WALL_TO_CLOSE					600																//~2-2.5cm
 #define GOAL_SENSOR 							270																//~3cm
 
+//Acceleration defines
+#define TIME_BETWEEN_SAMPLES					200																//ms
+#define ACC_MAX									3000 															//not in m/s^2
+#define TIME_WITHOUT_ACC_OVER_ACC_MAX 			4000															//ms
+
 //other defines
 #define NUMBER_OF_INCREMENT						8
-
-//static variables
-static bool drive_mode=false; //if drive_mode==true -> robot drives; if drive_mode==false -> robot does not drive
-								//drive_mode is initially false until robot has been placed
 
 //enums
 enum WALL_SIDE{WALL_ON_LEFT, WALL_ON_RIGHT};
@@ -57,46 +65,6 @@ enum IR_SENSORS{IR_1, IR_2, IR_3, IR_4, IR_5, IR_6, IR_7, IR_8};
      */
 
 
-
-/**
-* move_update_drive_mode
-*
-* @brief   					updates the state of driv_mode (changes state from true to false or from false to true)
-*
-* @param r					-
-*
-* @return					-
-*/
-void move_update_drive_mode(void){
-
-	drive_mode = !drive_mode;
-
-	set_led(LED5, drive_mode);	//set LED "on" to indicate driving mode true
-	chThdSleepSeconds(1); //wait for 1 sec
-
-	if (drive_mode){
-		//wait for robot to be stable, then calibrate ir and start mapping
-		calibrate_ir();
-		map_start_mapping(true);
-	}
-	else
-		map_pause_mapping();
-}
-
-
-
-/**
-* move_get_drive_mode
-*
-* @brief   					returns state of drieve_mode
-*
-* @param r					-
-*
-* @return					state of drive_mode (true or false)
-*/
-bool move_get_drive_mode(void){
-	return drive_mode;
-}
 
 
 
@@ -260,6 +228,47 @@ Wall	 Front
 
 
 /**
+* imu_handler
+*
+* @brief   					Robot does not move and program stays in infinite loop until a pickup was detected and the e-puck 2 was not moved
+* 							during the last 4 seconds. If that is the case the robot will start his "drive mode"
+* 							(NOTE: pick up detection counts as the beginning of the transport)
+*
+*
+* @param 					time_before: 	systime when last time ACC_x, ACC_Y or ACC_Z was bigger than ACC_MAX
+	        								time_before == 0 if ACC_x, ACC_Y or ACC_Z was not jet bigger than ACC_MAX and thus robot was not jet picked up/transported
+	    									(functions the same time as a flag if robot was picked up or not -> )
+*
+* @return					-
+*/
+void imu_handler(void){
+	clear_leds();
+	chThdSleepSeconds(2);//wait for 2s otherwise robot can calibrate too fast after reset
+	calibrate_acc();
+
+	static systime_t time_before = false;
+
+	while(true){
+		set_led(LED5, 2);					//LED5 is blinking if calibrating is finished and robot is waiting for movment
+	    if(abs(get_acc(X_AXIS)-get_acc_offset(X_AXIS))>=ACC_MAX || abs(get_acc(Y_AXIS)-get_acc_offset(Y_AXIS))>=ACC_MAX || abs(get_acc(Z_AXIS)-get_acc_offset(Z_AXIS))>=ACC_MAX){
+	    	time_before = chVTGetSystemTime();//time_before is the last time ACC_x, ACC_Y or ACC_Z was bigger than ACC_MAX
+	    }
+
+	    if(((chVTGetSystemTime()-time_before)>TIME_WITHOUT_ACC_OVER_ACC_MAX) && time_before){
+	    	set_led(LED5, true); //set LED "on" to indicate driving mode true
+	    	chThdSleepSeconds(1); //wait for 1 sec
+	    	//wait for robot to be stable, then calibrate ir and start mapping
+	    	calibrate_ir();
+	    	map_start_mapping(true);
+	    	imu_stop();
+	    	break;		//if robot was moved and then was not moved during the last TIME_WITHOUT_ACC_OVER_ACC_MAX ms -> robot in drive_mode
+
+	    	chThdSleepMilliseconds(100);
+	    }
+	}
+}
+
+/**
 * move_handler
 *
 * @brief   					function handles movement of robot
@@ -288,11 +297,9 @@ void move_handler(void){
      */
 
 	while(true){
-		//drive_mode = true;
-		while(!drive_mode){//do not drive until drive_mode is true
-			move_robot_motors_speed(0, 0);//stop motors
-			chThdSleepSeconds(1);//wait for 1s
-		}
+
+		imu_handler();
+
 		while(!move_is_wall_to_close()){
 			move_robot_motors_speed(BASIC_SPEED, BASIC_SPEED);//drive forward until wall is reached
 		}

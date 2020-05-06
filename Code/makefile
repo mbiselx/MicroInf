@@ -14,7 +14,6 @@ CSRC += ./main.c \
 		./move.c \
 		./map.c \
 		./transmission.c\
-		./imu_handler.c \
 
 #Header folders to include
 INCDIR += 

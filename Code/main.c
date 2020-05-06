@@ -11,7 +11,6 @@
 //----specific personal includes----
 #include "main.h"
 #include "transmission.h"
-#include "imu_handler.h"
 #include "map.h"
 #include "move.h"
 
@@ -41,7 +40,6 @@ int main(void)
     motors_init();
 
     //specific personal thread inits
-    imu_handler_init();
     map_init();
 
     /* Infinite loop. */
