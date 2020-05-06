@@ -33,7 +33,6 @@
 #define GOAL_SENSOR 							270																//~3cm
 
 //Acceleration defines
-#define TIME_BETWEEN_SAMPLES					200																//ms
 #define ACC_MAX									3000 															//not in m/s^2
 #define TIME_WITHOUT_ACC_OVER_ACC_MAX 			4000															//ms
 
