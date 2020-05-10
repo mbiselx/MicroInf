@@ -261,7 +261,7 @@ void imu_handler(void){
 	    	map_start_mapping(true);
 	    	imu_stop();
 	    	break;		//if robot was moved and then was not moved during the last TIME_WITHOUT_ACC_OVER_ACC_MAX ms -> robot in drive_mode
-)	    }
+	    }
 
     	chThdSleepMilliseconds(100);
 	}
