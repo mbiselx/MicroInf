@@ -7,6 +7,7 @@
  
 * [About the Project](#about-the-project)
 * [Folder Structure](#folder-structure)
+* [Video](#video)
 * [Contact](#contact)
  
 <!-- ABOUT THE PROJECT -->
@@ -21,6 +22,10 @@ The project addresses simultaneous Localisation and Mapping (SLAM) of a [e-puck 
 | Code                    | C code for e-puck robot                                                                            |
 | Receiver                | Matlab code to visualise map on PC                                                                 |
  
+<!-- VIDEO -->
+## Video
+[Video of robot](https://photos.app.goo.gl/tFf95fPEbTgGpfGZ8)
+
  
  
 <!-- CONTACT -->
