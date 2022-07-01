@@ -24,9 +24,7 @@ The project addresses simultaneous Localisation and Mapping (SLAM) of a [e-puck 
  
 <!-- VIDEO -->
 ## Video
-[Video of robot](https://photos.app.goo.gl/MkjNiZFwDMXsTqXU7)
-
- 
+https://user-images.githubusercontent.com/58890541/176931892-f5869551-91fc-4290-8847-d80d2091cc3d.mp4
  
 <!-- CONTACT -->
 ## Contact
